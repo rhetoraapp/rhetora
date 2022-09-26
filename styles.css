@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+	font-family: 'Anek Devanagari', sans-serif;
+}
+
+::placeholder {
+	color: #050038;
+	opacity: 75%;
+	font-size: 26px;
+	margin-left: 34px;
+	padding: 0px;	
+}
+
+h1 {
+	font-size: 69px;
+	line-height: 1.1;
+	margin-bottom: 0px;
+	color: #FF9933;
+}
+
+h3 {
+	font-size: 26px;
+	font-weight: 550;
+}
+
+p {
+	font-size: 26px;
+	font-weight: 400;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.nav, .nav-center {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+.nav-left, .nav-center, .nav-right {
+	margin-top: 56px;
+}
+
+.nav-left{
+	margin-left: 264px;
+	padding-left: 0px;
+}
+
+.nav-left > h3{
+	margin-top: 16px;
+}
+
+.nav-center{
+	justify-content: right;
+}
+
+.nav-center>h3 {
+	margin-right: 80px;
+	margin-top: 16px;
+}
+
+#joinWaitlist {
+	color: white;
+	background-color: #050038;
+	height: 52px;
+	width: 173px;
+	text-align: center;
+	line-height: 52px;
+	border-radius: 10px;
+	margin-top: 12px;
+}
+
+.nav-right{
+	margin-right: 20px;
+}
+
+.containter {
+	width: 100%;
+}
+
+.heronav {
+	background-image: url(/assets/Background\ \(1\).svg);
+	background-size: cover;
+}
+
+.hero {
+	display: flex;
+	height: 645px;
+}
+
+.hero > .content-left {
+	width: 70%;
+	margin-top: 110px;
+}
+
+.hero > .content-left > * {
+	margin-left: 264px;
+}
+
+.emailhero {
+	height: 76px;
+}
+
+input {
+	width: 500px;
+	height: 70px;
+	border-radius: 10px;
+	margin-top: 0px;
+	line-height: 70px;
+}
+
+.requestaccess {
+	width: 227px;
+	height: 76px;
+	background-color: #050038;
+	color: white;
+	font-size: 26px;
+	font-weight: 600;
+	border-radius: 10px;
+	line-height: 76px;
+}
+
+.hero > .content-right {
+	width: 30%
+}
+
+.cards {
+	margin-top: 190px;
+	transform: translateX(40px);
+}
+
+.howrhetoraworks {
+	margin-left: 164px;
+	margin-right: 164px;
+}
+
+#hrw {
+	text-align: center;
+	font-size: 50px;
+	height: 149px;
+	margin-top: 32px;
+	color: #FF9933;
+	line-height: 149px;
+}
+
+.VYTT, .MCCOSF, .SPRR, .emailcapture, .footer {
+	display: flex;
+	justify-content: center;
+}
+
+.VYTT {
+	height: 708px;
+	align-items: center;
+}
+
+.MCCOSF {
+	background-image: url(./assets/Rectangle\ 9.svg);
+	background-size: cover;
+	height: 708px;
+	align-items: center;
+}
+
+.SPRR {
+	height: 708px;
+	align-items: center;
+	width: 100%;
+}
+
+.MCCOSF > .content-left {
+	margin-left: 81px;
+}
+
+.SPRR > .content-left {
+	margin-left: 81px;
+}
+
+.emailcapture {
+	background-image: url(./assets/Rectangle\ 9.svg);
+	background-size: cover;
+	flex-direction: column;
+	height: 708px;
+	margin-left: 164px;
+	margin-right: 164px;
+	margin-top: 0px;
+}
+
+.emailcapture > * {
+	justify-content: center;
+	text-align: center;
+}
+
+.footer {
+	height: 412px;
+	background-image: url(./assets/background-footer.svg);
+	background-size: cover;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for wide screens over 1761px */
+
+@media only screen 
+  and (min-device-width: 1761px) 
+  and (max-device-width: 3700px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+
+}
+
+
+/* for mobile screens under 812px */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
