@@ -1,5 +1,0 @@
-{
-  "AppSyncApiName": "rhetoralanding",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
-}
