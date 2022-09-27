@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rhetoralandingpage-dev-195211-authRole",
+      "UnauthRoleArn": "arn:aws:iam::322157001241:role/amplify-rhetoralandingpage-dev-195211-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::322157001241:role/amplify-rhetoralandingpage-dev-195211-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rhetoralandingpage-dev-195211-deployment",
+      "UnauthRoleName": "amplify-rhetoralandingpage-dev-195211-unauthRole",
+      "StackName": "amplify-rhetoralandingpage-dev-195211",
+      "StackId": "arn:aws:cloudformation:us-east-1:322157001241:stack/amplify-rhetoralandingpage-dev-195211/9fcad0d0-3dfe-11ed-aecf-12abc34ccd57",
+      "AmplifyAppId": "dhe3342hdoqpu"
+    },
+    "categories": {
+      "function": {
+        "rhetoralandingpage56609ec7": {
+          "deploymentBucketName": "amplify-rhetoralandingpage-dev-195211-deployment",
+          "s3Key": "amplify-builds/rhetoralandingpage56609ec7-48627677617263677974-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dhe3342hdoqpu",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
