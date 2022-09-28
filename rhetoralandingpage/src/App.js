@@ -48,7 +48,7 @@ const App = () => {
           Contact</a>
         </h3>
         <h3 id="joinWaitlist">
-          <a href="JoinWaitlist">
+          <a id="joinWaitlista" href="JoinWaitlist">
           Join Waitlist </a>
         </h3>
       </div>

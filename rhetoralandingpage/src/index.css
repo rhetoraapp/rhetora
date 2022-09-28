@@ -7,11 +7,21 @@
 
 ::placeholder {
 	color: #050038;
-	opacity: 75%;
 	font-size: 26px;
-	margin-left: 34px;
+	transform: translate(15px,5px);
 	padding: 0px;	
 }
+
+input:focus {
+	font-size: 24px;
+	outline-style: solid;
+    outline-color: #050038;
+	text-indent: 30px;
+}
+
+input:focus::placeholder {
+	color: transparent;
+  }
 
 a {
 	text-decoration: none;
@@ -24,11 +34,11 @@ a {
     user-select: none;
 }
 
-a:hover {
-	color: #FF9933;
+a:visited {
+	color: #050038;
 }
 
-a:visited {
+a:hover {
 	color: #FF9933;
 }
 
@@ -83,12 +93,21 @@ p {
 #joinWaitlist {
 	color: white;
 	background-color: #050038;
-	height: 52px;
-	width: 173px;
+	height: 46px;
+	width: 179px;
 	text-align: center;
 	line-height: 52px;
 	border-radius: 10px;
 	margin-top: 12px;
+}
+
+#joinWaitlista:visited {
+	color: white;
+}
+
+#joinWaitlist:hover {
+	color: white;
+	background-color: rgba(5, 0, 56, 0.8);
 }
 
 .nav-right{
@@ -107,7 +126,7 @@ p {
 
 .hero {
 	display: flex;
-	height: 645px;
+	height: 665px;
 }
 
 .hero > .content-left {
@@ -127,8 +146,10 @@ input {
 	width: 500px;
 	height: 70px;
 	border-radius: 10px;
-	margin-top: 0px;
 	line-height: 70px;
+	transform: translateY(-4px);
+	font-size: 24px;
+	text-indent: 30px;
 }
 
 .requestaccess {
@@ -140,6 +161,19 @@ input {
 	font-weight: 600;
 	border-radius: 10px;
 	line-height: 76px;
+	margin-left: 15px;
+}
+
+.requestaccess:hover {
+	background-color: #FF9933;
+	color: white;
+	border: none;
+}
+
+.requestaccess:active {
+	background-color: #050038;
+	color: white;
+	border: none;
 }
 
 .hero > .content-right {
@@ -152,17 +186,17 @@ input {
 }
 
 .howrhetoraworks {
-	margin-left: 164px;
-	margin-right: 164px;
+	margin-left: 225px;
+	margin-right: 225px;
 }
 
 #hrw {
-	text-align: center;
+	text-align:center;
 	font-size: 50px;
-	height: 149px;
-	margin-top: 32px;
+	height: 50px;
 	color: #FF9933;
-	line-height: 149px;
+	line-height: 50px;
+	transform: translateY(70px);
 }
 
 .VYTT, .MCCOSF, .SPRR, .emailcapture, .footer {
@@ -194,6 +228,7 @@ input {
 
 .SPRR > .content-left {
 	margin-left: 81px;
+	margin-right: 100px;
 }
 
 .emailcapture {
@@ -201,8 +236,8 @@ input {
 	background-size: cover;
 	flex-direction: column;
 	height: 708px;
-	margin-left: 164px;
-	margin-right: 164px;
+	margin-left: 225px;
+	margin-right: 225px;
 	margin-top: 0px;
 }
 
