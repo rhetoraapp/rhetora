@@ -33,6 +33,7 @@ const App = () => {
     <nav className="nav">
       <div className="nav-left">
         <h3>rhetora</h3>
+        <img src={require('./assets/hamburger.svg').default} />
       </div>
       <div className="nav-center">
         <h3>
@@ -58,7 +59,7 @@ const App = () => {
     </nav>
     <div className="hero">
       <div className="content-left">
-        <h1 style={{ color: "#FF9933", fontSize: 75 }}>
+        <h1 style={{ color: "#FF9933"}}>
           True Cold <br /> Calling Confidence <br /> Coming Soon
         </h1>
         <p style={{ color: "#FF9933", fontWeight: 500 }}>
@@ -117,20 +118,20 @@ const App = () => {
     <h1 style={{ fontWeight: 600, color: "#050038" }}>
       rhetora is <br /> Launching Soon
     </h1>
-    <h3>Designed by sales professionals, for sales professionals.</h3>
+    <h3 id='dbsp'>Designed by sales professionals, for sales professionals.</h3>
     <h3>
       Join <span className="waitinglistsignups">426</span> other ambitous
       salespeople on the waitlist.
     </h3>
     <div className="capture">
-      <input type="Enter Your Email" />
+      <input type="Enter Your Email" placeholder="Enter Your Email"/>
       <button className="requestaccess">Request Access</button>
     </div>
   </div>
   <div className="footer">
-    <h3>Home</h3>
-    <h3>About Us</h3>
-    <h3>Contact</h3>
+    <h3><a href="home">Home</a></h3>
+    <h3><a href="aboutUs">About Us</a></h3>
+    <h3><a href="Contact">Contact</a></h3>
   </div>
 </div>
 
