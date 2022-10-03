@@ -357,6 +357,14 @@ input {
 	}
 */
 
+	* {
+		margin: 0px;
+	}
+
+	.nav-left {
+		margin: 0px;
+	}
+
 	.nav-left > h3 {
 		display: none;
 	}
@@ -365,12 +373,23 @@ input {
 		display: block;
 	}
 
+	.nav-center {
+		margin: 0px;
+	}
+
 	.nav-center > h3 {
 		display: none;
 	}
 
 	.nav-center > #joinWaitlist {
 		display: block;
+		width: 110px;
+		font-size: 18px;
+		margin: 0px;
+	}
+
+	.nav-right {
+		margin: 0px;
 	}
 
 	.hero > .content-right {
@@ -389,6 +408,22 @@ input {
 		width: 326px;
 		height: 50px;
 	}
+
+	.VYTT, .MCCOSF, .SPRR {
+		flex-direction: column;
+	}
+
+	.VYTT, .MCCOSF, .SPRR > .content-left {
+		width: 100%;
+		margin: 0px;
+	}
+
+	.VYTT, .MCCOSF, .SPRR > .content-right {
+		width: 100%;
+		margin: 0px;
+	}
+
+
 }
 
 code {
