@@ -29,7 +29,8 @@ const App = () => {
   return (
     
     <div className="containter">
-  <div className="heronav">
+      <button type="button" className="btn btn-primary">Primary</button>
+  {/* <div className="heronav">
     <nav className="nav">
       <div className="nav-left">
         <h3>rhetora</h3>
@@ -132,7 +133,7 @@ const App = () => {
     <h3><a href="home">Home</a></h3>
     <h3><a href="aboutUs">About Us</a></h3>
     <h3><a href="Contact">Contact</a></h3>
-  </div>
+  </div> */}
 </div>
 
   )

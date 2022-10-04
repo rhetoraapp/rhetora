@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&display=swap');
 
-* {
+/* * {
 	font-family: 'Anek Devanagari', sans-serif;
 	margin: 0px;
 }
@@ -305,7 +305,7 @@ input {
     -ms-user-select: none;
     user-select: none;
 	color: white;
-}
+} */
 
 
 
@@ -346,16 +346,10 @@ input {
 
 /* for mobile screens under 812px */
 
-@media only screen 
+/* @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 844px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-/*
-	* {
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-*/
 
 	* {
 		margin: 0px;
@@ -392,22 +386,59 @@ input {
 		margin: 0px;
 	}
 
-	.hero > .content-right {
-		display: none;
+	.hero {
+		height: 480px;
+	}
+
+	.hero > .content-left {
+		width: 100%;
 	}
 
 	.hero > .content-left > h1 {
-		font-size: 47px;
+		font-size: 42px;
+		margin: 0px;
+		text-align: center;
 	}
 
 	.hero > .content-left > p {
 		font-size: 18px;
+		margin: 0px;
+		text-align: center;
+		font-weight: 300;
+		width: 70%;
+	}
+
+	.hero > .content-left > .emailhero {
+		margin: 0px;
 	}
 
 	.emailhero > input {
-		width: 326px;
+		width: 300px;
 		height: 50px;
 	}
+
+	.emailhero > button {
+		line-height: 40px;
+		height: 40px;
+		font-size: 22px;
+		margin: 0px;
+	}
+
+	.hero > .content-right {
+		display: none;
+	}
+
+	.howrhetoraworks {
+		margin: 0px;
+	}
+
+	.howrhetoraworks > #hrw {
+		transform: translateY(0px);
+		font-size: 30px;
+		font-weight: 500;
+	}
+
+
 
 	.VYTT, .MCCOSF, .SPRR {
 		flex-direction: column;
@@ -418,13 +449,31 @@ input {
 		margin: 0px;
 	}
 
-	.VYTT, .MCCOSF, .SPRR > .content-right {
+	.VYTT > div > img {
 		width: 100%;
 		margin: 0px;
 	}
 
+	.MCCOSF > .content-left {
+		margin: 0px;
+		margin-top: 40px;
+	}
 
-}
+	.MCCOSF > .content-right {
+		margin: 0px;
+	}
+
+	.MCCOSF > div > img {
+		width: 100%;
+		margin: 0px;
+	}
+
+	.SPRR {
+		margin-top: 60px;
+	}
+
+
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
