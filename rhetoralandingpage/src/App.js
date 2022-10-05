@@ -76,8 +76,16 @@ const App = () => {
 </nav>
     <div className='hero container mt-5'>
       <div className='row justify-content-around'>
-      <div className='col-lg-8 col-sm-10 c'></div>
-      <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'></div>
+      <div className='col-lg-8 col-sm-10 c'>
+      <div className='row'>
+          <h1> True Cold <br /> Calling Confidence <br /> Coming Soon</h1>
+          <p>Mock Authentic Cold Calls without Losing Business</p>
+        </div>
+        <input></input><button>Request Access</button>
+      </div>
+      <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'>
+      <img className="cards img-fluid" src={require('./assets/Cards.svg').default} />
+      </div>
       </div>
     </div>
 
@@ -85,27 +93,63 @@ const App = () => {
 
       <div className='VYTT container mt-5'>
       <div className='row justify-content-around'>
-      <div className='col-lg-6 col-sm-10 c'></div>
-      <div className='col-lg-4 col-sm-10 c'></div>
+      <h1>How rhetora Works</h1>
+      <div className='col-lg-6 col-sm-10 c'>
+      <img className='img-fluid' src={require('./assets/talktrack.svg').default} />
+      </div>
+      <div className='col-lg-4 col-sm-10 c'>
+      <p style={{ fontWeight: 600 }}>Join the Waitlist</p>
+        <h1>Visualize Your Talk Track</h1>
+        <p>There is no better way to navigate a sales call without visualizing
+          your talk track tree.
+        </p>
+      </div>
       </div>
       </div>
 
       <div className='MCCOSF container mt-5'>
       <div className='row justify-content-around'>
-      <div className='col-lg-6 col-sm-10 c'></div>
-      <div className='col-lg-4 col-sm-10 c'></div>
+      <div className='col-lg-6 col-sm-10 c'>
+      <h1>Mock Cold Calls Offline Stress-free</h1>
+        <p>No more awkward mock cold calling sessions with colleagues, practice
+          offine in peace.
+        </p>
+      </div>
+      <div className='col-lg-4 col-sm-10 c'>
+      <img className='img-fluid' src={require('./assets/zoom.svg').default} />
+      </div>
       </div>
       </div>
 
       <div className='SPRR container mt-5'>
       <div className='row justify-content-around'>
-      <div className='col-lg-6 col-sm-10 c'></div>
-      <div className='col-lg-4 col-sm-10 c'></div>
+      <div className='col-lg-6 col-sm-10 c'>
+      <h1>
+          Script, Practice, <br /> Refine &amp; Repeat
+        </h1>
+        <p>3 Step process to unlock your next level sales person.</p>
+      </div>
+      <div className='col-lg-4 col-sm-10 c'>
+      <img className='img-fluid' src={require('./assets/diagram.svg').default} />
+      </div>
       </div>
 
       <div className='emailcapture container mt-5'>
       <div className='row justify-content-around'>
-      <div className='col-lg-12 col-sm-10 c'></div>
+      <div className='col-lg-12 col-sm-10 c'>
+      <h1 style={{ fontWeight: 600, color: "#050038" }}>
+      rhetora is <br /> Launching Soon
+    </h1>
+    <h3 id='dbsp'>Designed by sales professionals, for sales professionals.</h3>
+    <h3>
+      Join <span className="waitinglistsignups">426</span> other ambitous
+      salespeople on the waitlist.
+    </h3>
+    <div className="capture">
+      <input type="Enter Your Email" placeholder="Enter Your Email"/>
+      <button className="requestaccess">Request Access</button>
+    </div>
+      </div>
       </div>
       </div>
 
