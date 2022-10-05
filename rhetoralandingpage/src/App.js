@@ -29,7 +29,106 @@ const App = () => {
   return (
     
     <div className="containter">
-      <button type="button" className="btn btn-primary">Primary</button>
+      <div className="heronav">
+      <nav className="navbar navbar-expand-lg">
+  <div className="container-fluid mt-4">
+    <a className="navbar-brand" href="#">
+      rhetora
+    </a> 
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon" />
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+        <li className="nav-item mx-3">
+          <a className="nav-link" aria-current="page" href="#">
+            Home
+          </a>
+        </li>
+        <li className="nav-item mx-3">
+          <a className="nav-link" href="#">
+            About Us
+          </a>
+        </li>
+        <li className="nav-item mx-3">
+          <a className="nav-link" href="#">
+            Contact
+          </a>
+        </li>
+        <li className="nav-item mx-5">
+          <a id="joinwaitlistnavbtn" className="nav-link" href="#">
+            Join Waitlist</a>
+        </li>
+      </ul>
+      <a className="navbar-brand" href="#">
+    <img src={require('./assets/Logo.svg').default} />
+    </a> 
+    </div>
+  </div>
+</nav>
+    <div className='hero container mt-5'>
+      <div className='row justify-content-around'>
+      <div className='col-lg-8 col-sm-10 c'></div>
+      <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'></div>
+      </div>
+    </div>
+
+  </div>
+
+      <div className='VYTT container mt-5'>
+      <div className='row justify-content-around'>
+      <div className='col-lg-6 col-sm-10 c'></div>
+      <div className='col-lg-4 col-sm-10 c'></div>
+      </div>
+      </div>
+
+      <div className='MCCOSF container mt-5'>
+      <div className='row justify-content-around'>
+      <div className='col-lg-6 col-sm-10 c'></div>
+      <div className='col-lg-4 col-sm-10 c'></div>
+      </div>
+      </div>
+
+      <div className='SPRR container mt-5'>
+      <div className='row justify-content-around'>
+      <div className='col-lg-6 col-sm-10 c'></div>
+      <div className='col-lg-4 col-sm-10 c'></div>
+      </div>
+
+      <div className='emailcapture container mt-5'>
+      <div className='row justify-content-around'>
+      <div className='col-lg-12 col-sm-10 c'></div>
+      </div>
+      </div>
+
+</div>
+      <div className='footer container-fluid mt-5'>
+      <div className='row justify-content-around'>
+      <div className='col-lg-12 col-sm-12 c'></div>
+      </div>
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
   {/* <div className="heronav">
     <nav className="nav">
       <div className="nav-left">

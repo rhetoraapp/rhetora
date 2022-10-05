@@ -1,10 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&display=swap');
 
-/* * {
-	font-family: 'Anek Devanagari', sans-serif;
-	margin: 0px;
+.heronav {
+	background-image: url(./assets/Background-1.svg);
+	background-size: cover;
 }
 
+.navbar-brand {
+	margin-left: 275px;
+	color: #050038;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+a.nav-link {
+	text-decoration: none;
+    user-select: none;
+	color: #050038;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+a:visited {
+	color: #050038;
+}
+
+a:hover {
+	color: #FF9933;
+}
+
+#joinwaitlistnavbtn {
+	color: white;
+	background-color: #050038;
+	width: 179px;
+	height: 44px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.row {
+	background-color: antiquewhite;
+}
+
+.c {
+	background-color: lightblue;
+	height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ * {
+	font-family: 'Anek Devanagari', sans-serif;
+}
+/*
 ::placeholder {
 	color: #050038;
 	font-size: 26px;
@@ -128,11 +216,6 @@ p {
 .containter {
 	width: 100%;
 	margin: 0px;
-}
-
-.heronav {
-	background-image: url(./assets/Background-1.svg);
-	background-size: cover;
 }
 
 .hero {
