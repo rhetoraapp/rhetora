@@ -94,12 +94,12 @@ const App = () => {
 
       <div className='VYTT container mt-5'>
       <div className='row justify-content-around'>
-      <h1>How rhetora Works</h1>
-      <div className='col-lg-6 col-sm-10 c'>
+      <h1 id='hrw'>How rhetora Works</h1>
+      <div className='col-lg-6 col-sm-10 c d-flex justify-content-center'>
       <img className='img-fluid' src={require('./assets/talktrack.svg').default} />
       </div>
       <div className='col-lg-4 col-sm-10 c'>
-      <p style={{ fontWeight: 600 }}>Join the Waitlist</p>
+      <p className='my-5' style={{ fontWeight: 600 }}>Join the Waitlist</p>
         <h1>Visualize Your Talk Track</h1>
         <p>There is no better way to navigate a sales call without visualizing
           your talk track tree.
@@ -108,16 +108,16 @@ const App = () => {
       </div>
       </div>
 
-      <div className='MCCOSF container mt-5'>
+      <div className='MCCOSF container mt-5 g'>
       <div className='row justify-content-around'>
-      <div className='col-lg-6 col-sm-10 c'>
-      <h1>Mock Cold Calls Offline Stress-free</h1>
+      <div className='col-lg-6 col-sm-10 c '>
+      <h1 style={{ marginTop: 125 }}>Mock Cold Calls Offline Stress-free</h1>
         <p>No more awkward mock cold calling sessions with colleagues, practice
           offine in peace.
         </p>
       </div>
-      <div className='col-lg-4 col-sm-10 c'>
-      <img className='img-fluid' src={require('./assets/zoom.svg').default} />
+      <div className='col-lg-4 col-sm-10 c d-flex justify-content-center'>
+      <img className='img-fluid ' src={require('./assets/zoom.svg').default} />
       </div>
       </div>
       </div>
@@ -125,17 +125,17 @@ const App = () => {
       <div className='SPRR container mt-5'>
       <div className='row justify-content-around'>
       <div className='col-lg-6 col-sm-10 c'>
-      <h1>
+      <h1 style={{ marginTop: 125 }}>
           Script, Practice, <br /> Refine &amp; Repeat
         </h1>
         <p>3 Step process to unlock your next level sales person.</p>
       </div>
-      <div className='col-lg-4 col-sm-10 c'>
+      <div className='col-lg-4 col-sm-10 c d-flex justify-content-center'>
       <img className='img-fluid' src={require('./assets/diagram.svg').default} />
       </div>
       </div>
 
-      <div className='emailcapture container mt-5'>
+      <div className='emailcapture container mt-5 g'>
       <div className='row justify-content-around'>
       <div className='col-lg-12 col-sm-10 c'>
       <h1 style={{ fontWeight: 600, color: "#050038" }}>
