@@ -32,7 +32,7 @@ const App = () => {
       <div className="heronav">
       <nav className="navbar navbar-expand-lg">
   <div className="container-fluid mt-4">
-    <a className="navbar-brand" href="#">
+    <a id='navbar-brand-main' className="navbar-brand" href="#">
       rhetora
     </a> 
     <button
@@ -78,13 +78,14 @@ const App = () => {
       <div className='row justify-content-around'>
       <div className='col-lg-8 col-sm-10 c'>
       <div className='row'>
-          <h1> True Cold <br /> Calling Confidence <br /> Coming Soon</h1>
-          <p>Mock Authentic Cold Calls without Losing Business</p>
+          <h1 id='herotitle'> True Cold <br /> Calling Confidence <br /> Coming Soon</h1>
+          <p id='herop'>Mock Authentic Cold Calls without Losing Business</p>
         </div>
-        <input></input><button>Request Access</button>
+        <input id='heroinput' className='col-10 col-lg-8 col-xl-6' placeholder='Enter Your Email'></input>
+        <button className='col-10 col-lg-4 col-xl-3' id='herobtn'>Request Access</button>
       </div>
       <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'>
-      <img className="cards img-fluid" src={require('./assets/Cards.svg').default} />
+      <img className="cards img-fluid mt-5" src={require('./assets/Cards.svg').default} />
       </div>
       </div>
     </div>
@@ -154,25 +155,16 @@ const App = () => {
       </div>
 
 </div>
-      <div className='footer container-fluid mt-5'>
-      <div className='row justify-content-around'>
-      <div className='col-lg-12 col-sm-12 c'></div>
-      </div>
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-3 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-3 text-muted">About Us</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-3 text-muted">Contact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-3 text-muted">Join Waitlist</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 rhetora</p>
+  </footer>
     
-      
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
   {/* <div className="heronav">
     <nav className="nav">
       <div className="nav-left">
