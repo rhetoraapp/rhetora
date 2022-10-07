@@ -56,12 +56,13 @@ a:hover {
 }
 
 .c {
+	height: 600px;
 }
 
 .g {
 	background-image: url(/src/assets/Rectangle\ 9.svg);
 	background-size: cover;
-	border-radius: 10px;
+	border-radius: 60px;
 }
 
 #herotitle {
@@ -122,14 +123,46 @@ a:hover {
 	/* transform: translateY(70px); */
 }
 
+.tr {
+	text-align: right;
+}
+
+.tc {
+	text-align: center;
+}
+
+
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 1151px) {
 	
 	#navbar-brand-main {
-		margin-left: 185px;
+		margin-left: 220px;
+	}
+
+	.c {
+		height: 500px;
 	}
   }
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 991px) {
+
+	#herotitle {
+		text-align: center;
+	}
+
+	#herop {
+		text-align: center;
+	}
+
+	img {
+		margin-bottom: 70px;
+	}
+  }
+
 
 @media only screen 
   and (min-device-width: 375px) 

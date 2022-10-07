@@ -81,8 +81,10 @@ const App = () => {
           <h1 id='herotitle'> True Cold <br /> Calling Confidence <br /> Coming Soon</h1>
           <p id='herop'>Mock Authentic Cold Calls without Losing Business</p>
         </div>
-        <input id='heroinput' className='col-10 col-lg-8 col-xl-6' placeholder='Enter Your Email'></input>
-        <button className='col-10 col-lg-4 col-xl-3' id='herobtn'>Request Access</button>
+        <div className='d-flex justify-content-md-start justify-content-around'>
+        <input id='heroinput' className='row-10 col-lg-8 col-xl-6' placeholder='Enter Your Email'></input>
+        <button className='row-10 col-lg-4 col-xl-3' id='herobtn'>Request Access</button>
+        </div>
       </div>
       <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'>
       <img className="cards img-fluid mt-5" src={require('./assets/Cards.svg').default} />
@@ -111,8 +113,8 @@ const App = () => {
       <div className='MCCOSF container mt-5 g'>
       <div className='row justify-content-around'>
       <div className='col-lg-6 col-sm-10 c '>
-      <h1 style={{ marginTop: 125 }}>Mock Cold Calls Offline Stress-free</h1>
-        <p>No more awkward mock cold calling sessions with colleagues, practice
+      <h1 className='tr' style={{ marginTop: 125 }}>Mock Cold Calls Offline Stress-free</h1>
+        <p className='tr' >No more awkward mock cold calling sessions with colleagues, practice
           offine in peace.
         </p>
       </div>
@@ -125,10 +127,10 @@ const App = () => {
       <div className='SPRR container mt-5'>
       <div className='row justify-content-around'>
       <div className='col-lg-6 col-sm-10 c'>
-      <h1 style={{ marginTop: 125 }}>
+      <h1 className='tr' style={{ marginTop: 125 }}>
           Script, Practice, <br /> Refine &amp; Repeat
         </h1>
-        <p>3 Step process to unlock your next level sales person.</p>
+        <p className='tr'>3 Step process to unlock your next level sales person.</p>
       </div>
       <div className='col-lg-4 col-sm-10 c d-flex justify-content-center'>
       <img className='img-fluid' src={require('./assets/diagram.svg').default} />
@@ -138,17 +140,17 @@ const App = () => {
       <div className='emailcapture container mt-5 g'>
       <div className='row justify-content-around'>
       <div className='col-lg-12 col-sm-10 c'>
-      <h1 style={{ fontWeight: 600, color: "#050038" }}>
+      <h1 style={{ fontWeight: 600, color: "#050038", textAlign:'center', marginTop:70 }}>
       rhetora is <br /> Launching Soon
     </h1>
-    <h3 id='dbsp'>Designed by sales professionals, for sales professionals.</h3>
-    <h3>
+    <h4 className='tc mt-5' id='dbsp'>Designed by sales professionals, for sales professionals.</h4>
+    <h4 className='tc mt-5'>
       Join <span className="waitinglistsignups">426</span> other ambitous
       salespeople on the waitlist.
-    </h3>
-    <div className="capture">
-      <input type="Enter Your Email" placeholder="Enter Your Email"/>
-      <button className="requestaccess">Request Access</button>
+    </h4>
+    <div className="capture d-flex justify-content-center">
+    <input id='heroinput' className='col-10 col-lg-7 col-xl-5' placeholder='Enter Your Email'></input>
+        <button className='col-10 col-lg-3 col-xl-2' id='herobtn'>Request Access</button>
     </div>
       </div>
       </div>
