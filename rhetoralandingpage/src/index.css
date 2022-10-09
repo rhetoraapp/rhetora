@@ -51,12 +51,14 @@ a:hover {
 	border-radius: 10px;
 }
 
-.row {
-	
-}
-
 .c {
 	height: 600px;
+}
+
+.w {
+	height: 650px;
+	background-color: white;
+	border-radius: 50px;
 }
 
 .g {
