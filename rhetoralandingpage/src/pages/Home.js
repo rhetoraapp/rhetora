@@ -20,7 +20,7 @@ const Home = () => {
         </div>
       </div>
       <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'>
-      <img className="cards img-fluid mt-5" src={require('../assets/Cards.svg').default} />
+      <img className="img-fluid mt-5" src={require('../assets/Cards.svg').default} />
       </div>
       </div>
     </div>

@@ -82,7 +82,6 @@ a:hover {
 }
 
 #heroinput {
-	height: 45px;
 	border-radius: 10px;
 	border-color: #050038;
 	height: 50px;
@@ -133,6 +132,38 @@ a:hover {
 	text-align: center;
 }
 
+#cinputdiv {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+#heroinput-join {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	border-radius: 10px;
+	border-color: #050038;
+	height: 50px;
+	text-align: center;
+}
+
+.os-w {
+	height: 500px;
+	background-color: white;
+}
+
+.os-b {
+	height: 500px;
+	background-color: #BCBBC8;
+}
+
+.os-img {
+	height: 300px;
+}
+
+.os-img-250 {
+	height: 250px;
+}
 
 
 @media only screen 
