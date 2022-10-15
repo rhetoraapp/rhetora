@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import HubspotForm from 'react-hubspot-form';
 
 const Home = () => {
 
@@ -15,8 +16,15 @@ const Home = () => {
           <p id='herop'>Mock Authentic Cold Calls without Losing Business</p>
         </div>
         <div className='d-flex justify-content-md-start justify-content-around'>
-        <input id='heroinput' className='row-10 col-lg-8 col-xl-6' placeholder='Enter Your Email'></input>
-        <button className='row-10 col-lg-4 col-xl-3' id='herobtn'>Request Access</button>
+        <HubspotForm
+            portalId='22700288'
+            formId='521db1b3-1952-49a9-893b-c45a72bbfe05'
+            onSubmit={() => console.log('Submit!')}
+            onReady={(form) => console.log('Form ready!')}
+            loading={<div>Loading...</div>}
+            />
+        {/* <input id='heroinput' className='row-10 col-lg-8 col-xl-6' placeholder='Enter Your Email'></input>
+        <button className='row-10 col-lg-4 col-xl-3' id='herobtn'>Request Access</button> */}
         </div>
       </div>
       <div className='col-lg-3 d-none d-sm-none d-md-none d-lg-block c'>
@@ -82,8 +90,15 @@ const Home = () => {
       salespeople on the waitlist.
     </h4>
     <div className="capture d-flex justify-content-center">
-    <input id='heroinput' className='col-10 col-lg-7 col-xl-5' placeholder='Enter Your Email'></input>
-        <button className='col-10 col-lg-3 col-xl-2' id='herobtn'>Request Access</button>
+    <HubspotForm
+            portalId='22700288'
+            formId='521db1b3-1952-49a9-893b-c45a72bbfe05'
+            onSubmit={() => console.log('Submit!')}
+            onReady={(form) => console.log('Form ready!')}
+            loading={<div>Loading...</div>}
+            />
+    {/* <input id='heroinput' className='col-10 col-lg-7 col-xl-5' placeholder='Enter Your Email'></input>
+        <button className='col-10 col-lg-3 col-xl-2' id='herobtn'>Request Access</button> */}
     </div>
       </div>
       </div>
