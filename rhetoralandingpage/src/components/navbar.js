@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 const Home = () => {
 
@@ -23,7 +24,7 @@ const Home = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
         <li className="nav-item mx-3">
-          <a className="nav-link" aria-current="page" href="/">
+          <a id='homelink' className="nav-link" aria-current="page" href="/">
             Home
           </a>
         </li>

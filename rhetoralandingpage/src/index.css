@@ -132,6 +132,10 @@ a:hover {
 	text-align: center;
 }
 
+#mt125 {
+	margin-top: 125px;
+}
+
 #cinputdiv {
 	display: flex;
 	align-items: center;
@@ -174,6 +178,10 @@ a:hover {
 		margin-left: 220px;
 	}
 
+	#homelink {
+		display: none;
+	}
+
 	.c {
 		height: 500px;
 	}
@@ -193,6 +201,11 @@ a:hover {
 
 	img {
 		margin-bottom: 70px;
+	}
+
+	.tr {
+		text-align: center;
+		margin-top: 75px;
 	}
   }
 
@@ -217,6 +230,24 @@ a:hover {
 		font-size: 39px;
 		margin-top: 0px;
 	}
+
+	h1 {
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	#mt125 {
+		margin-top: 55px;
+	}
+
+	.emailcapture {
+		height: 750px;
+	}
+	
+
   }
 
 

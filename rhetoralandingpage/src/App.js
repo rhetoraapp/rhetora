@@ -41,6 +41,7 @@ const App = () => {
                 <title>rhetora</title>
                 <link rel="canonical" href="http://mysite.com/example" />
                 <meta name="description" content="Cold calling practice" />
+                <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700288.js"></script>
             </Helmet>
       <Routes>
         <Route path="/" element={<Home />} ></Route>

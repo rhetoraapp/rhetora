@@ -38,7 +38,7 @@ const Home = () => {
       <div className='VYTT container mt-5'>
       <div className='row justify-content-around'>
       <h1 id='hrw'>How rhetora Works</h1>
-      <div className='col-lg-6 col-sm-10 c d-flex justify-content-center'>
+      <div className='col-lg-6 col-sm-10 d-flex justify-content-center'>
       <img className='img-fluid' src={require('../assets/talktrack.svg').default} />
       </div>
       <div className='col-lg-4 col-sm-10 c'>
@@ -54,7 +54,7 @@ const Home = () => {
       <div className='MCCOSF container mt-5 g'>
       <div className='row justify-content-around'>
       <div className='col-lg-6 col-sm-10 c '>
-      <h1 className='tr' style={{ marginTop: 125 }}>Mock Cold Calls Offline Stress-free</h1>
+      <h1 id='mt125' className='tr'>Mock Cold Calls Offline Stress-free</h1>
         <p className='tr' >No more awkward mock cold calling sessions with colleagues, practice
           offine in peace.
         </p>
@@ -68,7 +68,7 @@ const Home = () => {
       <div className='SPRR container mt-5'>
       <div className='row justify-content-around'>
       <div className='col-lg-6 col-sm-10 c'>
-      <h1 className='tr' style={{ marginTop: 125 }}>
+      <h1 id='mt125' className='tr'>
           Script, Practice, <br /> Refine &amp; Repeat
         </h1>
         <p className='tr'>3 Step process to unlock your next level sales person.</p>
