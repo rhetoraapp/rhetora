@@ -43,7 +43,7 @@ const Home = () => {
       <img className='img-fluid' src={require('../assets/talktrack.svg').default} />
       </div>
       <div className='col-lg-4 col-sm-10 c'>
-      <p className='my-5' style={{ fontWeight: 600 }}>Join the Waitlist</p>
+      <p id='mt125' style={{ fontWeight: 600 }}>Join the Waitlist</p>
         <h1>Visualize Your Talk Track</h1>
         <p>There is no better way to navigate a sales call without visualizing
           your talk track tree.

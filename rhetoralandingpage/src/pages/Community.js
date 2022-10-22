@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/Hero-lines.svg';
+import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/background-long.svg';
+import slackgraphic from '../assets/slackGraphic.png';
 import HubspotForm from 'react-hubspot-form';
 
 const community = () => {
@@ -9,30 +10,23 @@ const community = () => {
     return (
       <div>
         <Navbar/>
-        <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
-          <div className='d-flex justify-content-center'>
-          <div className='col-8 w mt-5 d-flex justify-center flex-column'>
-            <h1 className='tc mt-5'>Contact Us</h1>
-            <p className='tc'>Designed by sales professionals, for sales professionals.</p>
-            <div id='cinputdiv' className=''>
-            <HubspotForm
-            portalId='22700288'
-            formId='f6b08b13-0830-4860-9e47-0c753a15ef7a'
-            onSubmit={() => console.log('Submit!')}
-            onReady={(form) => console.log('Form ready!')}
-            loading={<div>Loading...</div>}
-            />
-            {/* <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Name'></input>
-            <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Email'></input>
-            </div>
-            <div id='cinputdiv d-flex flex-column'>
-            <input style={{height:250}} id='heroinput' className='row-10 col-lg-8 col-xl-12' placeholder='Message'></input>
-            <button id='herobtn' className='row-10 col-lg-8 col-xl-4'>Submit</button> */}
-            </div>
+        <div style={{height: "1285px", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
+        <div className='container hero'>
+            <div className='spacer' style={{height:165}}></div>
+          <h1 style={{color:'white', textAlign:'center'}}>Our Invite-Only <br></br>Sales Professionals <br></br>Slack Community </h1>
+          <p style={{color:'white', textAlign:'center'}}>Network with some of the brighest sellers</p>
+          <button id='herobtn'>Enquire</button>
+          <div style={{height: "100vh", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
           </div>
-
           </div>
-
+        </div>
+        <div className='story d-flex' style={{backgroundColor:"#111B35", height:414}} >
+          <div className=''>
+            <h3>Over 100+ sales professionals across the world connect daily</h3>
+          </div>
+          <div className=''>
+          <img className='img-fluid' src={require('../assets/Attributes.svg').default} />
+          </div>
         </div>
         <Footer/>
       </div>

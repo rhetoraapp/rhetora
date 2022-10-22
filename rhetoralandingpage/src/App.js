@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Ourstory from './pages/Ourstory';
 import Contactus from './pages/Contactus';
 import Joinwaitlist from './pages/Joinwaitlist';
-import Community from './pages/Community';
+import Community from './pages/Community.js';
 import Invited from './pages/Invited';
 
 const myAPI = "api4b919b3b"

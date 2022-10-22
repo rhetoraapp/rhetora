@@ -23,7 +23,7 @@ const Home = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
-        <li className="nav-item mx-3">
+        <li id='navbar-ourstory' className="nav-item mx-3">
           <a className="nav-link" href="/ourstory">
             Our Story
           </a>
@@ -42,10 +42,13 @@ const Home = () => {
           <a id="joinwaitlistnavbtn" className="nav-link" href="/join">
             Join Waitlist</a>
         </li>
-      </ul>
+        </ul>
+        
+      <div id='navbar-logo'>
       <a className="navbar-brand" href="#">
     <img src={require('../assets/Logo.svg').default} />
     </a> 
+    </div>
     </div>
   </div>
 </nav>
