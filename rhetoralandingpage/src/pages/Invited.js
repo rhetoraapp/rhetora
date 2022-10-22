@@ -1,42 +1,32 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import SignupButton from '../components/signupButton';
 import Footer from '../components/footer';
 import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/Hero-lines.svg';
-import HubspotForm from 'react-hubspot-form';
+import slackgraphic from '../assets/slackGraphic.png';
 
 const invited = () => {
 
     return (
-      <div>
-        <Navbar/>
-        <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
-          <div className='d-flex justify-content-center'>
-          <div className='col-8 w mt-5 d-flex justify-center flex-column'>
-            <h1 className='tc mt-5'>Contact Us</h1>
-            <p className='tc'>Designed by sales professionals, for sales professionals.</p>
-            <div id='cinputdiv' className=''>
-            <HubspotForm
-            portalId='22700288'
-            formId='f6b08b13-0830-4860-9e47-0c753a15ef7a'
-            onSubmit={() => console.log('Submit!')}
-            onReady={(form) => console.log('Form ready!')}
-            loading={<div>Loading...</div>}
-            />
-            {/* <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Name'></input>
-            <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Email'></input>
+        <div>
+          <Navbar/>
+          <div style={{height: "1268px", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
+          <div className='container hero d-flex flex-column justify-content-around align-items-center'>
+              <div className='spacer' style={{height:200}}></div>
+            <h1 style={{color:'white', textAlign:'center'}}>You're Invited!</h1>
+            <p style={{color:'white', textAlign:'center'}}>Looking forward to seeing you at our launch event Nov. 14th</p>
+            <div style={{"width":"40%"}} className='d-flex justify-content-around align-items-center mt-5'>
+            <SignupButton/>   
+            <button id='herobtn'>Learn More</button>
             </div>
-            <div id='cinputdiv d-flex flex-column'>
-            <input style={{height:250}} id='heroinput' className='row-10 col-lg-8 col-xl-12' placeholder='Message'></input>
-            <button id='herobtn' className='row-10 col-lg-8 col-xl-4'>Submit</button> */}
+            <div className='spacer' style={{height:80}}></div>
+            <div style={{width:"80vw",height: "750px", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
+            </div>
             </div>
           </div>
-
-          </div>
-
+          <Footer/>
         </div>
-        <Footer/>
-      </div>
-    );
-  };
+      );
+    };
    
   export default invited;

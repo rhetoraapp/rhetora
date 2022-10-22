@@ -81,7 +81,7 @@ const Home = () => {
 
       <div className='emailcapture container mt-5 g'>
       <div className='row justify-content-around'>
-      <div className='col-lg-12 col-sm-10 c'>
+      <div className='col-lg-12 col-sm-10 c n'>
       <h1 style={{ fontWeight: 600, color: "#050038", textAlign:'center', marginTop:70 }}>
       rhetora is <br /> Launching Soon
     </h1>

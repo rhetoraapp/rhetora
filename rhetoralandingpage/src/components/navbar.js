@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-const Home = () => {
+const navbar = () => {
 
     return (
       <div>
@@ -56,4 +56,4 @@ const Home = () => {
     );
   };
   
-  export default Home;
+  export default navbar;

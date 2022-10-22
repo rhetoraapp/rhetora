@@ -44,6 +44,9 @@ const App = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
                 <meta name="description" content="Cold calling practice" />
                 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700288.js"></script>
+                <script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="rhetora-test" ></script>
+                <script charset="utf-8" src="https://js.chargebee.com/v2/115-94b9b381e1334549cd23.js"></script>
+                <link rel="stylesheet" href="https://js.chargebee.com/v2/animation.css" type="text/css"></link>
             </Helmet>
       <Routes>
         <Route path="/" element={<Home />} ></Route>

@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-const Home = () => {
+const footer = () => {
 
     return (
       <div>
@@ -19,4 +19,4 @@ const Home = () => {
     );
   };
   
-  export default Home;
+  export default footer;
