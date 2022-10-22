@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/Hero-lines.svg';
 import HubspotForm from 'react-hubspot-form';
 
@@ -34,6 +35,7 @@ const join = () => {
 
         </div>
       </div>
+      <Footer/>
       </div>
     );
   };

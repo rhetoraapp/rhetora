@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/Hero-lines.svg';
 import HubspotForm from 'react-hubspot-form';
 
-const contactus = () => {
+const community = () => {
 
     return (
       <div>
@@ -39,4 +39,4 @@ const contactus = () => {
     );
   };
    
-  export default contactus;
+  export default community;

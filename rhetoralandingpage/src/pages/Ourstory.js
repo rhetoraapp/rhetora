@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar';
-
+import Footer from '../components/footer';
 import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/Hero-lines.svg';
 
 const Ourstory = () => {
@@ -53,6 +53,7 @@ const Ourstory = () => {
           </div>
           </div>
         </div>
+        <Footer/>
       </div>
     );
   };

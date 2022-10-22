@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Ourstory from './pages/Ourstory';
 import Contactus from './pages/Contactus';
 import Joinwaitlist from './pages/Joinwaitlist';
+import Community from './pages/Community';
+import Invited from './pages/Invited';
 
 const myAPI = "api4b919b3b"
 const path = '/users/'; 
@@ -48,6 +50,8 @@ const App = () => {
         <Route path="/ourstory" element={<Ourstory />} ></Route>
         <Route path="/contactus" element={<Contactus />} ></Route>
         <Route path="/join" element={<Joinwaitlist />} ></Route>
+        <Route path="/community" element={<Community />} ></Route>
+        <Route path="/invited" element={<Invited />} ></Route>
       </Routes>
     </div>
     </Router>

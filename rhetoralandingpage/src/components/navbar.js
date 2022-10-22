@@ -24,13 +24,13 @@ const Home = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
         <li className="nav-item mx-3">
-          <a id='homelink' className="nav-link" aria-current="page" href="/">
-            Home
+          <a className="nav-link" href="/ourstory">
+            Our Story
           </a>
         </li>
         <li className="nav-item mx-3">
-          <a className="nav-link" href="/ourstory">
-            Our Story
+          <a id='homelink' className="nav-link" aria-current="page" href="/community">
+            Community
           </a>
         </li>
         <li className="nav-item mx-3">
