@@ -13,7 +13,7 @@ const Ourstory = () => {
             <div className='spacer' style={{height:140}}></div>
           <h1 style={{color:'white'}}>The Story of rhetora</h1>
           <p style={{color:'white'}}>How Dumb & Dumber Met and Launched rhetora</p>
-          <button id='herobtn'>Speak With Us</button>
+          <button id='herobtn'><a href="/contactus" id='herobtn'>Speak With Us</a></button>
           </div>
         </div>
         <div>

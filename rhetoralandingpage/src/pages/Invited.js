@@ -17,7 +17,7 @@ const invited = () => {
             <p style={{color:'white', textAlign:'center'}}>Looking forward to seeing you at our launch event Nov. 14th</p>
             <div style={{"width":"40%"}} className='d-flex justify-content-around align-items-center mt-5'>
             <SignupButton/>   
-            <button id='herobtn'>Learn More</button>
+            <button id='herobtn'><a href="/community" id='herobtn'>Learn More</a></button>
             </div>
             <div className='spacer' style={{height:80}}></div>
             <div style={{width:"80vw",height: "750px", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>

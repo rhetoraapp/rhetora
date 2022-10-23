@@ -15,7 +15,9 @@ const community = () => {
             <div className='spacer' style={{height:165}}></div>
           <h1 style={{color:'white', textAlign:'center'}}>Our Invite-Only <br></br>Sales Professionals <br></br>Slack Community </h1>
           <p style={{color:'white', textAlign:'center'}}>Network with some of the brighest sellers</p>
-          <button id='herobtn'>Enquire</button>
+          <div className="d-flex justify-content-center align-items-center">
+          <button id='herobtn'><a href="#enquire" id='herobtn'>Enquire</a></button>
+          </div>
           <div style={{height: "800px", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
           </div>
           </div>
@@ -31,7 +33,7 @@ const community = () => {
           </div>
         </div>
         <div style={{height: "900px"}}>
-          <h1 style={{textAlign:"center", marginTop:170, "color":"#050038"}}>Community, <br></br> without Limits.</h1>
+          <h1 id='enquire' style={{textAlign:"center", marginTop:170, "color":"#050038"}}>Community, <br></br> without Limits.</h1>
         <div className='emailcapture container mt-5 g'>
       <div className='row justify-content-around'>
       <div className='col-lg-12 col-sm-10 c n'>

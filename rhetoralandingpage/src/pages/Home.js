@@ -33,9 +33,7 @@ const Home = () => {
       </div>
       </div>
     </div>
-
   </div>
-
       <div className='VYTT container mt-5'>
       <div className='row justify-content-around'>
       <h1 id='hrw'>How rhetora Works</h1>

@@ -20,8 +20,6 @@ const componentDidMount = () => {
         data-cb-type="checkout" 
         data-cb-item-0="Community-Plan-USD-Monthly" 
         data-cb-item-0-quantity="1" 
-        data-cb-item-1="Believer-USD-Monthly" 
-        data-cb-item-1-quantity="1" 
         >Sign up</a></button>
 )};
   
