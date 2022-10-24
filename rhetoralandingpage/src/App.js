@@ -54,7 +54,7 @@ const App = () => {
         <Route path="/contactus" element={<Contactus />} ></Route>
         <Route path="/join" element={<Joinwaitlist />} ></Route>
         <Route path="/community" element={<Community />} ></Route>
-        <Route path="/invited" element={<Invited />} ></Route>
+        <Route path="/invited-c03skupo" element={<Invited />} ></Route>
       </Routes>
     </div>
     </Router>
