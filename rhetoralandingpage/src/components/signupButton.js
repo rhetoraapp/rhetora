@@ -4,7 +4,7 @@ const componentDidMount = () => {
     const el = document.createElement('script');
     el.onload = () => {
       window.Chargebee.init({
-        "site": "rhetora-test"
+        "site": "rhetora"
       });
       window.Chargebee.registerAgain();
       // this.setState({ chargebeeReady: true });
@@ -16,10 +16,10 @@ const componentDidMount = () => {
         <button id='herobtn'><a 
         id='herobtn'
         style={{ "text-decoration":"none"}}
-        href="javascript:void(0)"
+        href="javascript:void(0)" 
         data-cb-type="checkout" 
-        data-cb-item-0="Community-Plan-USD-Monthly" 
-        data-cb-item-0-quantity="1" 
+        data-cb-item-0="Basic-access-USD-Monthly" 
+        data-cb-item-0-quantity="1"
         >Sign up</a></button>
 )};
   
