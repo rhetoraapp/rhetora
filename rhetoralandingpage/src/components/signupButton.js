@@ -15,11 +15,12 @@ const componentDidMount = () => {
     return (
         <button id='herobtn'><a 
         id='herobtn'
-        style={{ "text-decoration":"none"}}
         href="javascript:void(0)" 
         data-cb-type="checkout" 
-        data-cb-item-0="Basic-access-USD-Monthly" 
-        data-cb-item-0-quantity="1"
+        data-cb-item-0="Community-Access-USD-Monthly" 
+        data-cb-item-0-quantity="1" 
+        data-cb-item-1="Believer-USD-Monthly" 
+        data-cb-item-1-quantity="1"
         >Sign up</a></button>
 )};
   
