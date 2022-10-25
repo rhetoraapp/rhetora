@@ -13,8 +13,8 @@ const componentDidMount = () => {
     document.body.appendChild(el);
 
     return (
-        <button id='herobtn'><a 
-        id='herobtn'
+        <button id='herobtn2'><a 
+        id='herobtn2'
         href="javascript:void(0)" 
         data-cb-type="checkout" 
         data-cb-item-0="Community-Access-USD-Monthly" 

@@ -15,12 +15,12 @@ const invited = () => {
               <div className='spacer' style={{height:200}}></div>
             <h1 style={{color:'white', textAlign:'center'}}>You're Invited!</h1>
             <p style={{color:'white', textAlign:'center'}}>Looking forward to seeing you at our launch event Nov. 14th</p>
-            <div style={{"width":"40%"}} className='d-flex justify-content-around align-items-center mt-5'>
+            <div className='d-flex justify-content-around align-items-center mt-5 i-btn'>
             <SignupButton/>   
-            <button id='herobtn'><a href="/community" id='herobtn'>Learn More</a></button>
+            <button id='herobtn2'><a href="/community" id='herobtn2'>Learn More</a></button>
             </div>
             <div className='spacer' style={{height:80}}></div>
-            <div style={{width:"80vw",height: "750px", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
+            <div className='i-img' style={{width:"80vw", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
             </div>
             </div>
           </div>

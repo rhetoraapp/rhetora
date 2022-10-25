@@ -118,6 +118,19 @@ a:hover {
 	text-decoration: none;
 }
 
+#herobtn2 {
+	height: 45px;
+	width: 160px;
+	border-radius: 10px;
+	border-color: #050038;
+	color: white;
+	font-size: 22px;
+	font-weight: 500;
+	height: 50px;
+	background-color: #050038;
+	text-decoration: none;
+}
+
 #hrw {
 	text-align:center;
 	font-size: 50px;
@@ -186,6 +199,13 @@ a:hover {
 .c-img {
 	height: 350px;
 	width: 80%;
+}
+
+.i-btn {
+	width: 40%;
+}
+.i-img {
+	height: 750px;
 }
 
 @media only screen 
@@ -280,6 +300,10 @@ a:hover {
 	.os-b {
 		height: 400px;
 	}
+
+	.i-btn {
+		width: 50%;
+	}
   }
 
 
@@ -336,7 +360,32 @@ a:hover {
 		margin-left: 180px;
 
 	}
-	
+
+	#herobtn2{
+		margin-left: 0px;
+	}
+
+	.i-btn {
+		width: 100%;
+	}
+
+	.i-img {
+		height: 718px;
+	}	
+
+  }
+
+  @media only screen 
+  and (min-device-width: 275px) 
+  and (max-device-width: 422px) {
+
+	#navbar-brand-main {
+		margin-left: 0px;
+	}
+
+	.i-img {
+		height: 634px;
+	}	
 
   }
 
