@@ -201,6 +201,10 @@ a:hover {
 	width: 80%;
 }
 
+#c-slackgraphic {
+	height: 800px;
+}
+
 .i-btn {
 	width: 40%;
 }
@@ -317,6 +321,8 @@ a:hover {
 		text-align: center;
 	}
 
+
+
 	#herop {
 		font-size: 21px;
 		line-height: 21px;
@@ -329,6 +335,8 @@ a:hover {
 	}
 
 	h1 {
+		font-size: 54px;
+		line-height: 54px;
 		text-align: center;
 	}
 
@@ -372,6 +380,10 @@ a:hover {
 	.i-img {
 		height: 718px;
 	}	
+	
+	#c-slackgraphic {
+		height: 600px;
+	}
 
   }
 

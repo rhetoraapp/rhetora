@@ -10,15 +10,15 @@ const community = () => {
     return (
       <div>
         <Navbar/>
-        <div style={{height: "1285px", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
+        <div id='c-background' style={{backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
         <div className='container hero'>
             <div className='spacer' style={{height:165}}></div>
           <h1 style={{color:'white', textAlign:'center'}}>Our Invite-Only <br></br>Sales Professionals <br></br>Slack Community </h1>
           <p style={{color:'white', textAlign:'center'}}>Network with some of the brighest sellers</p>
           <div className="d-flex justify-content-center align-items-center">
-          <button id='herobtn'><a href="#enquire" id='herobtn'>Enquire</a></button>
+          <button id='herobtn2'><a href="#enquire" id='herobtn2'>Enquire</a></button>
           </div>
-          <div style={{height: "800px", backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
+          <div id='c-slackgraphic' style={{backgroundImage: `url(${slackgraphic})`,  backgroundSize: "cover"}}>
           </div>
           </div>
         </div>
