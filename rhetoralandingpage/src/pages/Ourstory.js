@@ -20,7 +20,7 @@ const Ourstory = () => {
           <div className='d-flex flex-lg-row flex-column'>
           <div className='os-w col-lg-6 col-md-12 flex-column d-flex justify-content-center'>
             <h2 className='os-h2'>1.We met in Highschool</h2>
-            <p className='os-p'>We met in Highschool in Dubai, we had similar philosophies of changing the corporate cuture in the Middle East.</p>
+            <p className='os-p'>We met in Highschool in Dubai, we had similar philosophies of changing the corporate culture in the Middle East.</p>
           </div>
           <div className='os-b col-lg-6 col-md-12 d-flex justify-content-center'>
           <img className="img-fluid mt-5 os-img" src={require('../assets/v1.svg').default} />
