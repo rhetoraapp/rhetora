@@ -212,6 +212,10 @@ a:hover {
 	height: 750px;
 }
 
+#i-background {
+	height: 1268px;
+}
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 1340px) {
@@ -312,7 +316,7 @@ a:hover {
 
 
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 275px) 
   and (max-device-width: 767px) {
 
 	#herotitle {
@@ -378,11 +382,19 @@ a:hover {
 	}
 
 	.i-img {
-		height: 718px;
+		height: 446px;
 	}	
+
+	#c-background {
+		height:100px;
+	}
 	
 	#c-slackgraphic {
 		height: 600px;
+	}
+
+	#i-background {
+		height: 968px;
 	}
 
   }
@@ -396,7 +408,7 @@ a:hover {
 	}
 
 	.i-img {
-		height: 634px;
+		height: 446px;
 	}	
 
   }

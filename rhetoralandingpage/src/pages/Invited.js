@@ -10,7 +10,7 @@ const invited = () => {
     return (
         <div>
           <Navbar/>
-          <div style={{height: "1268px", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
+          <div id='i-background' style={{backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
           <div className='container hero d-flex flex-column justify-content-around align-items-center'>
               <div className='spacer' style={{height:200}}></div>
             <h1 style={{color:'white', textAlign:'center'}}>You're Invited!</h1>
