@@ -14,7 +14,7 @@ const invited = () => {
           <div className='container hero d-flex flex-column justify-content-around align-items-center'>
               <div className='spacer' style={{height:200}}></div>
             <h1 style={{color:'white', textAlign:'center'}}>You're Invited!</h1>
-            <p style={{color:'white', textAlign:'center'}}>Looking forward to seeing you at our launch event Nov. 14th</p>
+            <p style={{color:'white', textAlign:'center'}}>Looking forward to seeing you at our launch event on Dec 1st!</p>
             <div className='d-flex justify-content-around align-items-center mt-5 i-btn'>
             <SignupButton/>   
             <button id='herobtn2'><a href="/community" id='herobtn2'>Learn More</a></button>
