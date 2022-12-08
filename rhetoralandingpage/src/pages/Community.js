@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Background from '/Users/lukaeric/Desktop/rhetora/rhetora/rhetoralandingpage/src/assets/background-long.svg';
+import Background from '../assets/background-long.svg';
 import slackgraphic from '../assets/slackGraphic.png';
 import HubspotForm from 'react-hubspot-form';
 
