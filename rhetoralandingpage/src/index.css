@@ -1,434 +1,407 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 h1 {
-	color: #FF9933;
-	font-size: 69px;
-	font-weight: 600;
+  color: #ff9933;
+  font-size: 69px;
+  font-weight: 600;
 }
 
 p {
-	color: #050038;
-	font-size: 22px;
+  color: #050038;
+  font-size: 22px;
+}
+
+.color-primary {
+  color: #050038;
 }
 
 .heronav {
-	background-image: url(./assets/Background-1.svg);
-	background-size: cover;
+  background-image: url(./assets/Background-1.svg);
+  background-size: cover;
 }
 
 .navbar-brand {
-	color: #050038;
-	font-size: 22px;
-	font-weight: 600;
+  color: #050038;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 #navbar-brand-main {
-	margin-left: 275px;
-	font-size:xx-large;
+  margin-left: 275px;
+  font-size: xx-large;
 }
 
 a.nav-link {
-	text-decoration: none;
-    user-select: none;
-	color: #050038;
-	font-size: 22px;
-	font-weight: 500;
+  text-decoration: none;
+  user-select: none;
+  color: #050038;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 a:visited {
-	color: #050038;
+  color: #050038;
 }
 
 a:hover {
-	color: #FF9933;
+  color: #ff9933;
 }
 
 #joinwaitlistnavbtn {
-	color: white;
-	background-color: #050038;
-	width: 179px;
-	height: 44px;
-	text-align: center;
-	border-radius: 10px;
+  color: white;
+  background-color: #050038;
+  width: 179px;
+  height: 44px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .c {
-	height: 600px;
+  height: 600px;
 }
 
 .w {
-	height: 650px;
-	background-color: white;
-	border-radius: 50px;
+  height: 650px;
+  background-color: white;
+  border-radius: 50px;
 }
 
 .g {
-	background-image: url(/src/assets/Rectangle\ 9.svg);
-	background-size: cover;
-	border-radius: 60px;
+  background-image: url(/src/assets/Rectangle\ 9.svg);
+  background-size: cover;
+  border-radius: 60px;
 }
 
 #herotitle {
-	font-size: 69px;
-	font-weight: 600;
-	color: #FF9933;
-	line-height: 69px;
-	margin-top: 70px;
+  font-size: 69px;
+  font-weight: 600;
+  color: #ff9933;
+  line-height: 69px;
+  margin-top: 70px;
 }
 
 #herop {
-	font-size: 26px;
-	font-weight: 500;
-	color: #FF9933;
+  font-size: 26px;
+  font-weight: 500;
+  color: #ff9933;
 }
 
 #heroinput {
-	border-radius: 10px;
-	border-color: #050038;
-	height: 50px;
-	text-align: center;
+  border-radius: 10px;
+  border-color: #050038;
+  height: 50px;
+  text-align: center;
 }
 
 #heroinput:focus {
-	font-size: 22px;
+  font-size: 22px;
 }
 
 #heroinput::after {
-	font-size: 22px; 
+  font-size: 22px;
 }
 
 ::placeholder {
-	color: #050038;
-	font-size: 22px;
-	text-align: center;
-	transform: translateY(2px);
+  color: #050038;
+  font-size: 22px;
+  text-align: center;
+  transform: translateY(2px);
 }
 
 #herobtn {
-	height: 45px;
-	width: 160px;
-	border-radius: 10px;
-	border-color: #050038;
-	color: white;
-	font-size: 22px;
-	font-weight: 500;
-	height: 50px;
-	background-color: #050038;
-	text-decoration: none;
+  height: 45px;
+  width: 160px;
+  border-radius: 10px;
+  border-color: #050038;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  height: 50px;
+  background-color: #050038;
+  text-decoration: none;
 }
 
 #herobtn2 {
-	height: 45px;
-	width: 160px;
-	border-radius: 10px;
-	border-color: #050038;
-	color: white;
-	font-size: 22px;
-	font-weight: 500;
-	height: 50px;
-	background-color: #050038;
-	text-decoration: none;
+  height: 45px;
+  width: 160px;
+  border-radius: 10px;
+  border-color: #050038;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  height: 50px;
+  background-color: #050038;
+  text-decoration: none;
 }
 
 #hrw {
-	text-align:center;
-	font-size: 50px;
-	height: 50px;
-	color: #FF9933;
-	line-height: 50px;
-	margin-top: 50px;
-	/* transform: translateY(70px); */
+  text-align: center;
+  font-size: 50px;
+  height: 50px;
+  color: #ff9933;
+  line-height: 50px;
+  margin-top: 50px;
+  /* transform: translateY(70px); */
 }
 
 .tr {
-	text-align: right;
+  text-align: right;
 }
 
 .tc {
-	text-align: center;
+  text-align: center;
 }
 
 #mt125 {
-	margin-top: 135px;
+  margin-top: 135px;
 }
 
 #cinputdiv {
-	display: flex;
-	align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #heroinput-join {
-	display: flex;
-	align-items: center;
-    justify-content: center;
-	border-radius: 10px;
-	border-color: #050038;
-	height: 50px;
-	text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border-color: #050038;
+  height: 50px;
+  text-align: center;
 }
 
 .os-h2 {
-	margin-left: 130px;
-	margin-right: 230px;
+  margin-left: 130px;
+  margin-right: 230px;
 }
 
 .os-p {
-	margin-left: 130px;
-	margin-right: 130px;
+  margin-left: 130px;
+  margin-right: 130px;
 }
 
 .os-w {
-	height: 500px;
-	background-color: white;
+  height: 500px;
+  background-color: white;
 }
 
 .os-b {
-	height: 500px;
-	background-color: #F6F6FA;
+  height: 500px;
+  background-color: #f6f6fa;
 }
 
 .os-img {
-	height: 300px;
+  height: 300px;
 }
 
 .os-img-250 {
-	height: 250px;
+  height: 250px;
 }
 
 .c-img {
-	height: 350px;
-	width: 80%;
+  height: 350px;
+  width: 80%;
 }
 
 #c-slackgraphic {
-	height: 800px;
+  height: 800px;
 }
 
 .i-btn {
-	width: 40%;
+  width: 40%;
 }
 .i-img {
-	height: 750px;
+  height: 750px;
 }
 
 #i-background {
-	height: 1268px;
+  height: 1268px;
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 1340px) {
-	
-	.os-h2 {
-		margin-right: 130px;
-	}
-	
+@media only screen and (min-device-width: 375px) and (max-device-width: 1340px) {
+  .os-h2 {
+    margin-right: 130px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 1240px) {
+  #navbar-brand-main {
+    margin-left: 220px;
   }
 
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 1240px) {
-	
-	#navbar-brand-main {
-		margin-left: 220px;
-	}
-
-	#navbar-logo {
-		display: none;
-	}
-
-	.c {
-		height: 500px;
-	}
-
-	.n {
-		height: 600px;
-	}
+  #navbar-logo {
+    display: none;
   }
 
-  @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 1110px) {
-
-	#navbar-ourstory {
-		display: none;
-	}
-
-	.os-h2 {
-		margin-left: 100px;
-		margin-right: 100px;
-	}
-	
-	.os-p {
-		margin-left: 100px;
-		margin-right: 100px;
-	}
-
+  .c {
+    height: 500px;
   }
 
-  @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 991px) {
+  .n {
+    height: 600px;
+  }
+}
 
-	#herotitle {
-		text-align: center;
-	}
-
-	#herop {
-		text-align: center;
-	}
-
-	img {
-		margin-bottom: 70px;
-	}
-
-	.tr {
-		text-align: center;
-		margin-top: 75px;
-	}
-
-	.os-h2 {
-		text-align: center;
-		margin-left: 290px;
-		margin-right: 290px;
-	}
-	
-	.os-p {
-		text-align: center;
-		margin-left: 240px;
-		margin-right: 240px;
-	}
-
-	.os-w {
-		height: 400px;
-	}
-
-	.os-b {
-		height: 400px;
-	}
-
-	.i-btn {
-		width: 50%;
-	}
+@media only screen and (min-device-width: 375px) and (max-device-width: 1110px) {
+  #navbar-ourstory {
+    display: none;
   }
 
-
-@media only screen 
-  and (min-device-width: 275px) 
-  and (max-device-width: 767px) {
-
-	#herotitle {
-		font-size: 54px;
-		line-height: 54px;
-		text-align: center;
-	}
-
-
-
-	#herop {
-		font-size: 21px;
-		line-height: 21px;
-		text-align: center;
-	}
-
-	#hrw {
-		font-size: 39px;
-		margin-top: 0px;
-	}
-
-	h1 {
-		font-size: 54px;
-		line-height: 54px;
-		text-align: center;
-	}
-
-	p {
-		text-align: center;
-	}
-
-	#mt125 {
-		margin-top: 55px;
-	}
-
-	.emailcapture {
-		height: 750px;
-	}
-
-	.os-h2 {
-		text-align: center;
-		margin-left: 190px;
-		margin-right: 190px;
-	}
-	
-	.os-p {
-		text-align: center;
-		margin-left: 140px;
-		margin-right: 140px;
-	}
-
-	#herobtn {
-		margin-left: 180px;
-
-	}
-
-	#herobtn2{
-		margin-left: 0px;
-	}
-
-	.i-btn {
-		width: 100%;
-	}
-
-	.i-img {
-		height: 446px;
-	}	
-
-	#c-background {
-		height:100px;
-	}
-	
-	#c-slackgraphic {
-		height: 600px;
-	}
-
-	#i-background {
-		height: 968px;
-	}
-
+  .os-h2 {
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
-  @media only screen 
-  and (min-device-width: 275px) 
-  and (max-device-width: 422px) {
+  .os-p {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
 
-	#navbar-brand-main {
-		margin-left: 0px;
-	}
-
-	.i-img {
-		height: 446px;
-	}	
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 991px) {
+  #herotitle {
+    text-align: center;
   }
 
- * {
-	font-family: 'Anek Devanagari', sans-serif;
+  #herop {
+    text-align: center;
+  }
+
+  img {
+    margin-bottom: 70px;
+  }
+
+  .tr {
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  .os-h2 {
+    text-align: center;
+    margin-left: 290px;
+    margin-right: 290px;
+  }
+
+  .os-p {
+    text-align: center;
+    margin-left: 240px;
+    margin-right: 240px;
+  }
+
+  .os-w {
+    height: 400px;
+  }
+
+  .os-b {
+    height: 400px;
+  }
+
+  .i-btn {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-device-width: 275px) and (max-device-width: 767px) {
+  #herotitle {
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  #herop {
+    font-size: 21px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  #hrw {
+    font-size: 39px;
+    margin-top: 0px;
+  }
+
+  h1 {
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #mt125 {
+    margin-top: 55px;
+  }
+
+  .emailcapture {
+    height: 750px;
+  }
+
+  .os-h2 {
+    text-align: center;
+    margin-left: 190px;
+    margin-right: 190px;
+  }
+
+  .os-p {
+    text-align: center;
+    margin-left: 140px;
+    margin-right: 140px;
+  }
+
+  #herobtn {
+    margin-left: 180px;
+  }
+
+  #herobtn2 {
+    margin-left: 0px;
+  }
+
+  .i-btn {
+    width: 100%;
+  }
+
+  .i-img {
+    height: 446px;
+  }
+
+  #c-background {
+    height: 100px;
+  }
+
+  #c-slackgraphic {
+    height: 600px;
+  }
+
+  #i-background {
+    height: 968px;
+  }
+}
+
+@media only screen and (min-device-width: 275px) and (max-device-width: 422px) {
+  #navbar-brand-main {
+    margin-left: 0px;
+  }
+
+  .i-img {
+    height: 446px;
+  }
+}
+
+* {
+  font-family: "Anek Devanagari", sans-serif;
 }
 
 /* for wide screens over 1761px */
 
-@media only screen 
-  and (min-device-width: 1761px) 
-  and (max-device-width: 3700px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-
+@media only screen and (min-device-width: 1761px) and (max-device-width: 3700px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
