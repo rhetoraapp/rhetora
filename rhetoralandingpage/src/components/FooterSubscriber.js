@@ -1,17 +1,21 @@
 import React from "react";
+import bannerReqAccess from "../assets/banner-req-access.svg";
 
 const FooterSubscriber = () => {
   return (
     <div className="flex justify-center md:absolute w-full z-20">
-      <div className="-mb-28 bg-main w-full md:w-1/2 md:rounded-lg px-10 py-4">
-        <div className="md:flex md:flex-col items-center justify-between gap-8">
+      <div
+        className="-mb-28 bg-main w-full md:w-3/4 lg:w-4/6 rounded-lg md:rounded-lg px-10 py-16"
+        style={{ backgroundImage: `url(${bannerReqAccess})` }}
+      >
+        <div className="sm:w-2/3 md:w-full mx-auto flex flex-col items-center justify-between gap-8">
           <p className="text-2xl text-white font-anek">
-            Ready to explode your response rates?
+            If you made it this far, we must be striking a chord.
           </p>
           {/* CTA */}
-          <div className="mt-5 border border-white w-full md:w-3/4 rounded-full">
+          <div className="mt-4 md:mt-0 border border-white w-full md:w-3/4 rounded-full">
             <div className="m-1 flex items-center gap-2 border border-white rounded-full bg-white w-98/100">
-              <button className="w-48 md:w-60 bg-minor uppercase py-2 px-3 rounded-full text-white text-xs md:text-lg font-medium">
+              <button className="w-48 md:w-60 bg-main uppercase py-2 px-3 rounded-full text-white text-xs md:text-lg font-medium">
                 Early Access
               </button>
               <input

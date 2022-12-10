@@ -135,7 +135,7 @@ const HowItWorksMobile = () => {
         </div>
         <div className="w-full md:w-3/6">
           <img
-            src={require("../assets/unlimited mock calls.svg").default}
+            src={require("../assets/ai-suggestions.svg").default}
             alt="hero"
             className="float-right"
           />
@@ -172,7 +172,7 @@ const HowItWorksMobile = () => {
         </div>
         <div className="w-full md:w-3/6">
           <img
-            src={require("../assets/unlimited mock calls.svg").default}
+            src={require("../assets/analytics-insights-hero.svg").default}
             alt="hero"
             className="float-right"
           />

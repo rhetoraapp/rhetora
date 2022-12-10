@@ -1,5 +1,6 @@
 import React from "react";
 import HowItWorksMobile from "./HowItWorksMobile";
+import bannerReqAccess from "../assets/banner-req-access-2.svg";
 
 const HowItWorks = () => {
   return (
@@ -8,22 +9,25 @@ const HowItWorks = () => {
         className="p-4 md:p-20 flex flex-col items-center"
         style={{ backgroundColor: "#F9F9F9" }}
       >
-        <p className="font-anek text-minor text-4xl font-semibold">
+        <p className="font-anek text-minor mt-6 text-4xl font-semibold">
           How rhetora Works
         </p>
         {/* Tabs section */}
-        <div className="hidden md:block my-20 bg-white w-full rounded-2xl md:p-20">
+        <div
+          className="hidden md:block my-20 bg-white w-full md:p-20"
+          style={{ borderRadius: "60px" }}
+        >
           <div>
-            <div class="mb-4 border-b border-gray-200 ">
+            <div className="mb-4 border-b border-gray-200 ">
               <ul
-                class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                className="flex flex-wrap -mb-px text-sm font-medium text-center"
                 id="myTab"
                 data-tabs-toggle="#myTabContent"
                 role="tablist"
               >
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 font-anek"
+                    className="inline-block p-4 rounded-t-lg border-b-2 font-anek"
                     id="profile-tab"
                     data-tabs-target="#profile"
                     type="button"
@@ -34,9 +38,9 @@ const HowItWorks = () => {
                     UNLIMITED MOCK CALLS
                   </button>
                 </li>
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                     id="visualize-talk-track"
                     data-tabs-target="#visualizeTalkTrack"
                     type="button"
@@ -47,9 +51,9 @@ const HowItWorks = () => {
                     VISUALIZE TALK TRACK
                   </button>
                 </li>
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
+                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
                     id="script-builder"
                     data-tabs-target="#scriptBuilder"
                     type="button"
@@ -60,9 +64,9 @@ const HowItWorks = () => {
                     SCRIPT BUILDER
                   </button>
                 </li>
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
+                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
                     id="ai-suggestions"
                     data-tabs-target="#aiSuggestion"
                     type="button"
@@ -75,7 +79,7 @@ const HowItWorks = () => {
                 </li>
                 <li role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
+                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
                     id="analytics-insights"
                     data-tabs-target="#analyticsInsights"
                     type="button"
@@ -90,7 +94,7 @@ const HowItWorks = () => {
             </div>
             <div id="myTabContent">
               <div
-                class="hidden"
+                className="hidden"
                 id="profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
@@ -135,7 +139,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div
-                class="hidden"
+                className="hidden"
                 id="visualizeTalkTrack"
                 role="tabpanel"
                 aria-labelledby="visualize-talk-track"
@@ -179,7 +183,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div
-                class="hiddendark:bg-gray-800"
+                className="hiddendark:bg-gray-800"
                 id="scriptBuilder"
                 role="tabpanel"
                 aria-labelledby="script-builder"
@@ -222,7 +226,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div
-                class="hiddendark:bg-gray-800"
+                className="hiddendark:bg-gray-800"
                 id="aiSuggestion"
                 role="tabpanel"
                 aria-labelledby="ai-suggestions"
@@ -258,7 +262,7 @@ const HowItWorks = () => {
                   <div className="w-full md:w-3/6">
                     <img
                       src={
-                        require("../assets/unlimited mock calls.svg").default
+                        require("../assets/ai-suggestions.svg").default
                       }
                       alt="hero"
                       className="float-right"
@@ -267,7 +271,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div
-                class="hiddendark:bg-gray-800"
+                className="hiddendark:bg-gray-800"
                 id="analyticsInsights"
                 role="tabpanel"
                 aria-labelledby="analytics-insights"
@@ -306,7 +310,7 @@ const HowItWorks = () => {
                   <div className="w-full md:w-3/6">
                     <img
                       src={
-                        require("../assets/unlimited mock calls.svg").default
+                        require("../assets/analytics-insights-hero.svg").default
                       }
                       alt="hero"
                       className="float-right"
@@ -321,7 +325,12 @@ const HowItWorks = () => {
         <HowItWorksMobile />
         {/* Mobile View */}
         {/* Promotion banner */}
-        <div className="hidden md:block -mb-28 bg-minorlight max-w-5xl rounded-lg px-10 py-16">
+        <div
+          className="hidden md:block -mb-28 bg-minorlight max-w-5xl rounded-lg px-10 py-16"
+          style={{
+            backgroundImage: `url(${bannerReqAccess})`,
+          }}
+        >
           <div className="flex items-center justify-between gap-16">
             <p className="text-2xl text-white font-anek">
               Ready to explode your response rates?
@@ -339,19 +348,19 @@ const HowItWorks = () => {
         {/* another tabs section */}
         <div
           className="mb-20 mt-40 w-full rounded-2xl md:p-20"
-          style={{ backgroundColor: "#F8F8F9" }}
+          style={{ backgroundColor: "#F8F8F9", borderRadius: "60px" }}
         >
           <div>
-            <div class="mb-4 border-b border-gray-200">
+            <div className="mb-4 border-b border-gray-200">
               <ul
-                class="flex flex-wrap -mb-px text-sm font-medium text-center"
+                className="flex flex-wrap -mb-px text-sm font-medium text-center"
                 id="myTab"
                 data-tabs-toggle="#mySalesTabContent"
                 role="tablist"
               >
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 font-anek"
+                    className="inline-block p-4 rounded-t-lg border-b-2 font-anek"
                     id="sales-leaders"
                     data-tabs-target="#salesLeaders"
                     type="button"
@@ -362,9 +371,9 @@ const HowItWorks = () => {
                     Sales Leaders
                   </button>
                 </li>
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                     id="sales-rep"
                     data-tabs-target="#salesRep"
                     type="button"
@@ -375,9 +384,9 @@ const HowItWorks = () => {
                     Sales Rep
                   </button>
                 </li>
-                <li class="mr-2" role="presentation">
+                <li className="mr-2" role="presentation">
                   <button
-                    class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
+                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
                     id="enterpreneur-tab"
                     data-tabs-target="#enterpreneurs"
                     type="button"
@@ -392,7 +401,7 @@ const HowItWorks = () => {
             </div>
             <div id="mySalesTabContent">
               <div
-                class="hidden"
+                className="hidden"
                 id="salesLeaders"
                 role="tabpanel"
                 aria-labelledby="sales-leaders"
@@ -421,7 +430,7 @@ const HowItWorks = () => {
                     <div className="mt-4">
                       <button
                         type="button"
-                        class="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                       >
                         Book Demo
                       </button>
@@ -447,7 +456,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div
-                class="hidden"
+                className="hidden"
                 id="salesRep"
                 role="tabpanel"
                 aria-labelledby="sales-rep"
@@ -477,7 +486,7 @@ const HowItWorks = () => {
                     <div className="mt-4">
                       <button
                         type="button"
-                        class="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                       >
                         Get Access
                       </button>
@@ -493,7 +502,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div
-                class="hidden"
+                className="hidden"
                 id="enterpreneurs"
                 role="tabpanel"
                 aria-labelledby="enterpreneur-tab"
@@ -523,7 +532,7 @@ const HowItWorks = () => {
                     <div className="mt-4">
                       <button
                         type="button"
-                        class="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                       >
                         Book Demo
                       </button>

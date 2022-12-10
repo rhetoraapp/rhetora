@@ -62,12 +62,13 @@ const community = () => {
                 <p className="text-2xl mb-2 text-main font-bold  ">
                   Network with like-minded
                 </p>
-                <p className="text-base text-main ">
+                <p className="text-base text-main">
                   Networking is an essential part of the sales profession. By
                   building connections with other professionals, we can learn
                   from their experiences, gain valuable insights, and even find
                   new leads and opportunities.
-                  <hr className="border-none my-2" />
+                </p>
+                <p className="text-base text-main border-none my-2">
                   The Rhetora Community is a great place to network with other
                   sales professionals. Our active slack channel is a hub for
                   discussion and networking, where members can connect with each
@@ -91,7 +92,8 @@ const community = () => {
                   success of any career, let alone in sales. Our members work
                   together and share ideas, we learn from each other, improve
                   our skills, and achieve our goals more effectively.
-                  <hr className="border-none my-2" />
+                </p>
+                <p className="text-base text-main border-none my-2">
                   The Rhetora Community provides a platform for sales
                   professionals to collaborate and share best practices. Our
                   slack channel is where members bounce ideas off of one another
