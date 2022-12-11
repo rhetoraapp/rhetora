@@ -15,7 +15,7 @@ const HeroSection = () => {
             sales reps in days, instead of weeks without burning your lead list.
           </p>
           <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/4">
-            <button className="w-48 md:w-60 bg-minor uppercase py-2 px-3 rounded-full text-white text-xs md:text-lg font-medium">
+            <button style={{paddingTop:"13px"}} className="w-48 md:w-60 bg-minor uppercase pb-2 px-3 rounded-full text-white text-xs md:text-lg font-medium">
               Early Access
             </button>
             <input

@@ -17,9 +17,13 @@ const navbar = () => {
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
-            <div className="text-white bg-minor hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+            <Link
+              to="/join-waitlist"
+              className="text-white bg-minor hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-bold rounded-lg text-sm px-4 lg:px-5 pb-2 lg:py-2.5 mr-2 focus:outline-none "
+              style={{ paddingTop: "13px" }}
+            >
               Join Waitlist
-            </div>
+            </Link>
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"

@@ -6,15 +6,12 @@ import Background from "../assets/Hero-lines.svg";
 import { useFormik, Form, FormikProvider } from "formik";
 // Yup
 import * as Yup from "yup";
-import { PostAccessRequest } from "../api";
-import { Link } from "react-router-dom";
+import { InviteFriendRequest, PostAccessRequest } from "../api";
 // import HubspotForm from "react-hubspot-form";
 
-const JoinWaitlist = () => {
+const InviteFriend = () => {
   // validation schema
   const LoginSchema = Yup.object().shape({
-    name: Yup.string().required("Name is required."),
-    companyName: Yup.string().required("Company name is required."),
     email: Yup.string()
       .email("Email must be a valid email address")
       .required("The Email address field is required."),
@@ -23,8 +20,6 @@ const JoinWaitlist = () => {
   // formik
   const formik = useFormik({
     initialValues: {
-      name: "",
-      companyName: "",
       email: "",
     },
 
@@ -32,18 +27,14 @@ const JoinWaitlist = () => {
     onSubmit: async (values, { setErrors, setSubmitting, resetForm }) => {
       console.log("values", values);
       try {
-        const result = await PostAccessRequest({
-          name: values.name,
-          companyName: values.companyName,
+        const result = await InviteFriendRequest({
           email: values.email,
         });
         console.log(result);
         if (result && result.status === "200") {
           setErrors({
             success: result.message || "Successfully Requested!",
-            queueNumber: result.payload.queueNumber,
           });
-          localStorage.setItem("successfullAccess", values.email);
         } else {
           console.log("error", result);
           setErrors({
@@ -51,8 +42,6 @@ const JoinWaitlist = () => {
               result?.response.data.message || "Request Failed, Try again!",
           });
         }
-        values.name = "";
-        values.companyName = "";
         values.email = "";
       } catch (error) {
         resetForm();
@@ -88,11 +77,8 @@ const JoinWaitlist = () => {
             <div className="flex justify-center p-2">
               <div className="p-12 md:p-20 w-full md:w-4/6 flex justify-center flex-col bg-white rounded-3xl shadow my-5">
                 <h1 className="text-center text-main">
-                  rhetora is <br></br>Launching Soon
+                  Invite friend to skip to queue number!
                 </h1>
-                <p className="tc mt-2">
-                  Designed by sales professionals, for sales professionals.
-                </p>
                 <div className="mt-4">
                   {/* Error handling */}
                   {errors && errors.success && (
@@ -100,15 +86,7 @@ const JoinWaitlist = () => {
                       className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
                       role="alert"
                     >
-                      <span className="font-medium">
-                        {errors.success}, your Queue number is{" "}
-                        <b>
-                          {errors.queueNumber},{" "}
-                          <Link to="/invite-friend">
-                            Invite Friends to skip to queue ➡
-                          </Link>
-                        </b>
-                      </span>
+                      <span className="font-medium">{errors.success}</span>
                     </div>
                   )}
                   {errors && errors.afterSubmit && (
@@ -119,16 +97,6 @@ const JoinWaitlist = () => {
                       <span className="font-medium">{errors.afterSubmit}</span>
                     </div>
                   )}
-                  {(errors.name || errors.companyName) && (
-                    <div
-                      className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
-                      role="alert"
-                    >
-                      <span className="font-medium">
-                        Kindly fill all the fields!
-                      </span>
-                    </div>
-                  )}
                   {errors && errors.email && (
                     <div
                       className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
@@ -137,43 +105,23 @@ const JoinWaitlist = () => {
                       <span className="font-medium">{errors.email}</span>
                     </div>
                   )}
-                  {/* Error handling */}
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      {...getFieldProps("name")}
-                      className="md:col-start-1 md:col-end-3 border-1 border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
-                    />
-                    <input
-                      type="text"
-                      {...getFieldProps("companyName")}
-                      placeholder="Company Name"
-                      className="md:col-start-3 md:col-end-5 border-1 border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
-                    />
+                  {/* Error handling end */}
+                  <div className="flex items-center justify-center gap-2">
                     <input
                       type="text"
                       {...getFieldProps("email")}
                       placeholder="Email"
-                      className="md:col-start-1 md:col-end-4 border-1 border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
+                      className="border-1 h-full border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
                     />
                     <button
                       type="submit"
-                      className="md:col-start-4 py-2 md:col-end-5 bg-main text-white rounded-lg"
+                      className="px-4 pb-2 bg-main text-white rounded-lg"
+                      style={{ paddingTop: "14px" }}
                     >
-                      Get Early Access
+                      Invite Friend
                     </button>
                   </div>
                 </div>
-                {/*<div id="cinputdiv" className="">
-               <HubspotForm
-                portalId="22700288"
-                formId="5d003db2-c7e7-4230-b51f-cf526b584d4b"
-                onSubmit={() => console.log("Submit!")}
-                onReady={(form) => console.log("Form ready!")}
-                loading={<div>Loading...</div>}
-              /> 
-            </div>*/}
               </div>
             </div>
           </div>
@@ -184,4 +132,4 @@ const JoinWaitlist = () => {
   );
 };
 
-export default JoinWaitlist;
+export default InviteFriend;

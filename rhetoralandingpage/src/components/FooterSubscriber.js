@@ -15,13 +15,16 @@ const FooterSubscriber = () => {
           {/* CTA */}
           <div className="mt-4 md:mt-0 border border-white w-full md:w-3/4 rounded-full">
             <div className="m-1 flex items-center gap-2 border border-white rounded-full bg-white w-98/100">
-              <button className="w-48 md:w-60 bg-main uppercase py-2 px-3 rounded-full text-white text-xs md:text-lg font-medium">
+              <button
+                style={{ paddingTop: "13px" }}
+                className="w-48 md:w-60 bg-main uppercase pb-2 px-3 rounded-full text-white text-xs md:text-lg font-medium"
+              >
                 Early Access
               </button>
               <input
                 type="email"
                 id="email"
-                className="border-none placeholder:text-base p-0 w-full placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
+                className="border-none placeholder:text-base w-full placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
                 placeholder="name@rhetora.cc"
                 required
               />
