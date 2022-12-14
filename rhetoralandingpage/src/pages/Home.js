@@ -13,7 +13,7 @@ const Home = () => {
       <HeroSection />
       {/* Hero Section */}
       <HowItWorks />
-      <FooterSubscriber />
+      <FooterSubscriber title="If you made it this far, we must be striking a chord." />
       <Footer />
     </div>
   );

@@ -9,17 +9,17 @@ const navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               src={require("../assets/Logo-Regular.svg").default}
-              className="mr-3 h-16 mb-0"
+              className="mr-3 h-16 mb-0 pt-2"
               alt="Rhetora Logo"
             />
-            <span className="hidden md:block self-center text-xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="hidden pt-2 md:block self-center text-xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">
               rhetora
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
             <Link
               to="/join-waitlist"
-              className="text-white bg-minor hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-bold rounded-lg text-sm px-4 lg:px-5 pb-2 lg:py-2.5 mr-2 focus:outline-none "
+              className="text-white bg-main hover:bg-minor focus:ring-4 focus:ring-primary-300 font-bold rounded-lg text-lg px-3 lg:px-5 pb-2 lg:py-2 mr-2 focus:outline-none "
               style={{ paddingTop: "13px" }}
             >
               Join Waitlist
@@ -66,7 +66,7 @@ const navbar = () => {
               <li>
                 <Link
                   to="/our-story"
-                  className="block py-2 pr-4 pl-3 text-main font-medium rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                  className="block py-2 pr-4 pl-3 text-lg font-medium rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Our Story
@@ -75,7 +75,7 @@ const navbar = () => {
               <li>
                 <Link
                   to="/community"
-                  className="block py-2 pr-4 pl-3 text-main font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-lg font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Community
                 </Link>
@@ -83,7 +83,7 @@ const navbar = () => {
               <li>
                 <Link
                   to="/contact-us"
-                  className="block py-2 pr-4 pl-3 text-main font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-lg font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
                 </Link>

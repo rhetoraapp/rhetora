@@ -1,7 +1,7 @@
 import React from "react";
 import bannerReqAccess from "../assets/banner-req-access.svg";
 
-const FooterSubscriber = () => {
+const FooterSubscriber = ({ title }) => {
   return (
     <div className="flex justify-center md:absolute w-full z-20">
       <div
@@ -9,9 +9,7 @@ const FooterSubscriber = () => {
         style={{ backgroundImage: `url(${bannerReqAccess})` }}
       >
         <div className="sm:w-2/3 md:w-full mx-auto flex flex-col items-center justify-between gap-8">
-          <p className="text-2xl text-white font-anek">
-            If you made it this far, we must be striking a chord.
-          </p>
+          <p className="text-2xl text-white font-anek">{title}</p>
           {/* CTA */}
           <div className="mt-4 md:mt-0 border border-white w-full md:w-3/4 rounded-full">
             <div className="m-1 flex items-center gap-2 border border-white rounded-full bg-white w-98/100">
@@ -24,7 +22,7 @@ const FooterSubscriber = () => {
               <input
                 type="email"
                 id="email"
-                className="border-none placeholder:text-base w-full placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
+                className="border-none placeholder:text-base mr-8 w-full placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
                 placeholder="name@rhetora.cc"
                 required
               />

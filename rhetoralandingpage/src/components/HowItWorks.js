@@ -9,7 +9,7 @@ const HowItWorks = () => {
         className="p-4 md:p-20 flex flex-col items-center"
         style={{ backgroundColor: "#F9F9F9" }}
       >
-        <p className="font-anek text-minor mt-6 text-4xl font-semibold">
+        <p className="font-anek text-minor mt-12 text-4xl font-semibold">
           How rhetora Works
         </p>
         {/* Tabs section */}
@@ -18,9 +18,9 @@ const HowItWorks = () => {
           style={{ borderRadius: "60px" }}
         >
           <div>
-            <div className="mb-4 border-b border-gray-200 ">
+            <div className="mb-4 border-gray-200 ">
               <ul
-                className="flex flex-wrap -mb-px text-sm font-medium text-center"
+                className="flex flex-wrap items-center justify-center -mb-px text-sm font-medium text-center"
                 id="myTab"
                 data-tabs-toggle="#myTabContent"
                 role="tablist"
@@ -40,7 +40,7 @@ const HowItWorks = () => {
                 </li>
                 <li className="mr-2" role="presentation">
                   <button
-                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                    className="inline-block p-4 rounded-t-lg text-main border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                     id="visualize-talk-track"
                     data-tabs-target="#visualizeTalkTrack"
                     type="button"
@@ -92,14 +92,14 @@ const HowItWorks = () => {
                 </li>
               </ul>
             </div>
-            <div id="myTabContent">
+            <div id="myTabContent" className="mx-8">
               <div
                 className="hidden"
                 id="profile"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container md:px-10 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-lg font-semibold uppercase text-minor">
                       Unlimited Mock Calls
@@ -144,7 +144,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="visualize-talk-track"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-lg font-semibold uppercase text-minor">
                       Visualize Talk Track
@@ -188,7 +188,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="script-builder"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-lg font-semibold uppercase text-minor">
                       Script Builder
@@ -231,7 +231,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="ai-suggestions"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-lg font-semibold uppercase text-minor">
                       AI Suggestions
@@ -274,7 +274,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="analytics-insights"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-lg font-semibold uppercase text-minor">
                       Analytics & Insights
@@ -350,9 +350,9 @@ const HowItWorks = () => {
           style={{ backgroundColor: "#F8F8F9", borderRadius: "60px" }}
         >
           <div>
-            <div className="mb-4 border-b border-gray-200">
+            <div className="mb-4 border-gray-200">
               <ul
-                className="flex flex-wrap -mb-px text-sm font-medium text-center"
+                className="flex flex-wrap items-center justify-center -mb-px text-sm font-medium text-center"
                 id="myTab"
                 data-tabs-toggle="#mySalesTabContent"
                 role="tablist"
@@ -398,14 +398,14 @@ const HowItWorks = () => {
                 </li>
               </ul>
             </div>
-            <div id="mySalesTabContent">
+            <div id="mySalesTabContent" className="mx-8">
               <div
                 className="hidden"
                 id="salesLeaders"
                 role="tabpanel"
                 aria-labelledby="sales-leaders"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-5xl font-bold text-main mt-6">
                       Lead Your Champions.
@@ -460,7 +460,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="sales-rep"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-5xl font-bold text-main mt-6">
                       Practice To Mastery.
@@ -506,7 +506,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="enterpreneur-tab"
               >
-                <div className="container md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 md:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-5xl font-bold text-main mt-6">
                       Pitch Perfectly.
@@ -541,7 +541,7 @@ const HowItWorks = () => {
                     <img
                       src={require("../assets/Enterpreneurs.svg").default}
                       alt="hero"
-                      className="float-right  z-10"
+                      className="float-right z-10 w-screen"
                     />
                   </div>
                 </div>
