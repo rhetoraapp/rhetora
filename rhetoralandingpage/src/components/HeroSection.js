@@ -3,7 +3,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div>
-      <div className="container px-10 py-16 mx-auto flex flex-col md:flex md:flex-row items-center justify-between gap-8 w-100">
+      <div className="container px-10 pt-24 md:pt-16 pb-16 mx-auto flex flex-col md:flex md:flex-row items-center justify-between gap-8 w-100">
         <div className="font-inter w-full text-start md:w-3/6">
           <h2 className="text-4xl lg:text-5xl font-bold text-main">
             Eliminate Cold Calling <br />

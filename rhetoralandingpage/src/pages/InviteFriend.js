@@ -34,6 +34,7 @@ const InviteFriend = () => {
         if (result && result.status === "200") {
           setErrors({
             success: result.message || "Successfully Requested!",
+            queueNumber: result.payload.queueNumber,
           });
         } else {
           console.log("error", result);
@@ -86,7 +87,12 @@ const InviteFriend = () => {
                       className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
                       role="alert"
                     >
-                      <span className="font-medium">{errors.success}</span>
+                      <span className="font-medium">
+                        {errors.success}, your new Queue number is{" "}
+                        <b>
+                          {errors.queueNumber},{" "}
+                        </b>
+                      </span>
                     </div>
                   )}
                   {errors && errors.afterSubmit && (

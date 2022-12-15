@@ -2,7 +2,7 @@ import React from "react";
 
 const HowItWorksMobile = () => {
   return (
-    <div className="md:hidden bg-white">
+    <div className="md:hidden bg-white rounded-xl">
       <div className="container md:px-10 pt-16 mx-auto flex flex-col md:flex md:flex-row items-center justify-between w-100">
         <div className="font-inter w-full text-start md:w-3/6">
           <p className="font-anek text-lg text-left font-semibold uppercase text-minor">
@@ -30,11 +30,11 @@ const HowItWorksMobile = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-3/6">
+        <div className="w-full md:w-3/6 flex justify-center mb-0">
           <img
             src={require("../assets/unlimited mock calls.svg").default}
             alt="hero"
-            className="float-right"
+            className="float-right w-60"
           />
         </div>
       </div>
@@ -64,11 +64,11 @@ const HowItWorksMobile = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-3/6">
+        <div className="w-full md:w-3/6 flex justify-center mb-0">
           <img
             src={require("../assets/visualize-talk-track.svg").default}
             alt="hero"
-            className="float-right"
+            className="float-right w-60"
           />
         </div>
       </div>
@@ -98,11 +98,11 @@ const HowItWorksMobile = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-3/6">
+        <div className="w-full md:w-3/6 flex justify-center mb-0">
           <img
             src={require("../assets/script-builder.svg").default}
             alt="hero"
-            className="float-right"
+            className="float-right w-60"
           />
         </div>
       </div>
@@ -133,11 +133,11 @@ const HowItWorksMobile = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-3/6">
+        <div className="w-full md:w-3/6 flex justify-center mb-0">
           <img
             src={require("../assets/ai-suggestions.svg").default}
             alt="hero"
-            className="float-right"
+            className="float-right w-60 mb-0"
           />
         </div>
       </div>
@@ -170,11 +170,11 @@ const HowItWorksMobile = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-3/6">
+        <div className="w-full md:w-3/6 flex justify-center mb-0">
           <img
             src={require("../assets/analytics-insights-hero.svg").default}
             alt="hero"
-            className="float-right"
+            className="float-right w-60"
           />
         </div>
       </div>

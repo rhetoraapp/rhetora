@@ -165,15 +165,6 @@ const JoinWaitlist = () => {
                     </button>
                   </div>
                 </div>
-                {/*<div id="cinputdiv" className="">
-               <HubspotForm
-                portalId="22700288"
-                formId="5d003db2-c7e7-4230-b51f-cf526b584d4b"
-                onSubmit={() => console.log("Submit!")}
-                onReady={(form) => console.log("Form ready!")}
-                loading={<div>Loading...</div>}
-              /> 
-            </div>*/}
               </div>
             </div>
           </div>

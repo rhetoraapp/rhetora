@@ -66,16 +66,23 @@ const community = () => {
             />
           </div>
         </div>
-        <div className="py-32 w-full">
+        <div className="-my-10 md:hidden w-full -mr-32">
+          <img
+            src={require("../assets/community-main-mobile.svg").default}
+            alt="community"
+            className="mx-auto w-full md:w-2/3"
+          />
+        </div>
+        <div className="hidden md:block py-16 md:py-32 w-full">
           <img
             src={require("../assets/Main.svg").default}
             alt="community"
-            className="mx-auto w-2/3"
+            className="mx-auto w-full md:w-2/3"
           />
         </div>
         <div>
           <div className="">
-            <p className="text-6xl text-center text-main font-bold">
+            <p className="text-3xl md:text-6xl text-center text-main font-bold">
               Exclusive Access Includes
             </p>
             <p className="text-base text-center text-main">

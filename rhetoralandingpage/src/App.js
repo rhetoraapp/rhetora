@@ -67,9 +67,8 @@ const App = () => {
         </Helmet>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/ourstory" element={<Ourstory />}></Route>
+          <Route path="/our-story" element={<Ourstory />}></Route>
           <Route path="/contact-us" element={<Contactus />}></Route>
-          <Route path="/join" element={<Joinwaitlist />}></Route>
           <Route path="/community" element={<Community />}></Route>
           <Route path="/invited-c03skupo" element={<Invited />}></Route>
           <Route path="/join-waitlist" element={<JoinWaitlist />}></Route>

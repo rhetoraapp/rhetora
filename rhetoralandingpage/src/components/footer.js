@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const footer = () => {
   return (
@@ -47,41 +48,44 @@ const footer = () => {
           </a>
           <ul className="flex font-anek my-16 md:my-6  flex-wrap items-center justify-center  text-sm text-gray-500 dark:text-gray-400">
             <li className="">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="mx-4 text-white font-anek  hover:underline md:mr-6 "
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="border-l border-white">
-              <a
-                href="#"
+              <Link
+                to="/our-story"
                 className="mx-4 text-white font-anek  hover:underline md:mr-6 "
               >
                 Our Story
-              </a>
+              </Link>
             </li>
             <li className="border-l border-white">
-              <a
-                href="#"
+              <Link
+                to="/community"
                 className="mx-4 text-white font-anek  hover:underline md:mr-6"
               >
                 Community
-              </a>
+              </Link>
             </li>
             <li className="border-l border-white">
-              <a
-                href="#"
+              <Link
+                to="/contact-us"
                 className="mx-4 text-white font-anek  hover:underline md:mr-6 "
               >
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="border-l border-white">
-              <a href="#" className="mx-4 text-white font-anek hover:underline">
+              <Link
+                to="/join-waitlist"
+                className="mx-4 text-white font-anek hover:underline"
+              >
                 Join Waitlist
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="flex items-center justify-center gap-4 md:gap-6">
