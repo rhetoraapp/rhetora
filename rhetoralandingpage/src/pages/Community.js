@@ -37,10 +37,10 @@ const community = () => {
       <Navbar />
       <div className="container px-10 py-32 mx-auto flex flex-col items-center justify-between w-100">
         <div className="text-center flex flex-col items-center">
-          <p className="text-3xl md:text-5xl text-main font-bold">
+          <p className="text-4xl md:text-5xl text-main font-bold">
             Become a <span className="text-minor">Rhetorian</span>
           </p>
-          <p className="text-3xl md:text-5xl text-main font-bold">
+          <p className="text-4xl md:text-5xl text-main font-bold">
             Become a <span className="text-minor">Champion</span>
           </p>
           <p className="w-full md:w-2/3 mt-6 text-lg">
@@ -66,18 +66,18 @@ const community = () => {
             />
           </div>
         </div>
-        <div className="-my-10 md:hidden w-full -mr-32">
+        <div className="-my-10 md:hidden w-full -mr-60">
           <img
             src={require("../assets/community-main-mobile.svg").default}
             alt="community"
             className="mx-auto w-full md:w-2/3"
           />
         </div>
-        <div className="hidden md:block py-16 md:py-32 w-full">
+        <div className="hidden md:block w-full">
           <img
-            src={require("../assets/Main.svg").default}
+            src={require("../assets/main-community-with-color-blur.svg").default}
             alt="community"
-            className="mx-auto w-full md:w-2/3"
+            className="mx-auto w-full md:w-full"
           />
         </div>
         <div>
@@ -103,9 +103,9 @@ const community = () => {
                   <p className="text-2xl mb-2 text-main font-bold  ">
                     {item.title}
                   </p>
-                  <p className="text-base text-main pl-8 w-5/6">{item.p1}</p>
+                  <p className="text-base text-main w-full md:w-5/6">{item.p1}</p>
                   {item.p2 && (
-                    <p className="text-base text-main border-none my-2 pl-8 w-5/6">
+                    <p className="text-base text-main border-none my-2 w-full md:w-5/6">
                       {item.p2}
                     </p>
                   )}

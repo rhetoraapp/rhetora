@@ -5,7 +5,7 @@ const FooterSubscriber = ({ title }) => {
   return (
     <div className="flex justify-center md:absolute w-full z-20">
       <div
-        className="-mb-28 bg-main w-full md:w-3/4 lg:w-4/6 rounded-lg md:rounded-lg px-10 py-16"
+        className="-mb-28 bg-main w-full md:w-3/4 lg:w-4/6 rounded-none md:rounded-lg px-10 py-16"
         style={{ backgroundImage: `url(${bannerReqAccess})` }}
       >
         <div className="sm:w-2/3 md:w-full mx-auto flex flex-col items-center justify-between gap-8">

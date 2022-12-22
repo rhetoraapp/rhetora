@@ -100,7 +100,7 @@ const HowItWorks = () => {
                   role="tabpanel"
                   aria-labelledby="profile-tab"
                 >
-                  <div className="container lg:px-4 xl:px-10 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         Unlimited Mock Calls
@@ -124,7 +124,7 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="m-2 lg:m-4 border-l-4 border-minor p-1">
-                        <p className="ml-4 text-xl lg:text-2xl font-semibold font-anek text-subheading">
+                        <p className="ml-4 text-xl lg:text-xl font-semibold font-anek text-subheading">
                           Train your team for the real world
                         </p>
                       </div>
@@ -146,7 +146,7 @@ const HowItWorks = () => {
                   role="tabpanel"
                   aria-labelledby="visualize-talk-track"
                 >
-                  <div className="container lg:px-4 xl:px-10 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         VISUALIZE TALK TRACK
@@ -169,7 +169,7 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="m-2 lg:m-4 border-l-4 border-minor p-1">
-                        <p className="ml-4 text-xl lg:text-2xl font-semibold font-anek text-subheading">
+                        <p className="ml-4 text-xl font-semibold font-anek text-subheading">
                           Never lose track of your call again.
                         </p>
                       </div>
@@ -191,7 +191,7 @@ const HowItWorks = () => {
                   role="tabpanel"
                   aria-labelledby="script-builder"
                 >
-                  <div className="container lg:px-4 xl:px-10 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         SCRIPT BUILDER
@@ -214,7 +214,7 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="m-2 lg:m-4 border-l-4 border-minor p-1">
-                        <p className="ml-4 text-xl lg:text-2xl font-semibold font-anek text-subheading">
+                        <p className="ml-4 text-xl font-semibold font-anek text-subheading">
                           Get it tailored or don’t wear it.
                         </p>
                       </div>
@@ -234,7 +234,7 @@ const HowItWorks = () => {
                   role="tabpanel"
                   aria-labelledby="ai-suggestions"
                 >
-                  <div className="container lg:px-4 xl:px-10 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         AI SUGGESTIONS
@@ -257,7 +257,7 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="m-2 lg:m-4 border-l-4 border-minor p-1">
-                        <p className="ml-4 text-xl lg:text-2xl font-semibold font-anek text-subheading">
+                        <p className="ml-4 text-xl font-semibold font-anek text-subheading">
                           Leaving you with time to do what you do best, selling.
                         </p>
                       </div>
@@ -277,7 +277,7 @@ const HowItWorks = () => {
                   role="tabpanel"
                   aria-labelledby="analytics-insights"
                 >
-                  <div className="container lg:px-4 xl:px-10 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         ANALYTICS & INSIGHTS
@@ -302,7 +302,7 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="m-2 lg:m-4 border-l-4 border-minor p-1">
-                        <p className="ml-4 text-xl lg:text-2xl font-semibold font-anek text-subheading">
+                        <p className="ml-4 text-xl font-semibold font-anek text-subheading">
                           Reward your champions. Coach your champions. Cultivate
                           a winning sales team with data.
                         </p>
@@ -357,7 +357,7 @@ const HowItWorks = () => {
           <div>
             <div className="mb-4 border-gray-200">
               <ul
-                className="flex items-center justify-center -mb-px text-sm font-medium text-center"
+                className="flex items-center justify-start -mb-px md:pl-20 text-sm font-medium text-center"
                 id="myTab"
                 data-tabs-toggle="#mySalesTabContent"
                 role="tablist"
@@ -410,9 +410,9 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="sales-leaders"
               >
-                <div className="container gap-8 lg:px-4 xl:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 lg:px-4 xl:px-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
-                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-6">
+                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                       Lead Your Champions.
                     </p>
                     <div className="mt-6">
@@ -458,9 +458,9 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="sales-rep"
               >
-                <div className="container gap-8 lg:px-4 xl:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 lg:px-4 xl:px-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
-                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-6">
+                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                       Practice To Mastery.
                     </p>
                     <div className="mt-6">
@@ -504,9 +504,9 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="enterpreneur-tab"
               >
-                <div className="container gap-8 lg:px-4 xl:px-10 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 lg:px-4 xl:px-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
-                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-6">
+                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                       Pitch Perfectly.
                     </p>
                     <div className="mt-6">

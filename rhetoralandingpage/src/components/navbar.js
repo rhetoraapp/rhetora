@@ -12,7 +12,7 @@ const navbar = () => {
               className="mr-3 h-16 mb-0 pt-2"
               alt="Rhetora Logo"
             />
-            <span className="hidden pt-2 md:block self-center text-xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="hidden pt-2 md:block self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
               rhetora
             </span>
           </Link>
@@ -66,7 +66,7 @@ const navbar = () => {
               <li>
                 <Link
                   to="/our-story"
-                  className="block py-2 pr-4 pl-3 text-lg font-medium rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                  className="block py-2 pr-4 pl-3 text-md font-medium rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Our Story
@@ -75,7 +75,7 @@ const navbar = () => {
               <li>
                 <Link
                   to="/community"
-                  className="block py-2 pr-4 pl-3 text-lg font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-md font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Community
                 </Link>
@@ -83,7 +83,7 @@ const navbar = () => {
               <li>
                 <Link
                   to="/contact-us"
-                  className="block py-2 pr-4 pl-3 text-lg font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 pr-4 pl-3 text-md font-medium border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
                 </Link>
