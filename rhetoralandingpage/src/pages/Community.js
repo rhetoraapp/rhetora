@@ -66,7 +66,7 @@ const community = () => {
             />
           </div>
         </div>
-        <div className="-my-10 md:hidden w-full -mr-60">
+        <div className="-my-10 md:hidden w-full -mr-16">
           <img
             src={require("../assets/community-main-mobile.svg").default}
             alt="community"
