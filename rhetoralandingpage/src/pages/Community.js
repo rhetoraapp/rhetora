@@ -35,8 +35,15 @@ const community = () => {
   return (
     <div>
       <Navbar />
-      <div className="container px-10 py-32 mx-auto flex flex-col items-center justify-between w-100">
-        <div className="text-center flex flex-col items-center">
+      {/* <HubspotForm
+        portalId="22700288"
+        formId="521db1b3-1952-49a9-893b-c45a72bbfe05"
+        onSubmit={() => console.log("Submit!")}
+        onReady={(form) => console.log("Form ready!")}
+        loading={<div>Loading...</div>}
+      /> */}
+      <div className="md:container py-32 mx-auto flex flex-col items-center justify-between w-100">
+        <div className="text-center px-10 flex flex-col items-center">
           <p className="text-4xl md:text-5xl text-main font-bold">
             Become a <span className="text-minor">Rhetorian</span>
           </p>
@@ -66,21 +73,23 @@ const community = () => {
             />
           </div>
         </div>
-        <div className="-my-10 md:hidden w-full -mr-16">
+        <div className="md:hidden w-full">
           <img
             src={require("../assets/community-main-mobile.svg").default}
-            alt="community"
-            className="mx-auto w-full md:w-2/3"
-          />
-        </div>
-        <div className="hidden md:block w-full">
-          <img
-            src={require("../assets/main-community-with-color-blur.svg").default}
             alt="community"
             className="mx-auto w-full md:w-full"
           />
         </div>
-        <div>
+        <div className="hidden md:block w-full">
+          <img
+            src={
+              require("../assets/main-community-with-color-blur.svg").default
+            }
+            alt="community"
+            className="mx-auto w-full md:w-full"
+          />
+        </div>
+        <div className="px-10">
           <div className="">
             <p className="text-3xl md:text-6xl text-center text-main font-bold">
               Exclusive Access Includes
@@ -103,7 +112,9 @@ const community = () => {
                   <p className="text-2xl mb-2 text-main font-bold  ">
                     {item.title}
                   </p>
-                  <p className="text-base text-main w-full md:w-5/6">{item.p1}</p>
+                  <p className="text-base text-main w-full md:w-5/6">
+                    {item.p1}
+                  </p>
                   {item.p2 && (
                     <p className="text-base text-main border-none my-2 w-full md:w-5/6">
                       {item.p2}

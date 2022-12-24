@@ -1,6 +1,8 @@
 import React from "react";
 import HowItWorksMobile from "./HowItWorksMobile";
 import bannerReqAccess from "../assets/banner-req-access-2.svg";
+const LeadYourChampionship =
+  require("../assets/lead-your-championship-3-cropped.svg").default;
 
 const HowItWorks = () => {
   return (
@@ -443,11 +445,11 @@ const HowItWorks = () => {
                   <div className="w-full md:w-3/6">
                     <img
                       src={
-                        require("../assets/lead-your-championship-3.svg")
+                        require("../assets/lead-your-championship-3-cropped.svg")
                           .default
                       }
                       alt="hero"
-                      className="float-right  z-10"
+                      className="z-10"
                     />
                   </div>
                 </div>
@@ -458,7 +460,7 @@ const HowItWorks = () => {
                 role="tabpanel"
                 aria-labelledby="sales-rep"
               >
-                <div className="container gap-8 lg:px-4 xl:px-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <div className="container gap-8 lg:pl-4 xl:pl-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                   <div className="font-inter w-full text-start md:w-3/6">
                     <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                       Practice To Mastery.
