@@ -1,4 +1,5 @@
 import React from "react";
+import HubspotForm from "react-hubspot-form";
 
 const HeroSection = () => {
   return (
@@ -14,22 +15,16 @@ const HeroSection = () => {
             using the first AI cold calling coach for unlimited mock calls. Ramp
             sales reps in days, instead of weeks without burning your lead list.
           </p>
-          <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/4 lg:w-full">
-            <button
-              style={{ paddingTop: "13px" }}
-              className="w-48 md:w-60 bg-minor uppercase pb-2 px-3 rounded-full text-white text-sm lg:text-lg font-medium"
-            >
-              Early Access
-            </button>
-            <input
-              type="email"
-              id="email"
-              className="border-none w-full placeholder:text-start placeholder:text-lg text-gray-900 text-lg rounded-full focus:ring-transparent block p-2.5"
-              placeholder="name@rhetora.cc"
-              required
-            />
-          </div>
+          {/* <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/4 lg:w-full"> */}
+          <HubspotForm
+            portalId="22700288"
+            formId="5d003db2-c7e7-4230-b51f-cf526b584d4b"
+            onSubmit={() => console.log("Submit!")}
+            onReady={(form) => console.log("Form ready!")}
+            loading={<div>Loading...</div>}
+          />
         </div>
+        {/* </div> */}
         <div className="w-full md:w-3/6 lg:pb-32">
           <img
             src={require("../assets/hero-image.svg").default}

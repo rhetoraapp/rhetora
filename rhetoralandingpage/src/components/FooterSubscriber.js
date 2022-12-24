@@ -1,5 +1,6 @@
 import React from "react";
 import bannerReqAccess from "../assets/banner-req-access.svg";
+import HubspotForm from "react-hubspot-form";
 
 const FooterSubscriber = ({ title }) => {
   return (
@@ -11,8 +12,8 @@ const FooterSubscriber = ({ title }) => {
         <div className="sm:w-2/3 md:w-full mx-auto flex flex-col items-center justify-between gap-8">
           <p className="text-2xl text-white font-anek">{title}</p>
           {/* CTA */}
-          <div className="mt-4 md:mt-0 border border-white w-full md:w-3/4 rounded-full">
-            <div className="m-1 flex items-center gap-2 border border-white rounded-full bg-white w-98/100">
+          {/* <div className="mt-4 md:mt-0 border border-white w-full md:w-3/4 rounded-full"> */}
+          {/* <div className="m-1 flex items-center gap-2 border border-white rounded-full bg-white w-98/100">
               <button
                 style={{ paddingTop: "13px" }}
                 className="w-48 md:w-60 bg-main uppercase pb-2 px-3 rounded-full text-white text-xs md:text-lg font-medium"
@@ -26,8 +27,15 @@ const FooterSubscriber = ({ title }) => {
                 placeholder="name@rhetora.cc"
                 required
               />
-            </div>
-          </div>
+            </div> */}
+          <HubspotForm
+            portalId="22700288"
+            formId="5d003db2-c7e7-4230-b51f-cf526b584d4b"
+            onSubmit={() => console.log("Submit!")}
+            onReady={(form) => console.log("Form ready!")}
+            loading={<div>Loading...</div>}
+          />
+          {/* </div> */}
           {/* CTA */}
         </div>
       </div>

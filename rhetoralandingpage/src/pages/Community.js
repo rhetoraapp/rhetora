@@ -57,7 +57,7 @@ const community = () => {
             Community is a vibrant and active Slack channel with hundreds of
             sales professionals from all industries and experience levels
           </p>
-          <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6">
+          {/* <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6">
             <button
               style={{ padding: "10px", paddingTop: "14px" }}
               className="w-48 md:w-60 bg-minor uppercase rounded-full text-white text-xs md:text-lg font-medium"
@@ -71,7 +71,14 @@ const community = () => {
               placeholder="EMAIL"
               required
             />
-          </div>
+          </div> */}
+          <HubspotForm
+            portalId="22700288"
+            formId="521db1b3-1952-49a9-893b-c45a72bbfe05"
+            onSubmit={() => console.log("Submit!")}
+            onReady={(form) => console.log("Form ready!")}
+            loading={<div>Loading...</div>}
+          />
         </div>
         <div className="md:hidden w-full">
           <img
