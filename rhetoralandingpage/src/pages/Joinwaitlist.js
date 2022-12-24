@@ -1,43 +1,178 @@
-import React from 'react';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import Background from '../assets/Hero-lines.svg';
-import HubspotForm from 'react-hubspot-form';
+import React from "react";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import Background from "../assets/Hero-lines.svg";
+// formik
+import { useFormik, Form, FormikProvider } from "formik";
+// Yup
+import * as Yup from "yup";
+import { PostAccessRequest } from "../api";
+import { Link } from "react-router-dom";
+// import HubspotForm from "react-hubspot-form";
 
-const join = () => {
+const JoinWaitlist = () => {
+  // validation schema
+  const LoginSchema = Yup.object().shape({
+    name: Yup.string().required("Name is required."),
+    companyName: Yup.string().required("Company name is required."),
+    email: Yup.string()
+      .email("Email must be a valid email address")
+      .required("The Email address field is required."),
+  });
 
-    return (
-      <div>
-        <Navbar/>
-        <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
-          <div className='d-flex justify-content-center'>
-          <div className='col-8 w mt-5 d-flex justify-center flex-column'>
-            <h1 className='tc mt-5'>rhetora is <br></br>Launching Soon</h1>
-            <p className='tc'>Designed by sales professionals, for sales professionals.</p>
-            <div id='cinputdiv' className=''>
-            <HubspotForm
-            portalId='22700288'
-            formId='5d003db2-c7e7-4230-b51f-cf526b584d4b'
-            onSubmit={() => console.log('Submit!')}
-            onReady={(form) => console.log('Form ready!')}
-            loading={<div>Loading...</div>}
-            />
-            {/* <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Name'></input>
-            <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Company Name'></input>
+  // formik
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      companyName: "",
+      email: "",
+    },
+
+    validationSchema: LoginSchema,
+    onSubmit: async (values, { setErrors, setSubmitting, resetForm }) => {
+      console.log("values", values);
+      try {
+        const result = await PostAccessRequest({
+          name: values.name,
+          companyName: values.companyName,
+          email: values.email,
+        });
+        console.log(result);
+        if (result && result.status === "200") {
+          setErrors({
+            success: result.message || "Successfully Requested!",
+            queueNumber: result.payload.queueNumber,
+          });
+          localStorage.setItem("successfullAccess", values.email);
+        } else {
+          console.log("error", result);
+          setErrors({
+            afterSubmit:
+              result?.response.data.message || "Request Failed, Try again!",
+          });
+        }
+        values.name = "";
+        values.companyName = "";
+        values.email = "";
+      } catch (error) {
+        resetForm();
+        setSubmitting(false);
+        console.log("error", error);
+        setErrors({ afterSubmit: error?.response.data.message });
+      }
+    },
+  });
+
+  const { errors, handleSubmit, getFieldProps } = formik;
+  return (
+    <div>
+      <Navbar />
+      <FormikProvider value={formik}>
+        <Form
+          autoComplete="off"
+          noValidate
+          onSubmit={handleSubmit}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              height: "100%",
+              backgroundImage: `url(${Background})`,
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="flex justify-center p-2">
+              <div className="p-12 md:p-20 w-full md:w-4/6 flex justify-center flex-col bg-white rounded-3xl shadow my-5">
+                <h1 className="text-center text-main">
+                  rhetora is <br></br>Launching Soon
+                </h1>
+                <p className="tc mt-2">
+                  Designed by sales professionals, for sales professionals.
+                </p>
+                <div className="mt-4">
+                  {/* Error handling */}
+                  {errors && errors.success && (
+                    <div
+                      className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                      role="alert"
+                    >
+                      <span className="font-medium">
+                        {errors.success}, your Queue number is{" "}
+                        <b>
+                          {errors.queueNumber},{" "}
+                          <Link to="/invite-friend">
+                            Invite Friends to skip to queue ➡
+                          </Link>
+                        </b>
+                      </span>
+                    </div>
+                  )}
+                  {errors && errors.afterSubmit && (
+                    <div
+                      className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+                      role="alert"
+                    >
+                      <span className="font-medium">{errors.afterSubmit}</span>
+                    </div>
+                  )}
+                  {(errors.name || errors.companyName) && (
+                    <div
+                      className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+                      role="alert"
+                    >
+                      <span className="font-medium">
+                        Kindly fill all the fields!
+                      </span>
+                    </div>
+                  )}
+                  {errors && errors.email && (
+                    <div
+                      className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+                      role="alert"
+                    >
+                      <span className="font-medium">{errors.email}</span>
+                    </div>
+                  )}
+                  {/* Error handling */}
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      {...getFieldProps("name")}
+                      className="md:col-start-1 md:col-end-3 border-1 border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
+                    />
+                    <input
+                      type="text"
+                      {...getFieldProps("companyName")}
+                      placeholder="Company Name"
+                      className="md:col-start-3 md:col-end-5 border-1 border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
+                    />
+                    <input
+                      type="text"
+                      {...getFieldProps("email")}
+                      placeholder="Email"
+                      className="md:col-start-1 md:col-end-4 border-1 border-main rounded-lg placeholder:text-base placeholder:text-gray-300 placeholder:text-left "
+                    />
+                    <button
+                      type="submit"
+                      className="md:col-start-4 py-2 md:col-end-5 bg-main text-white rounded-lg"
+                    >
+                      Get Early Access
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id='cinputdiv'>
-            <input id='heroinput' className='row-10 col-lg-8 col-xl-9' placeholder='Email'></input>
-            <button id='herobtn' className='row-10 col-lg-8 col-xl-3'>Get Early Access</button>
-            </div> */}
           </div>
+        </Form>
+      </FormikProvider>
+      <Footer />
+    </div>
+  );
+};
 
-          </div>
-
-        </div>
-      </div>
-      <Footer/>
-      </div>
-    );
-  };
-   
-  export default join;
+export default JoinWaitlist;
