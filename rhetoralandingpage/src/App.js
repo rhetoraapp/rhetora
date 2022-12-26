@@ -16,7 +16,7 @@ import InviteFriend from "./pages/InviteFriend";
 
 import ReactGA from "react-ga";
 
-const tracking_ID = "G-8RY9QCXDXJ";
+const tracking_ID = "UA-252717872-1";
 ReactGA.initialize(tracking_ID);
 
 const myAPI = "api4b919b3b";
