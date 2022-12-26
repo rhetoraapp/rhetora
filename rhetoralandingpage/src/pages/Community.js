@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Background from "../assets/background-long.svg";
@@ -10,11 +10,10 @@ const image1 = require("../assets/network-like-minded.svg").default;
 const image2 = require("../assets/learn-from industry.svg").default;
 const image3 = require("../assets/real-sense-of-belonging.svg").default;
 
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname);
-},[]);
-
-const community = () => {
+const Community = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
   const exclusiveAccess = [
     {
       id: 1,
@@ -137,4 +136,4 @@ const community = () => {
   );
 };
 
-export default community;
+export default Community;

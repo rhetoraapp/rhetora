@@ -7,11 +7,12 @@ import HowItWorks from "../components/HowItWorks";
 import FooterSubscriber from "../components/FooterSubscriber";
 import ReactGA from "react-ga";
 
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname);
-},[]);
-
 const Home = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
+  
   return (
     <div>
       <Navbar />

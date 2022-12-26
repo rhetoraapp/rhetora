@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Background from "../assets/Hero-lines.svg";
@@ -11,11 +11,12 @@ import { PostAccessRequest } from "../api";
 import { Link } from "react-router-dom";
 // import HubspotForm from "react-hubspot-form";
 
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname);
-},[]);
-
 const JoinWaitlist = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
+  
   // validation schema
   const LoginSchema = Yup.object().shape({
     name: Yup.string().required("Name is required."),

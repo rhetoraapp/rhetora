@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "../components/navbar";
 import SignupButton from "../components/communitywaitlist";
 import Footer from "../components/footer";
@@ -13,11 +13,10 @@ import { PostAccessRequest } from "../api";
 import { Link } from "react-router-dom";
 import InviteFriendComponent from "../components/InviteFriend";
 
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname);
-},[]);
-
 const Invited = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
   const [hide, setHide] = useState(false);
   // validation schema
   const LoginSchema = Yup.object().shape({
