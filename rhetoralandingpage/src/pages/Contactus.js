@@ -3,6 +3,11 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import Background from '../assets/Hero-lines.svg';
 import HubspotForm from 'react-hubspot-form';
+import ReactGA from "react-ga";
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname);
+},[]);
 
 const contactus = () => {
 

@@ -4,6 +4,7 @@ import SignupButton from "../components/communitywaitlist";
 import Footer from "../components/footer";
 import Background from "../assets/Hero-lines.svg";
 import slackgraphic from "../assets/slackGraphic.png";
+import ReactGA from "react-ga";
 // formik
 import { useFormik, Form, FormikProvider } from "formik";
 // Yup
@@ -11,6 +12,10 @@ import * as Yup from "yup";
 import { PostAccessRequest } from "../api";
 import { Link } from "react-router-dom";
 import InviteFriendComponent from "../components/InviteFriend";
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname);
+},[]);
 
 const Invited = () => {
   const [hide, setHide] = useState(false);

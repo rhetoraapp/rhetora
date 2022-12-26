@@ -2,6 +2,11 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import Background from '../assets/Hero-lines.svg';
+import ReactGA from "react-ga";
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname);
+},[]);
 
 const Ourstory = () => {
 

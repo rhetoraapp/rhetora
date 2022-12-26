@@ -2,12 +2,17 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Background from "../assets/Hero-lines.svg";
+import ReactGA from "react-ga";
 // formik
 import { useFormik, Form, FormikProvider } from "formik";
 // Yup
 import * as Yup from "yup";
 import { InviteFriendRequest, PostAccessRequest } from "../api";
 // import HubspotForm from "react-hubspot-form";
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname);
+},[]);
 
 const InviteFriend = () => {
   // validation schema

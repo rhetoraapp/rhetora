@@ -4,10 +4,15 @@ import Footer from "../components/footer";
 import Background from "../assets/background-long.svg";
 import slackgraphic from "../assets/slackGraphic.png";
 import HubspotForm from "react-hubspot-form";
+import ReactGA from "react-ga";
 import FooterSubscriber from "../components/FooterSubscriber";
 const image1 = require("../assets/network-like-minded.svg").default;
 const image2 = require("../assets/learn-from industry.svg").default;
 const image3 = require("../assets/real-sense-of-belonging.svg").default;
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname);
+},[]);
 
 const community = () => {
   const exclusiveAccess = [

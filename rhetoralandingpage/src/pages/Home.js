@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import HubspotForm from "react-hubspot-form";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import FooterSubscriber from "../components/FooterSubscriber";
+import ReactGA from "react-ga";
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname);
+},[]);
 
 const Home = () => {
   return (
