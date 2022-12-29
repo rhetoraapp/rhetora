@@ -5,7 +5,7 @@ import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from "yup";
 import { InviteFriendRequest, PostAccessRequest } from "../api";
 
-const InviteFriendComponent = () => {
+const InviteFriendComponent = ({ firstQueueNumber }) => {
   const [hideForm1, setHideForm1] = useState(false);
   // validation schema
   const LoginSchema = Yup.object().shape({
@@ -51,6 +51,7 @@ const InviteFriendComponent = () => {
   });
 
   const { errors, handleSubmit, getFieldProps } = formik;
+  console.log("errors");
   return (
     <FormikProvider value={formik}>
       <Form
@@ -65,9 +66,19 @@ const InviteFriendComponent = () => {
       >
         <div className="flex justify-center p-2">
           <div className="p-12 md:p-20 w-full md:w-4/6 flex justify-center flex-col bg-white rounded-3xl shadow my-5">
-            <h1 className="text-center text-main text-2xl md:text-5xl">
-              Invite friend to skip to queue number!
-            </h1>
+            {!errors.success && (
+              <h1 className="text-center text-main text-2xl md:text-5xl">
+                Your Queue Number is{" "}
+                <span className="text-minor">{firstQueueNumber}</span>, Invite
+                friend to skip to queue numbers!
+              </h1>
+            )}
+            {errors.success && (
+              <h1 className="text-center text-main text-2xl md:text-5xl">
+                Awesome! Your new queue number is
+                <span className="text-minor"> {errors.queueNumber}</span>
+              </h1>
+            )}
             <div className="mt-4">
               {/* Error handling */}
               {errors && errors.success && (
@@ -76,8 +87,7 @@ const InviteFriendComponent = () => {
                   role="alert"
                 >
                   <span className="font-medium">
-                    {errors.success}, your new Queue number is{" "}
-                    <b>{errors.queueNumber}, </b>
+                    {errors.success}
                   </span>
                 </div>
               )}

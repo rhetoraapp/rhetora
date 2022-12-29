@@ -47,6 +47,7 @@ const Invited = () => {
             queueNumber: result.payload.queueNumber,
           });
           localStorage.setItem("successfullAccess", values.email);
+          localStorage.setItem("queueNumber", result.payload.queueNumber);
           setHide(true);
         } else {
           console.log("error", result);
@@ -181,10 +182,14 @@ const Invited = () => {
             </Form>
           </FormikProvider>
         )}
-        {hide && <InviteFriendComponent />}
+        {hide && <InviteFriendComponent firstQueueNumber={errors.queueNumber} />}
 
         <div className="w-full d-flex justify-center">
-          <img src={slackgraphic} className="w-10/12 md:9/12" alt="slack-graphic" />
+          <img
+            src={slackgraphic}
+            className="w-10/12 md:9/12"
+            alt="slack-graphic"
+          />
         </div>
       </div>
       <Footer />

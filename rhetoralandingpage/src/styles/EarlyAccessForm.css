@@ -1,0 +1,184 @@
+#hero-form-container {
+  padding: 0.25rem;
+  width: 100%;
+  border-width: 1px;
+  border-radius: 9999px;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem !important;
+  border: 1px solid #dee2e6;
+}
+
+#footer-form-container {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 9999px;
+  gap: 0.3rem;
+  display: flex;
+  align-items: center;
+  margin: 0.25rem;
+}
+
+#community-form-container {
+  padding: 0.25rem;
+  width: 100%;
+  border-width: 1px;
+  border-radius: 9999px;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem !important;
+  border: 1px solid #dee2e6;
+}
+
+/* button */
+
+#hero-form-button {
+  padding-top: 13px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 9999px;
+  width: 12rem;
+  padding-bottom: 0.5rem !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  color: white;
+  background-color: #ff9933;
+}
+
+#footer-form-button {
+  /* padding-top: 13px; */
+  padding: 1rem 1.5rem 0.9rem 1.5rem;
+  width: fit-content;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  background-color: #050038;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  border-radius: 999px;
+  width: 12rem;
+}
+
+#community-form-button {
+  padding-top: 13px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 9999px;
+  width: 12rem;
+  padding-bottom: 0.5rem !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  color: white;
+  background-color: #ff9933;
+}
+
+/* inputs */
+
+#hero-form-input {
+  display: block;
+  margin-right: 1rem;
+  background-color: #fff;
+  border: none;
+  color: rgb(17 24 39);
+  border-style: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-right: 2rem;
+}
+
+#footer-form-input {
+  color: rgb(17 24 39);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0.625rem;
+  border-style: none;
+  border-radius: 9999px !important;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#community-form-input {
+  display: block;
+  margin-right: 2rem;
+  background-color: #fff;
+  border: none;
+  color: rgb(17 24 39);
+  border-style: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-right: 2rem;
+}
+
+/* general css */
+
+::placeholder {
+  text-align: start;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  outline: none;
+}
+
+/* md breakpoints */
+
+@media (min-width: 778px) {
+  #hero-form-container {
+    width: 75%;
+  }
+
+  #hero-form-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    width: 15rem;
+  }
+
+  #community-form-container {
+    width: 75%;
+  }
+
+  #community-form-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    width: 15rem;
+  }
+
+  #footer-form-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    width: 15rem;
+  }
+}
+
+/* lg breakpoints */
+
+@media (min-width: 1024px) {
+  #hero-form-container {
+    width: 100%;
+  }
+
+  #hero-form-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  #community-form-container {
+    width: 60%;
+  }
+
+  #community-form-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}

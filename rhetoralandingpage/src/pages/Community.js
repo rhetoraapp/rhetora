@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import Background from "../assets/background-long.svg";
 import slackgraphic from "../assets/slackGraphic.png";
 import HubspotForm from "react-hubspot-form";
+import "../styles/EarlyAccessForm.css";
 import FooterSubscriber from "../components/FooterSubscriber";
 const image1 = require("../assets/network-like-minded.svg").default;
 const image2 = require("../assets/learn-from industry.svg").default;
@@ -57,28 +58,25 @@ const community = () => {
             Community is a vibrant and active Slack channel with hundreds of
             sales professionals from all industries and experience levels
           </p>
-          {/* <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6">
+          <div
+            id="community-form-container"
+            // className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6"
+          >
             <button
               style={{ padding: "10px", paddingTop: "14px" }}
-              className="w-48 md:w-60 bg-minor uppercase rounded-full text-white text-xs md:text-lg font-medium"
+              id="community-form-button"
+              // className="w-48 md:w-60 bg-minor uppercase rounded-full text-white text-xs md:text-lg font-medium"
             >
               ENQUIRE
             </button>
             <input
               type="email"
-              id="email"
-              className="border-none p-0 w-full placeholder:text-base placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
+              id="community-form-input"
+              // className="border-none p-0 w-full placeholder:text-base placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
               placeholder="EMAIL"
               required
             />
-          </div> */}
-          <HubspotForm
-            portalId="22700288"
-            formId="521db1b3-1952-49a9-893b-c45a72bbfe05"
-            onSubmit={() => console.log("Submit!")}
-            onReady={(form) => console.log("Form ready!")}
-            loading={<div>Loading...</div>}
-          />
+          </div>
         </div>
         <div className="md:hidden w-full">
           <img

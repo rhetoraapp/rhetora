@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import Background from "../assets/Hero-lines.svg";
 import HubspotForm from "react-hubspot-form";
 
-const JoinWaitlist = () => {
+const join = () => {
   return (
     <div>
       <Navbar />
@@ -47,4 +47,4 @@ const JoinWaitlist = () => {
   );
 };
 
-export default JoinWaitlist;
+export default join;

@@ -1,6 +1,6 @@
 import React from "react";
 import bannerReqAccess from "../assets/banner-req-access.svg";
-import HubspotForm from "react-hubspot-form";
+import "../styles/EarlyAccessForm.css"
 
 const FooterSubscriber = ({ title }) => {
   return (
@@ -12,30 +12,23 @@ const FooterSubscriber = ({ title }) => {
         <div className="sm:w-2/3 md:w-full mx-auto flex flex-col items-center justify-between gap-8">
           <p className="text-2xl text-white font-anek">{title}</p>
           {/* CTA */}
-          {/* <div className="mt-4 md:mt-0 border border-white w-full md:w-3/4 rounded-full"> */}
-          {/* <div className="m-1 flex items-center gap-2 border border-white rounded-full bg-white w-98/100">
+          <div className="mt-4 md:mt-0 w-full md:w-3/4 rounded-full">
+            <div
+              id="footer-form-container"
+            >
               <button
-                style={{ paddingTop: "13px" }}
-                className="w-48 md:w-60 bg-main uppercase pb-2 px-3 rounded-full text-white text-xs md:text-lg font-medium"
+                id="footer-form-button"
               >
                 Early Access
               </button>
               <input
                 type="email"
-                id="email"
-                className="border-none placeholder:text-base mr-8 w-full placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
+                id="footer-form-input"
                 placeholder="name@rhetora.cc"
                 required
               />
-            </div> */}
-          <HubspotForm
-            portalId="22700288"
-            formId="5d003db2-c7e7-4230-b51f-cf526b584d4b"
-            onSubmit={() => console.log("Submit!")}
-            onReady={(form) => console.log("Form ready!")}
-            loading={<div>Loading...</div>}
-          />
-          {/* </div> */}
+            </div>
+          </div>
           {/* CTA */}
         </div>
       </div>
