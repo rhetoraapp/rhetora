@@ -6,6 +6,7 @@ import slackgraphic from "../assets/slackGraphic.png";
 import HubspotForm from "react-hubspot-form";
 import "../styles/EarlyAccessForm.css";
 import FooterSubscriber from "../components/FooterSubscriber";
+import CommunityPageForm from "../components/forms/CommunityPageForm";
 const image1 = require("../assets/network-like-minded.svg").default;
 const image2 = require("../assets/learn-from industry.svg").default;
 const image3 = require("../assets/real-sense-of-belonging.svg").default;
@@ -58,7 +59,8 @@ const community = () => {
             Community is a vibrant and active Slack channel with hundreds of
             sales professionals from all industries and experience levels
           </p>
-          <div
+          <CommunityPageForm />
+          {/* <div
             id="community-form-container"
             // className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6"
           >
@@ -76,7 +78,7 @@ const community = () => {
               placeholder="EMAIL"
               required
             />
-          </div>
+          </div> */}
         </div>
         <div className="md:hidden w-full">
           <img

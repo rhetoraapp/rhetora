@@ -1,5 +1,8 @@
 import React from "react";
 import "../styles/EarlyAccessForm.css";
+import HubspotForm from "react-hubspot-form";
+import HeroSectionForm from "./forms/HeroSectionForm";
+
 
 const HeroSection = () => {
   return (
@@ -15,7 +18,8 @@ const HeroSection = () => {
             using the first AI cold calling coach for unlimited mock calls. Ramp
             sales reps in days, instead of weeks without burning your lead list.
           </p>
-          <div id="hero-form-container">
+          <HeroSectionForm />
+          {/* <div id="hero-form-container">
             <button style={{ paddingTop: "13px" }} id="hero-form-button">
               Early Access
             </button>
@@ -25,7 +29,7 @@ const HeroSection = () => {
               placeholder="name@rhetora.cc"
               required
             />
-          </div>
+          </div> */}
           {/* <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/4 lg:w-full">
             <button
               style={{ paddingTop: "13px" }}

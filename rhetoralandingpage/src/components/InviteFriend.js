@@ -75,7 +75,7 @@ const InviteFriendComponent = ({ firstQueueNumber }) => {
             )}
             {errors.success && (
               <h1 className="text-center text-main text-2xl md:text-5xl">
-                Awesome! Your new queue number is
+                Awesome! You new queue number is
                 <span className="text-minor"> {errors.queueNumber}</span>
               </h1>
             )}

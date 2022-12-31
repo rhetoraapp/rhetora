@@ -1,6 +1,7 @@
 import React from "react";
 import bannerReqAccess from "../assets/banner-req-access.svg";
-import "../styles/EarlyAccessForm.css"
+import "../styles/EarlyAccessForm.css";
+import FooterSubscriberForm from "./forms/FooterSubscriberForm";
 
 const FooterSubscriber = ({ title }) => {
   return (
@@ -13,7 +14,7 @@ const FooterSubscriber = ({ title }) => {
           <p className="text-2xl text-white font-anek">{title}</p>
           {/* CTA */}
           <div className="mt-4 md:mt-0 w-full md:w-3/4 rounded-full">
-            <div
+            {/* <div
               id="footer-form-container"
             >
               <button
@@ -27,7 +28,8 @@ const FooterSubscriber = ({ title }) => {
                 placeholder="name@rhetora.cc"
                 required
               />
-            </div>
+            </div> */}
+            <FooterSubscriberForm />
           </div>
           {/* CTA */}
         </div>
