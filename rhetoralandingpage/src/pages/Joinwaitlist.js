@@ -5,7 +5,7 @@ import Background from '../assets/Hero-lines.svg';
 import HubspotForm from 'react-hubspot-form';
 import ReactGA from "react-ga";
 
-const join = () => {
+const Join = () => {
 
 useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -45,4 +45,4 @@ useEffect(() => {
     );
   };
    
-  export default join;
+  export default Join;
