@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "../components/navbar";
 import SignupButton from "../components/communitywaitlist";
 import Footer from "../components/footer";
 import Background from "../assets/Hero-lines.svg";
 import slackgraphic from "../assets/slackGraphic.png";
+import ReactGA from "react-ga";
 // formik
 import { useFormik, Form, FormikProvider } from "formik";
 // Yup
@@ -13,6 +14,9 @@ import { Link } from "react-router-dom";
 import InviteFriendComponent from "../components/InviteFriend";
 
 const Invited = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
   const [hide, setHide] = useState(false);
   // validation schema
   const LoginSchema = Yup.object().shape({

@@ -14,6 +14,11 @@ import Invited from "./pages/Invited";
 import JoinWaitlist from "./pages/Joinwaitlist";
 import InviteFriend from "./pages/InviteFriend";
 
+import ReactGA from "react-ga";
+
+const tracking_ID = "UA-252717872-1";
+ReactGA.initialize(tracking_ID);
+
 const myAPI = "api4b919b3b";
 const path = "/users/";
 

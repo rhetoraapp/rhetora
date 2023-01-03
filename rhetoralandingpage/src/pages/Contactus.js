@@ -1,11 +1,15 @@
-import React from 'react';
+import {React,useEffect} from "react";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import Background from '../assets/Hero-lines.svg';
 import HubspotForm from 'react-hubspot-form';
+import ReactGA from "react-ga";
 
-const contactus = () => {
-
+const Contactus = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
+  
     return (
       <div>
         <Navbar/>
@@ -39,4 +43,4 @@ const contactus = () => {
     );
   };
    
-  export default contactus;
+  export default Contactus;

@@ -1,17 +1,21 @@
-import React from "react";
+import {React,useEffect} from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Background from "../assets/background-long.svg";
 import slackgraphic from "../assets/slackGraphic.png";
 import HubspotForm from "react-hubspot-form";
 import "../styles/EarlyAccessForm.css";
+import ReactGA from "react-ga";
 import FooterSubscriber from "../components/FooterSubscriber";
 import CommunityPageForm from "../components/forms/CommunityPageForm";
 const image1 = require("../assets/network-like-minded.svg").default;
 const image2 = require("../assets/learn-from industry.svg").default;
 const image3 = require("../assets/real-sense-of-belonging.svg").default;
 
-const community = () => {
+const Community = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
   const exclusiveAccess = [
     {
       id: 1,
@@ -139,4 +143,4 @@ const community = () => {
   );
 };
 
-export default community;
+export default Community;
