@@ -14,21 +14,6 @@ const FooterSubscriber = ({ title }) => {
           <p className="text-2xl text-white font-anek">{title}</p>
           {/* CTA */}
           <div className="mt-4 md:mt-0 w-full md:w-3/4 rounded-full">
-            {/* <div
-              id="footer-form-container"
-            >
-              <button
-                id="footer-form-button"
-              >
-                Early Access
-              </button>
-              <input
-                type="email"
-                id="footer-form-input"
-                placeholder="name@rhetora.cc"
-                required
-              />
-            </div> */}
             <FooterSubscriberForm />
           </div>
           {/* CTA */}

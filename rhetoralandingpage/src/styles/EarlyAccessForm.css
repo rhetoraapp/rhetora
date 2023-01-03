@@ -191,8 +191,19 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: start;
+  width: 100%;
 }
 /* its container */
+
+/* input[value="Early Access"] {
+  border-radius: 9999px !important;
+
+} */
+
+#hsForm_50796c8b-289f-4c2b-a333-79fbf7c3fb84 input.hs-button {
+  border-radius: 9999px !important;
+  background-color: #ff9933 !important;
+}
 
 #label-email-50796c8b-289f-4c2b-a333-79fbf7c3fb84 {
   display: none;
@@ -250,7 +261,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   padding: 0.625rem;
-  border-radius: 0.5rem;
+  border-radius: 9999px;
   width: 100%;
   margin-right: 2rem;
 }
@@ -280,6 +291,7 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: start;
+  width: 100%;
 }
 /* its container */
 
@@ -339,7 +351,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   padding: 0.625rem;
-  border-radius: 0.5rem;
+  border-radius: 9999px;
   width: 100%;
   margin-right: 2rem;
 }
@@ -373,8 +385,14 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: start;
+  width: 100%;
 }
 /* its container */
+
+form#hsForm_410031c8-6287-4d4e-805f-70137ed4c156 div.input,
+form#hsForm_410031c8-6287-4d4e-805f-70137ed4c156 div.hs_email {
+  width: 100%;
+}
 
 #label-email-410031c8-6287-4d4e-805f-70137ed4c156 {
   display: none;
@@ -441,7 +459,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   padding: 0.625rem;
-  border-radius: 999rem;
+  border-radius: 9999px;
   width: 100%;
   margin-right: 2rem;
 }

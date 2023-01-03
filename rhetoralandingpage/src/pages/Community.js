@@ -1,9 +1,6 @@
 import {React,useEffect} from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import Background from "../assets/background-long.svg";
-import slackgraphic from "../assets/slackGraphic.png";
-import HubspotForm from "react-hubspot-form";
 import "../styles/EarlyAccessForm.css";
 import ReactGA from "react-ga";
 import FooterSubscriber from "../components/FooterSubscriber";
@@ -41,13 +38,6 @@ const Community = () => {
   return (
     <div>
       <Navbar />
-      {/* <HubspotForm
-        portalId="22700288"
-        formId="521db1b3-1952-49a9-893b-c45a72bbfe05"
-        onSubmit={() => console.log("Submit!")}
-        onReady={(form) => console.log("Form ready!")}
-        loading={<div>Loading...</div>}
-      /> */}
       <div className="md:container py-32 mx-auto flex flex-col items-center justify-between w-100">
         <div className="text-center px-10 flex flex-col items-center">
           <p className="text-4xl md:text-5xl text-main font-bold">
@@ -64,25 +54,7 @@ const Community = () => {
             sales professionals from all industries and experience levels
           </p>
           <CommunityPageForm />
-          {/* <div
-            id="community-form-container"
-            // className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6"
-          >
-            <button
-              style={{ padding: "10px", paddingTop: "14px" }}
-              id="community-form-button"
-              // className="w-48 md:w-60 bg-minor uppercase rounded-full text-white text-xs md:text-lg font-medium"
-            >
-              ENQUIRE
-            </button>
-            <input
-              type="email"
-              id="community-form-input"
-              // className="border-none p-0 w-full placeholder:text-base placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
-              placeholder="EMAIL"
-              required
-            />
-          </div> */}
+          
         </div>
         <div className="md:hidden w-full">
           <img

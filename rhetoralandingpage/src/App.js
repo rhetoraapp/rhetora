@@ -1,18 +1,15 @@
-import logo from "./assets/Logo.svg";
 import "./App.css";
-import Amplify, { API } from "aws-amplify";
-import React, { useEffect, useState } from "react";
+import { API } from "aws-amplify";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import Home from "./pages/Home";
 import Ourstory from "./pages/Ourstory";
 import Contactus from "./pages/Contactus";
-import Joinwaitlist from "./pages/Joinwaitlist";
 import Community from "./pages/Community.js";
 import Invited from "./pages/Invited";
 import JoinWaitlist from "./pages/Joinwaitlist";
-import InviteFriend from "./pages/InviteFriend";
 
 import ReactGA from "react-ga";
 
@@ -77,7 +74,6 @@ const App = () => {
           <Route path="/community" element={<Community />}></Route>
           <Route path="/invited-c03skupo" element={<Invited />}></Route>
           <Route path="/join-waitlist" element={<JoinWaitlist />}></Route>
-          <Route path="/invite-friend" element={<InviteFriend />}></Route>
         </Routes>
       </div>
     </Router>

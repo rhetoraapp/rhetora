@@ -1,15 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import HowItWorksMobile from "./HowItWorksMobile";
 import bannerReqAccess from "../assets/banner-req-access-2.svg";
 import { Tabs } from "flowbite-react";
-const LeadYourChampionship =
-  require("../assets/lead-your-championship-3-cropped.svg").default;
+import "../styles/tabStyles.css";
 
 const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeTab2, setActiveTab2] = useState(0);
   const tabsRef = useRef(null);
   const tabsRef2 = useRef(null);
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, []);
 
   return (
     <div>
@@ -29,6 +32,7 @@ const HowItWorks = () => {
             <div className="w-full rounded-2xl md:px-6 lg:px-12">
               <Tabs.Group
                 aria-label="how rhetora works tabs 2 flex-nowrap"
+                id="how-it-works-1"
                 style="underline"
                 ref={tabsRef}
                 className="w-full border-none justify-center"
@@ -250,6 +254,7 @@ const HowItWorks = () => {
           className="hidden md:block -mb-28 bg-minorlight max-w-5xl rounded-lg px-10 py-16"
           style={{
             backgroundImage: `url(${bannerReqAccess})`,
+            backgroundSize: "cover",
           }}
         >
           <div className="flex items-center justify-between gap-16">
@@ -268,21 +273,22 @@ const HowItWorks = () => {
       </div>
       <div className="hidden md:block p-4 mt-40 bg-white md:p-6 lg:p-20 flex flex-col items-center">
         {/* another tabs section */}
-        <div className="px-4 w-full">
+        <div className="w-full">
           <div
             className="hidden md:block mb-20 w-full md:p-6 lg:p-12"
             style={{ borderRadius: "60px", backgroundColor: "#f9f9f9" }}
           >
-            <div className="w-full rounded-2xl md:px-6 lg:px-20">
+            <div className="w-full rounded-2xl">
               <Tabs.Group
                 aria-label="how rhetora works tabs"
+                id="how-it-works-2"
                 style="underline"
                 ref={tabsRef2}
                 className="w-full border-none flex-nowrap"
                 onActiveTabChange={(tab) => setActiveTab2(tab)}
               >
-                <Tabs.Item active title="SALES LEADER">
-                  <div className="container gap-8 lg:px-4 xl:px-6  pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <Tabs.Item title="SALES LEADER">
+                  <div className="container gap-8 pt-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                         Lead Your Champions.
@@ -315,7 +321,7 @@ const HowItWorks = () => {
                     <div className="w-full md:w-4/6">
                       <img
                         src={
-                          require("../assets/lead-your-championship-3-cropped.svg")
+                          require("../assets/lead-your-championship-3.svg")
                             .default
                         }
                         alt="hero"
@@ -324,8 +330,8 @@ const HowItWorks = () => {
                     </div>
                   </div>
                 </Tabs.Item>
-                <Tabs.Item title="SALES REP" className="border-gray-300">
-                  <div className="container gap-8 lg:pl-4 xl:px-6 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                <Tabs.Item title="SALES REP">
+                  <div className="container gap-8 lg:pl-4 pt-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                         Practice To Mastery.
@@ -366,7 +372,7 @@ const HowItWorks = () => {
                   </div>
                 </Tabs.Item>
                 <Tabs.Item title="ENTERPRENEURS">
-                  <div className="container gap-8 lg:px-4 xl:px-6  pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container gap-8 lg:px-4 pt-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                         Pitch Perfectly.

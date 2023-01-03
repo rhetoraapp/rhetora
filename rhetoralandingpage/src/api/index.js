@@ -9,7 +9,6 @@ const PostAccessRequest = async ({ name, companyName, email }) => {
     email,
   });
   const { data } = response;
-  console.log(data);
   return data;
 };
 
@@ -20,7 +19,6 @@ const InviteFriendRequest = async ({ email }) => {
     invitedBy: localStorage.getItem("successfullAccess"),
   });
   const { data } = response;
-  console.log(data);
   return data;
 };
 
