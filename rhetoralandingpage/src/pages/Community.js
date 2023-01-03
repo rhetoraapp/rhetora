@@ -4,8 +4,10 @@ import Footer from "../components/footer";
 import Background from "../assets/background-long.svg";
 import slackgraphic from "../assets/slackGraphic.png";
 import HubspotForm from "react-hubspot-form";
+import "../styles/EarlyAccessForm.css";
 import ReactGA from "react-ga";
 import FooterSubscriber from "../components/FooterSubscriber";
+import CommunityPageForm from "../components/forms/CommunityPageForm";
 const image1 = require("../assets/network-like-minded.svg").default;
 const image2 = require("../assets/learn-from industry.svg").default;
 const image3 = require("../assets/real-sense-of-belonging.svg").default;
@@ -61,21 +63,26 @@ const Community = () => {
             Community is a vibrant and active Slack channel with hundreds of
             sales professionals from all industries and experience levels
           </p>
-          <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6">
+          <CommunityPageForm />
+          {/* <div
+            id="community-form-container"
+            // className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/6"
+          >
             <button
               style={{ padding: "10px", paddingTop: "14px" }}
-              className="w-48 md:w-60 bg-minor uppercase rounded-full text-white text-xs md:text-lg font-medium"
+              id="community-form-button"
+              // className="w-48 md:w-60 bg-minor uppercase rounded-full text-white text-xs md:text-lg font-medium"
             >
               ENQUIRE
             </button>
             <input
               type="email"
-              id="email"
-              className="border-none p-0 w-full placeholder:text-base placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
+              id="community-form-input"
+              // className="border-none p-0 w-full placeholder:text-base placeholder:text-start text-gray-900 text-sm rounded-lg focus:ring-transparent block p-2.5"
               placeholder="EMAIL"
               required
             />
-          </div>
+          </div> */}
         </div>
         <div className="md:hidden w-full">
           <img

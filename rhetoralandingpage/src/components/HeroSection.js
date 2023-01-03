@@ -1,4 +1,8 @@
 import React from "react";
+import "../styles/EarlyAccessForm.css";
+import HubspotForm from "react-hubspot-form";
+import HeroSectionForm from "./forms/HeroSectionForm";
+
 
 const HeroSection = () => {
   return (
@@ -14,7 +18,19 @@ const HeroSection = () => {
             using the first AI cold calling coach for unlimited mock calls. Ramp
             sales reps in days, instead of weeks without burning your lead list.
           </p>
-          <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/4 lg:w-full">
+          <HeroSectionForm />
+          {/* <div id="hero-form-container">
+            <button style={{ paddingTop: "13px" }} id="hero-form-button">
+              Early Access
+            </button>
+            <input
+              type="email"
+              id="hero-form-input"
+              placeholder="name@rhetora.cc"
+              required
+            />
+          </div> */}
+          {/* <div className="flex items-center gap-2 mt-5 border border-gray-700 rounded-full p-1 w-full md:w-3/4 lg:w-full">
             <button
               style={{ paddingTop: "13px" }}
               className="w-48 md:w-60 bg-minor uppercase pb-2 px-3 rounded-full text-white text-sm lg:text-lg font-medium"
@@ -28,7 +44,7 @@ const HeroSection = () => {
               placeholder="name@rhetora.cc"
               required
             />
-          </div>
+          </div> */}
         </div>
         <div className="w-full md:w-3/6 lg:pb-32">
           <img

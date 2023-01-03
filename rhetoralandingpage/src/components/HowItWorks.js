@@ -1,108 +1,41 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import HowItWorksMobile from "./HowItWorksMobile";
 import bannerReqAccess from "../assets/banner-req-access-2.svg";
+import { Tabs } from "flowbite-react";
 const LeadYourChampionship =
   require("../assets/lead-your-championship-3-cropped.svg").default;
 
 const HowItWorks = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab2, setActiveTab2] = useState(0);
+  const tabsRef = useRef(null);
+  const tabsRef2 = useRef(null);
+
   return (
     <div>
       <div
-        className="flex flex-col items-center pb-4 px-2 md:px-4"
+        className="flex flex-col items-center pb-4"
         style={{ backgroundColor: "#F9F9F9" }}
       >
         <p className="font-anek text-minor text-4xl font-semibold py-12">
           How rhetora Works
         </p>
         {/* Tabs section */}
-        <div className="mx-2Lead Your Champions.">
+        <div className="px-4 w-full">
           <div
-            className="hidden md:block mb-20 bg-white w-full md:p-6 lg:p-20"
+            className="hidden md:block mb-20 bg-white w-full md:p-6 lg:p-12"
             style={{ borderRadius: "60px" }}
           >
-            <div>
-              <div className="mb-4 border-gray-200 ">
-                <ul
-                  className="flex items-center justify-center -mb-px text-sm font-medium text-center"
-                  id="myTab"
-                  data-tabs-toggle="#myTabContent"
-                  role="tablist"
-                >
-                  <li className="mr-2" role="presentation">
-                    <button
-                      className="inline-block p-4 rounded-t-lg border-b-2 font-anek"
-                      id="profile-tab"
-                      data-tabs-target="#profile"
-                      type="button"
-                      role="tab"
-                      aria-controls="profile"
-                      aria-selected="false"
-                    >
-                      UNLIMITED MOCK CALLS
-                    </button>
-                  </li>
-                  <li className="mr-2" role="presentation">
-                    <button
-                      className="inline-block p-4 rounded-t-lg text-main border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
-                      id="visualize-talk-track"
-                      data-tabs-target="#visualizeTalkTrack"
-                      type="button"
-                      role="tab"
-                      aria-controls="visualizeTalkTrack"
-                      aria-selected="false"
-                    >
-                      VISUALIZE TALK TRACK
-                    </button>
-                  </li>
-                  <li className="mr-2" role="presentation">
-                    <button
-                      className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
-                      id="script-builder"
-                      data-tabs-target="#scriptBuilder"
-                      type="button"
-                      role="tab"
-                      aria-controls="scriptBuilder"
-                      aria-selected="false"
-                    >
-                      SCRIPT BUILDER
-                    </button>
-                  </li>
-                  <li className="mr-2" role="presentation">
-                    <button
-                      className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
-                      id="ai-suggestions"
-                      data-tabs-target="#aiSuggestion"
-                      type="button"
-                      role="tab"
-                      aria-controls="aiSuggestion"
-                      aria-selected="false"
-                    >
-                      AI SUGGESTIONS
-                    </button>
-                  </li>
-                  <li role="presentation">
-                    <button
-                      className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
-                      id="analytics-insights"
-                      data-tabs-target="#analyticsInsights"
-                      type="button"
-                      role="tab"
-                      aria-controls="analyticsInsights"
-                      aria-selected="false"
-                    >
-                      ANALYTICS & INSIGHTS
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div id="myTabContent" className="mx-8">
-                <div
-                  className="hidden"
-                  id="profile"
-                  role="tabpanel"
-                  aria-labelledby="profile-tab"
-                >
-                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+            <div className="w-full rounded-2xl md:px-6 lg:px-12">
+              <Tabs.Group
+                aria-label="how rhetora works tabs 2 flex-nowrap"
+                style="underline"
+                ref={tabsRef}
+                className="w-full border-none justify-center"
+                onActiveTabChange={(tab) => setActiveTab(tab)}
+              >
+                <Tabs.Item active title="UNLIMITED MOCK CALLS">
+                  <div className="container lg:px-4 xl:px-6 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         Unlimited Mock Calls
@@ -141,14 +74,12 @@ const HowItWorks = () => {
                       />
                     </div>
                   </div>
-                </div>
-                <div
-                  className="hidden"
-                  id="visualizeTalkTrack"
-                  role="tabpanel"
-                  aria-labelledby="visualize-talk-track"
+                </Tabs.Item>
+                <Tabs.Item
+                  title="VISUALIZE TALK TRACK"
+                  className="border-gray-300"
                 >
-                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container lg:px-4 xl:px-6  gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         VISUALIZE TALK TRACK
@@ -186,14 +117,9 @@ const HowItWorks = () => {
                       />
                     </div>
                   </div>
-                </div>
-                <div
-                  className="hiddendark:bg-gray-800"
-                  id="scriptBuilder"
-                  role="tabpanel"
-                  aria-labelledby="script-builder"
-                >
-                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                </Tabs.Item>
+                <Tabs.Item title="SCRIPT BUILDER">
+                  <div className="container lg:px-4 xl:px-6  gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         SCRIPT BUILDER
@@ -229,14 +155,9 @@ const HowItWorks = () => {
                       />
                     </div>
                   </div>
-                </div>
-                <div
-                  className="hiddendark:bg-gray-800"
-                  id="aiSuggestion"
-                  role="tabpanel"
-                  aria-labelledby="ai-suggestions"
-                >
-                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                </Tabs.Item>
+                <Tabs.Item title="AI SUGGESTIONS">
+                  <div className="container lg:px-4 xl:px-6  gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         AI SUGGESTIONS
@@ -272,15 +193,10 @@ const HowItWorks = () => {
                       />
                     </div>
                   </div>
-                </div>
-                <div
-                  className="hiddendark:bg-gray-800"
-                  id="analyticsInsights"
-                  role="tabpanel"
-                  aria-labelledby="analytics-insights"
-                >
-                  <div className="container lg:px-4 xl:px-20 gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
-                    <div className="font-inter w-full text-start md:w-3/6">
+                </Tabs.Item>
+                <Tabs.Item title="ANALYTICS & INSIGHTS">
+                  <div className="container lg:px-4 xl:px-6  gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                    <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         ANALYTICS & INSIGHTS
                       </p>
@@ -310,7 +226,7 @@ const HowItWorks = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="w-full md:w-3/6">
+                    <div className="w-full md:w-4/6">
                       <img
                         src={
                           require("../assets/analytics-insights-hero.svg")
@@ -321,8 +237,8 @@ const HowItWorks = () => {
                       />
                     </div>
                   </div>
-                </div>
-              </div>
+                </Tabs.Item>
+              </Tabs.Group>
             </div>
           </div>
         </div>
@@ -350,202 +266,147 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block p-4 bg-white md:p-6 lg:p-20 flex flex-col items-center">
+      <div className="hidden md:block p-4 mt-40 bg-white md:p-6 lg:p-20 flex flex-col items-center">
         {/* another tabs section */}
-        <div
-          className="mb-20 mt-40 w-full rounded-2xl md:p-6 lg:p-20"
-          style={{ backgroundColor: "#F8F8F9", borderRadius: "60px" }}
-        >
-          <div>
-            <div className="mb-4 border-gray-200">
-              <ul
-                className="flex items-center justify-start -mb-px md:pl-20 text-sm font-medium text-center"
-                id="myTab"
-                data-tabs-toggle="#mySalesTabContent"
-                role="tablist"
+        <div className="px-4 w-full">
+          <div
+            className="hidden md:block mb-20 w-full md:p-6 lg:p-12"
+            style={{ borderRadius: "60px", backgroundColor: "#f9f9f9" }}
+          >
+            <div className="w-full rounded-2xl md:px-6 lg:px-20">
+              <Tabs.Group
+                aria-label="how rhetora works tabs"
+                style="underline"
+                ref={tabsRef2}
+                className="w-full border-none flex-nowrap"
+                onActiveTabChange={(tab) => setActiveTab2(tab)}
               >
-                <li className="mr-2" role="presentation">
-                  <button
-                    className="inline-block p-4 rounded-t-lg border-b-2 font-anek"
-                    id="sales-leaders"
-                    data-tabs-target="#salesLeaders"
-                    type="button"
-                    role="tab"
-                    aria-controls="salesLeaders"
-                    aria-selected="false"
-                  >
-                    Sales Leaders
-                  </button>
-                </li>
-                <li className="mr-2" role="presentation">
-                  <button
-                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
-                    id="sales-rep"
-                    data-tabs-target="#salesRep"
-                    type="button"
-                    role="tab"
-                    aria-controls="salesRep"
-                    aria-selected="false"
-                  >
-                    Sales Rep
-                  </button>
-                </li>
-                <li className="mr-2" role="presentation">
-                  <button
-                    className="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 "
-                    id="enterpreneur-tab"
-                    data-tabs-target="#enterpreneurs"
-                    type="button"
-                    role="tab"
-                    aria-controls="enterpreneurs"
-                    aria-selected="false"
-                  >
-                    Enterpreneurs
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div id="mySalesTabContent" className="mx-8">
-              <div
-                className="hidden"
-                id="salesLeaders"
-                role="tabpanel"
-                aria-labelledby="sales-leaders"
-              >
-                <div className="container gap-8 lg:px-4 xl:px-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
-                  <div className="font-inter w-full text-start md:w-3/6">
-                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
-                      Lead Your Champions.
-                    </p>
-                    <div className="mt-6">
-                      <ul className="space-y-4 max-w-lg text-gray-500 dark:text-gray-400">
-                        <li>
-                          Train your champions for the real world by providing a
-                          scalable solution to cold call training.
-                        </li>
-                        <li>
-                          Track your team’s progress and assess if they are
-                          ready to face prospects.
-                        </li>
-                        <li>
-                          Enable your salesforce to give the best first
-                          impression when speaking to clients.
-                        </li>
-                      </ul>
+                <Tabs.Item active title="SALES LEADER">
+                  <div className="container gap-8 lg:px-4 xl:px-6  pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                    <div className="font-inter w-full text-start md:w-2/6">
+                      <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
+                        Lead Your Champions.
+                      </p>
+                      <div className="mt-6">
+                        <ul className="space-y-4 max-w-lg text-gray-500 dark:text-gray-400">
+                          <li>
+                            Train your champions for the real world by providing
+                            a scalable solution to cold call training.
+                          </li>
+                          <li>
+                            Track your team’s progress and assess if they are
+                            ready to face prospects.
+                          </li>
+                          <li>
+                            Enable your salesforce to give the best first
+                            impression when speaking to clients.
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="mt-4">
+                        <button
+                          type="button"
+                          className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        >
+                          Book Demo
+                        </button>
+                      </div>
                     </div>
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                      >
-                        Book Demo
-                      </button>
+                    <div className="w-full md:w-4/6">
+                      <img
+                        src={
+                          require("../assets/lead-your-championship-3-cropped.svg")
+                            .default
+                        }
+                        alt="hero"
+                        className="z-10"
+                      />
                     </div>
                   </div>
-                  <div className="w-full md:w-3/6">
-                    <img
-                      src={
-                        require("../assets/lead-your-championship-3-cropped.svg")
-                          .default
-                      }
-                      alt="hero"
-                      className="z-10"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="hidden"
-                id="salesRep"
-                role="tabpanel"
-                aria-labelledby="sales-rep"
-              >
-                <div className="container gap-8 lg:pl-4 xl:pl-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
-                  <div className="font-inter w-full text-start md:w-3/6">
-                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
-                      Practice To Mastery.
-                    </p>
-                    <div className="mt-6">
-                      <ul className="space-y-4 max-w-lg text-gray-500 dark:text-gray-400">
-                        <li>
-                          Practice your desired scripts unlimitely without
-                          burning your lead list.
-                        </li>
-                        <li>
-                          Stress-free solution to mastering your cold calling
-                          scripts and roles.
-                        </li>
-                        <li>
-                          Visualize and track the flow of your conversations.
-                          Have AI guide you through all the way to booking a
-                          meeting.
-                        </li>
-                      </ul>
+                </Tabs.Item>
+                <Tabs.Item title="SALES REP" className="border-gray-300">
+                  <div className="container gap-8 lg:pl-4 xl:px-6 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                    <div className="font-inter w-full text-start md:w-2/6">
+                      <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
+                        Practice To Mastery.
+                      </p>
+                      <div className="mt-6">
+                        <ul className="space-y-4 max-w-lg text-gray-500 dark:text-gray-400">
+                          <li>
+                            Practice your desired scripts unlimitely without
+                            burning your lead list.
+                          </li>
+                          <li>
+                            Stress-free solution to mastering your cold calling
+                            scripts and roles.
+                          </li>
+                          <li>
+                            Visualize and track the flow of your conversations.
+                            Have AI guide you through all the way to booking a
+                            meeting.
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="mt-4">
+                        <button
+                          type="button"
+                          className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        >
+                          Book Access
+                        </button>
+                      </div>
                     </div>
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                      >
-                        Book Access
-                      </button>
+                    <div className="w-full md:w-4/6 relative">
+                      <img
+                        src={require("../assets/sales-rep.svg").default}
+                        alt="hero"
+                        className="float-right  z-10"
+                      />
                     </div>
                   </div>
-                  <div className="w-full md:w-3/6 relative">
-                    <img
-                      src={require("../assets/sales-rep.svg").default}
-                      alt="hero"
-                      className="float-right  z-10"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="hidden"
-                id="enterpreneurs"
-                role="tabpanel"
-                aria-labelledby="enterpreneur-tab"
-              >
-                <div className="container gap-8 lg:px-4 xl:px-20 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
-                  <div className="font-inter w-full text-start md:w-3/6">
-                    <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
-                      Pitch Perfectly.
-                    </p>
-                    <div className="mt-6">
-                      <ul className="space-y-4 max-w-lg text-gray-500 dark:text-gray-400">
-                        <li>
-                          Investors are some of the busiest personas to call on.
-                          These professionals require the up-most perfection
-                          when cold calling.
-                        </li>
-                        <li>
-                          Be able to effectively convey your pitch without
-                          repelling investors on the phone.
-                        </li>
-                        <li>
-                          Book that intro meeting with investors by pitching
-                          perfectly, practice your pitch to perfection.
-                        </li>
-                      </ul>
+                </Tabs.Item>
+                <Tabs.Item title="ENTERPRENEURS">
+                  <div className="container gap-8 lg:px-4 xl:px-6  pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                    <div className="font-inter w-full text-start md:w-2/6">
+                      <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
+                        Pitch Perfectly.
+                      </p>
+                      <div className="mt-6">
+                        <ul className="space-y-4 max-w-lg text-gray-500 dark:text-gray-400">
+                          <li>
+                            Investors are some of the busiest personas to call
+                            on. These professionals require the up-most
+                            perfection when cold calling.
+                          </li>
+                          <li>
+                            Be able to effectively convey your pitch without
+                            repelling investors on the phone.
+                          </li>
+                          <li>
+                            Book that intro meeting with investors by pitching
+                            perfectly, practice your pitch to perfection.
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="mt-4">
+                        <button
+                          type="button"
+                          className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        >
+                          Book Demo
+                        </button>
+                      </div>
                     </div>
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-                      >
-                        Book Demo
-                      </button>
+                    <div className="w-full md:w-4/6 relative">
+                      <img
+                        src={require("../assets/Enterpreneurs.svg").default}
+                        alt="hero"
+                        className="float-right z-10"
+                      />
                     </div>
                   </div>
-                  <div className="w-full md:w-3/6 relative">
-                    <img
-                      src={require("../assets/Enterpreneurs.svg").default}
-                      alt="hero"
-                      className="float-right z-10"
-                    />
-                  </div>
-                </div>
-              </div>
+                </Tabs.Item>
+              </Tabs.Group>
             </div>
           </div>
         </div>
