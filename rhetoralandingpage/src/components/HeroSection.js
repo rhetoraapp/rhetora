@@ -28,7 +28,7 @@ const HeroSection = () => {
       </div>
       <div className="-mt-4 md:py-20 mx-20">
         <div className="flex flex-col text-sm font-semibold items-center uppercase">
-          <p style={{ color: "#7C828D" }}>As seen on</p>
+          <p className="text-sm" style={{ color: "#7C828D" }}>As seen on</p>
           <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="flex justify-center">
               <img

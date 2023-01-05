@@ -31,11 +31,11 @@ const HowItWorks = () => {
           >
             <div className="w-full rounded-2xl md:px-6 lg:px-12">
               <Tabs.Group
-                aria-label="how rhetora works tabs 2 flex-nowrap"
+                aria-label="how rhetora works tabs 2"
                 id="how-it-works-1"
                 style="underline"
                 ref={tabsRef}
-                className="w-full border-none justify-center"
+                className="w-full border-none justify-center flex-nowrap"
                 onActiveTabChange={(tab) => setActiveTab(tab)}
               >
                 <Tabs.Item active title="UNLIMITED MOCK CALLS">
