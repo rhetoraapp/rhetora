@@ -30,7 +30,7 @@ const footer = () => {
               alt="24-hours-support"
             />
             <p className="ml-2 font-anek font-medium text-white text-xl">
-              Highest levels of uptime the last 12 months
+              High preforming sales community
             </p>
           </div>
         </div>

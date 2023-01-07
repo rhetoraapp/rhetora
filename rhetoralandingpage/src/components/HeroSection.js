@@ -31,25 +31,25 @@ const HeroSection = () => {
           <p className="text-sm" style={{ color: "#7C828D" }}>As seen on</p>
           <div className="my-10 grid grid-cols-3 md:grid-cols-3 gap-8">
             <div className="flex justify-center">
-              <img
+              <a href="https://disruptmagazine.com/accelerate-your-startups-growth-with-rhetoras-ai-powered-sales-training/"><img
                 src={require("../assets/disrupt.svg").default}
                 alt="disrupt"
                 className="m-0"
-              />
+              /></a>
             </div>
             <div className="flex justify-center">
-              <img
+            <a href="https://www.digitaljournal.com/pr/join-the-startup-revolution-with-rhetoras-ai-driven-sales-training-platform-based-in-the-uae"><img
                 src={require("../assets/digitaljournal.svg").default}
                 alt="digital"
                 className="m-0"
-              />
+              /></a>
             </div>
             <div className="flex justify-center">
-              <img
+            <a href="https://timebusinessnews.com/experience-the-future-of-sales-training-with-rhetora-the-ai-powered-startup-based-in-the-uae/"><img
                 src={require("../assets/timesbusinessnews.svg").default}
                 alt="tbn"
                 className="m-0"
-              />
+              /></a>
             </div>
           </div>
         </div>

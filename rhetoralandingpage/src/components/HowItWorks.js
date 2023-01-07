@@ -20,8 +20,8 @@ const HowItWorks = () => {
         className="flex flex-col items-center pb-4"
         style={{ backgroundColor: "#F9F9F9" }}
       >
-        <p className="font-anek text-minor text-4xl font-semibold py-20">
-          How rhetora Works
+        <p className="font-anek text-minor text-4xl font-semibold pt-20 pb-10">
+          Transforming Cold Calling Training
         </p>
         {/* Tabs section */}
         <div className="px-4 w-full">
@@ -289,7 +289,7 @@ const HowItWorks = () => {
                 onActiveTabChange={(tab) => setActiveTab2(tab)}
               >
                 <Tabs.Item title="SALES LEADER">
-                  <div className="container gap-8 pt-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container gap-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                         Lead Your Champions.
@@ -333,7 +333,7 @@ const HowItWorks = () => {
                   </div>
                 </Tabs.Item>
                 <Tabs.Item title="SALES REP">
-                  <div className="container gap-8 lg:pl-4 pt-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container gap-8 lg:pl-4 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                         Practice To Mastery.
@@ -375,7 +375,7 @@ const HowItWorks = () => {
                   </div>
                 </Tabs.Item>
                 <Tabs.Item title="ENTERPRENEURS">
-                  <div className="container gap-8 lg:px-4 pt-8 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
+                  <div className="container gap-8 lg:px-4 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
                     <div className="font-inter w-full text-start md:w-2/6">
                       <p className="font-anek text-4xl lg:text-5xl font-bold text-main lg:mt-0">
                         Pitch Perfectly.

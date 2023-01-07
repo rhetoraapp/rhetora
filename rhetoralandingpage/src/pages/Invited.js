@@ -92,11 +92,12 @@ const Invited = () => {
               <div className="container hero d-flex flex-column justify-content-around align-items-center">
                 <div className="flex w-full justify-center p-2">
                   <div className="p-12 md:p-20 w-full md:w-4/6 flex justify-center flex-col rounded-3xl my-5">
-                    <h1 className="text-center text-main">
-                      rhetora is <br></br>Launching Soon
+                    <h1 className="text-center text-5xl">
+                      You're Invited!
                     </h1>
+                    <h2 className="tc mt-2 text-6xl">Don't miss out on<br></br>this opportunity</h2>
                     <p className="tc mt-2">
-                      Designed by sales professionals, for sales professionals.
+                      Sign up below to secure a place on our waitlist
                     </p>
                     <div className="mt-4">
                       {/* Error handling */}
