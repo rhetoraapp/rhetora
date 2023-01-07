@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from "react";
 import Navbar from "../components/navbar";
-import SignupButton from "../components/communitywaitlist";
 import Footer from "../components/footer";
 import Background from "../assets/Hero-lines.svg";
 import slackgraphic from "../assets/slackGraphic.png";
@@ -37,14 +36,12 @@ const Invited = () => {
 
     validationSchema: LoginSchema,
     onSubmit: async (values, { setErrors, setSubmitting, resetForm }) => {
-      console.log("values", values);
       try {
         const result = await PostAccessRequest({
           name: values.name,
           companyName: values.companyName,
           email: values.email,
         });
-        console.log(result);
         if (result && result.status === "200") {
           setErrors({
             success: result.message || "Successfully Requested!",
@@ -54,7 +51,6 @@ const Invited = () => {
           localStorage.setItem("queueNumber", result.payload.queueNumber);
           setHide(true);
         } else {
-          console.log("error", result);
           setErrors({
             afterSubmit:
               result?.response.data.message || "Request Failed, Try again!",
@@ -66,7 +62,6 @@ const Invited = () => {
       } catch (error) {
         resetForm();
         setSubmitting(false);
-        console.log("error", error);
         setErrors({ afterSubmit: error?.response.data.message });
       }
     },

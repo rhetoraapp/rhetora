@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 // formik
 import { useFormik, Form, FormikProvider } from "formik";
 // Yup
 import * as Yup from "yup";
-import { InviteFriendRequest, PostAccessRequest } from "../api";
+import { InviteFriendRequest } from "../api";
 
 const InviteFriendComponent = ({ firstQueueNumber }) => {
-  const [hideForm1, setHideForm1] = useState(false);
   // validation schema
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
@@ -22,19 +21,16 @@ const InviteFriendComponent = ({ firstQueueNumber }) => {
 
     validationSchema: LoginSchema,
     onSubmit: async (values, { setErrors, setSubmitting, resetForm }) => {
-      console.log("values", values);
       try {
         const result = await InviteFriendRequest({
           email: values.email,
         });
-        console.log(result);
         if (result && result.status === "200") {
           setErrors({
             success: result.message || "Successfully Requested!",
             queueNumber: result.payload.queueNumber,
           });
         } else {
-          console.log("error", result);
           setErrors({
             afterSubmit:
               result?.response.data.message || "Request Failed, Try again!",
@@ -44,14 +40,12 @@ const InviteFriendComponent = ({ firstQueueNumber }) => {
       } catch (error) {
         resetForm();
         setSubmitting(false);
-        console.log("error", error);
         setErrors({ afterSubmit: error?.response.data.message });
       }
     },
   });
 
   const { errors, handleSubmit, getFieldProps } = formik;
-  console.log("errors");
   return (
     <FormikProvider value={formik}>
       <Form
@@ -75,7 +69,7 @@ const InviteFriendComponent = ({ firstQueueNumber }) => {
             )}
             {errors.success && (
               <h1 className="text-center text-main text-2xl md:text-5xl">
-                Awesome! You new queue number is
+                Awesome! Your new queue number is
                 <span className="text-minor"> {errors.queueNumber}</span>
               </h1>
             )}
@@ -86,9 +80,7 @@ const InviteFriendComponent = ({ firstQueueNumber }) => {
                   className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
                   role="alert"
                 >
-                  <span className="font-medium">
-                    {errors.success}
-                  </span>
+                  <span className="font-medium">{errors.success}</span>
                 </div>
               )}
               {errors && errors.afterSubmit && (

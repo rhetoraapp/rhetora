@@ -1,0 +1,26 @@
+div[role="tablist"] {
+  /* CSS goes here */
+  padding: 0 3rem 0 3rem !important;
+}
+
+button[role="tab"] {
+  color: #050038 !important;
+  font-weight: 600 !important;
+}
+
+#how-it-works-1 button[aria-selected="true"] {
+  border-color: #050038;
+}
+
+#how-it-works-1 button[aria-selected="false"] {
+  border-color: #B1B1B1;
+  color: #B1B1B1 !important;
+}
+
+#how-it-works-2 button[aria-selected="true"] {
+  border-color: #ff9933;
+}
+
+#how-it-works-2 button[aria-selected="false"] {
+  /* border-color: #B1B1B1; */
+}
