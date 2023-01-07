@@ -1,0 +1,101 @@
+/*---------------------------------- Hubspot Join-waitlist Form ------------------------------- */
+
+#hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a {
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  flex-wrap: wrap; */
+}
+
+/* #hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a .hs_submit,
+.hs-submit > .actions > .hs-button,
+.primary,
+.large {
+  border-radius: 0.5rem;
+} */
+input[value="Get Early Access"] {
+  border-radius: 0.5rem !important;
+}
+
+#hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_firstname {
+  width: 100%;
+}
+
+#hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_input {
+  width: 100%;
+}
+
+#hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_email {
+  width: 100%;
+}
+
+#hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_submit {
+  margin-top: 22px;
+  width: 100%;
+}
+
+#firstname-f6b08b13-0830-4860-9e47-0c753a15ef7a {
+  border-radius: 0.5rem;
+  border: 1px solid #050038;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+::placeholder {
+  color: #d1d5db;
+  font-size: "15px" !important;
+}
+
+#message-f6b08b13-0830-4860-9e47-0c753a15ef7a {
+  border-radius: 0.5rem;
+  border: 1px solid #050038;
+  width: 100%;
+}
+
+#email-f6b08b13-0830-4860-9e47-0c753a15ef7a {
+  border-radius: 0.5rem;
+  border: 1px solid #050038;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.hs-button,
+.primary,
+.large {
+  background-color: #050038;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* media queries */
+/* @media (min-width: 778px) {
+  #hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_firstname {
+    width: 49%;
+  }
+
+  #hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_input {
+    width: 49%;
+    margin-left: 2%;
+  }
+
+  #hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_email {
+    width: 74%;
+  }
+
+  #hsForm_f6b08b13-0830-4860-9e47-0c753a15ef7a > .hs_submit {
+    margin-top: 22px;
+    width: 24%;
+    margin-left: 2%;
+  }
+}
+
+@media (min-width: 768px) {
+} */
+
+/*---------------------------------- Hubspot Join-waitlist Form ------------------------------- */

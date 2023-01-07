@@ -1,9 +1,10 @@
 import {React,useEffect} from "react";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Background from '../assets/Hero-lines.svg';
+import Background from '../assets/Hero-background.svg';
 import HubspotForm from 'react-hubspot-form';
 import ReactGA from "react-ga";
+import "../styles/contactUsForm.css";
 
 const Contactus = () => {
   useEffect(() => {
@@ -15,7 +16,7 @@ const Contactus = () => {
         <Navbar/>
         <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
           <div className='d-flex justify-content-center'>
-          <div className='col-8 w mt-5 d-flex justify-center flex-column'>
+          <div className='col-8 mt-5 d-flex justify-center flex-column'>
             <h1 className='tc mt-5'>Contact Us</h1>
             <p className='tc'>Designed by sales professionals, for sales professionals.</p>
             <div id='cinputdiv' className=''>

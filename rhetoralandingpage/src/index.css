@@ -163,6 +163,11 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
+}
+
+#cinputdiv > div {
+  width: 55%;
 }
 #heroinput-join {
   display: flex;
@@ -216,10 +221,6 @@ a:hover {
 }
 .i-img {
   height: 750px;
-}
-
-#i-background {
-  height: 1268px;
 }
 
 #com {

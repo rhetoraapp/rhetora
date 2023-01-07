@@ -265,21 +265,6 @@
   width: 100%;
   margin-right: 2rem;
 }
-/* BREAKPOINT */
-
-/* for md */
-@media (min-width: 778px) {
-  /* #reactHubspotForm1 {
-    width: 75%;
-  } */
-}
-
-/* for lg */
-@media (min-width: 1024px) {
-  /* #reactHubspotForm1 {
-    width: 100%;
-  } */
-}
 
 /* -------------------------------------- Hubspot Form 1 -------------------------------------- */
 
@@ -362,13 +347,6 @@
   #footerSubscriberForm input[type="submit"] {
     width: max-content;
   }
-}
-
-/* for md */
-@media (min-width: 778px) {
-  /* #reactHubspotForm1 {
-    width: 75%;
-  } */
 }
 
 /* for lg */
@@ -477,9 +455,6 @@ form#hsForm_410031c8-6287-4d4e-805f-70137ed4c156 div.hs_email {
 
 /* for md */
 @media (min-width: 778px) {
-  /* #reactHubspotForm1 {
-    width: 75%;
-  } */
   #communityEnquiryForm {
     width: 80%;
   }

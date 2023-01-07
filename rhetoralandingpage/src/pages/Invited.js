@@ -1,8 +1,7 @@
 import React, { useState,useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import Background from "../assets/Hero-lines.svg";
-import slackgraphic from "../assets/slackGraphic.png";
+import Background from '../assets/Hero-background.svg';
 import ReactGA from "react-ga";
 // formik
 import { useFormik, Form, FormikProvider } from "formik";
@@ -92,7 +91,7 @@ const Invited = () => {
             >
               <div className="container hero d-flex flex-column justify-content-around align-items-center">
                 <div className="flex w-full justify-center p-2">
-                  <div className="p-12 md:p-20 w-full md:w-4/6 flex justify-center flex-col bg-white rounded-3xl shadow my-5">
+                  <div className="p-12 md:p-20 w-full md:w-4/6 flex justify-center flex-col rounded-3xl my-5">
                     <h1 className="text-center text-main">
                       rhetora is <br></br>Launching Soon
                     </h1>
@@ -182,14 +181,6 @@ const Invited = () => {
           </FormikProvider>
         )}
         {hide && <InviteFriendComponent firstQueueNumber={errors.queueNumber} />}
-
-        <div className="w-full d-flex justify-center">
-          <img
-            src={slackgraphic}
-            className="w-10/12 md:9/12"
-            alt="slack-graphic"
-          />
-        </div>
       </div>
       <Footer />
     </div>
