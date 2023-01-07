@@ -1,9 +1,10 @@
 import {React,useEffect} from "react";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Background from '../assets/Hero-lines.svg';
+import Background from '../assets/Hero-background.svg';
 import HubspotForm from 'react-hubspot-form';
 import ReactGA from "react-ga";
+import "../styles/joinWaitListForm.css";
 
 const Join = () => {
 
@@ -16,7 +17,7 @@ useEffect(() => {
         <Navbar/>
         <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
           <div className='d-flex justify-content-center'>
-          <div className='col-8 w mt-5 d-flex justify-center flex-column'>
+          <div className='col-8 mt-5 d-flex justify-center flex-column'>
             <h1 className='tc mt-5'>rhetora is <br></br>Launching Soon</h1>
             <p className='tc'>Designed by sales professionals, for sales professionals.</p>
             <div id='cinputdiv' className=''>
@@ -27,13 +28,6 @@ useEffect(() => {
             onReady={(form) => console.log('Form ready!')}
             loading={<div>Loading...</div>}
             />
-            {/* <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Name'></input>
-            <input id='heroinput-join' className='col-lg-8 col-xl-6' placeholder='Company Name'></input>
-            </div>
-            <div id='cinputdiv'>
-            <input id='heroinput' className='row-10 col-lg-8 col-xl-9' placeholder='Email'></input>
-            <button id='herobtn' className='row-10 col-lg-8 col-xl-3'>Get Early Access</button>
-            </div> */}
           </div>
 
           </div>

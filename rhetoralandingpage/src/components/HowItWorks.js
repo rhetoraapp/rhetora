@@ -261,13 +261,14 @@ const HowItWorks = () => {
             <p className="text-2xl text-white font-anek">
               Ready to explode your response rates?
             </p>
+            <a href="/join-waitlist">
             <button
               type="button"
               style={{ paddingTop: "13px" }}
               className="pb-2.5 px-5 mr-2 text-sm font-bold text-main focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-minor focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
               Request Access
-            </button>
+            </button></a>
           </div>
         </div>
       </div>
@@ -310,12 +311,13 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="mt-4">
+                      <a href="/join-waitlist">
                         <button
                           type="button"
                           className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                         >
                           Book Demo
-                        </button>
+                        </button></a>
                       </div>
                     </div>
                     <div className="w-full md:w-4/6">
@@ -354,12 +356,13 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="mt-4">
+                      <a href="/join-waitlist">
                         <button
                           type="button"
                           className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                         >
                           Book Access
-                        </button>
+                        </button></a>
                       </div>
                     </div>
                     <div className="w-full md:w-4/6 relative">
@@ -395,12 +398,13 @@ const HowItWorks = () => {
                         </ul>
                       </div>
                       <div className="mt-4">
+                      <a href="/join-waitlist">
                         <button
                           type="button"
                           className="text-white bg-minor hover:bg-minorlight focus:outline-none focus:ring-4 focus:ring-minor font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                         >
                           Book Demo
-                        </button>
+                        </button></a>
                       </div>
                     </div>
                     <div className="w-full md:w-4/6 relative">

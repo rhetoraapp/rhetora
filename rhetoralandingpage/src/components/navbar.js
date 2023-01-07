@@ -9,7 +9,7 @@ const navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               src={require("../assets/Logo-Regular.svg").default}
-              className="mr-3 h-16 mb-0 pt-2"
+              className="mr-3 h-12 mb-0"
               alt="Rhetora Logo"
             />
             <span className="hidden pt-2 md:block self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
