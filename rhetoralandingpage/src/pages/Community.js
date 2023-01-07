@@ -38,7 +38,7 @@ const Community = () => {
   return (
     <div>
       <Navbar />
-      <div className="md:container py-32 mx-auto flex flex-col items-center justify-between w-100">
+      <div className="md:container pt-32 pb--32 mx-auto flex flex-col items-center justify-between w-100">
         <div className="text-center px-10 flex flex-col items-center">
           <p className="text-4xl md:text-5xl text-main font-bold">
             Become a <span className="text-minor">Rhetorian</span>
@@ -63,7 +63,7 @@ const Community = () => {
             className="mx-auto w-full md:w-full"
           />
         </div>
-        <div className="hidden md:block w-full">
+        <div id="com" className="hidden md:block w-full">
           <img
             src={
               require("../assets/main-community-with-color-blur.svg").default
@@ -72,7 +72,7 @@ const Community = () => {
             className="mx-auto w-full md:w-full"
           />
         </div>
-        <div className="px-10">
+        <div id="com2" className="px-10">
           <div className="">
             <p className="text-3xl md:text-6xl text-center text-main font-bold">
               Exclusive Access Includes
@@ -109,8 +109,8 @@ const Community = () => {
           </div>
         </div>
       </div>
-      <FooterSubscriber title="Join the community save your quota" />
-      <Footer />
+      <FooterSubscriber id="com2" title="Join the community save your quota"/>
+      <Footer id="com2"/>
     </div>
   );
 };

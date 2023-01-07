@@ -20,7 +20,7 @@ const HowItWorks = () => {
         className="flex flex-col items-center pb-4"
         style={{ backgroundColor: "#F9F9F9" }}
       >
-        <p className="font-anek text-minor text-4xl font-semibold py-12">
+        <p className="font-anek text-minor text-4xl font-semibold py-20">
           How rhetora Works
         </p>
         {/* Tabs section */}
@@ -200,7 +200,7 @@ const HowItWorks = () => {
                 </Tabs.Item>
                 <Tabs.Item title="ANALYTICS & INSIGHTS">
                   <div className="container lg:px-4 xl:px-6  gap-8 pt-16 mx-auto flex flex-col-reverse md:flex md:flex-row items-center justify-between w-100">
-                    <div className="font-inter w-full text-start md:w-2/6">
+                    <div className="font-inter w-full text-start md:w-3/6">
                       <p className="font-anek text-base lg:text-lg font-semibold uppercase text-minor">
                         ANALYTICS & INSIGHTS
                       </p>
@@ -230,7 +230,7 @@ const HowItWorks = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="w-full md:w-4/6">
+                    <div className="w-full md:w-3/6">
                       <img
                         src={
                           require("../assets/analytics-insights-hero.svg")

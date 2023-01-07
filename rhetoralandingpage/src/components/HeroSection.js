@@ -26,35 +26,28 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="-mt-4 md:py-20 mx-20">
+      <div className="-mt-4 md:py-3 mx-20">
         <div className="flex flex-col text-sm font-semibold items-center uppercase">
           <p className="text-sm" style={{ color: "#7C828D" }}>As seen on</p>
-          <div className="my-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="my-10 grid grid-cols-3 md:grid-cols-3 gap-8">
             <div className="flex justify-center">
               <img
-                src={require("../assets/samsung.png.svg").default}
-                alt="samsung"
+                src={require("../assets/disrupt.svg").default}
+                alt="disrupt"
                 className="m-0"
               />
             </div>
             <div className="flex justify-center">
               <img
-                src={require("../assets/stanley-security.svg").default}
-                alt="stanley"
+                src={require("../assets/digitaljournal.svg").default}
+                alt="digital"
                 className="m-0"
               />
             </div>
             <div className="flex justify-center">
               <img
-                src={require("../assets/booking-com.svg.svg").default}
-                alt="booking"
-                className="m-0"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img
-                src={require("../assets/ibm.svg.svg").default}
-                alt="ibm"
+                src={require("../assets/timesbusinessnews.svg").default}
+                alt="tbn"
                 className="m-0"
               />
             </div>

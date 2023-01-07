@@ -222,6 +222,13 @@ a:hover {
   height: 1268px;
 }
 
+#com {
+  transform: translateY(-150px);
+}
+#com2 {
+  transform: translateY(-220px);
+}
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 1340px) {
   .os-h2 {
     margin-right: 130px;
