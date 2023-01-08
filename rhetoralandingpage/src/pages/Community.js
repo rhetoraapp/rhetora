@@ -18,20 +18,20 @@ const Community = () => {
       id: 1,
       title: "Network with like-minded",
       p1: "Networking is an essential part of the sales profession. By building connections with other professionals, we can learn from their experiences, gain valuable insights, and even find new leads and opportunities.",
-      p2: "The Rhetora Community is a great place to network with other sales professionals. Our active slack channel is a hub for discussion and networking, where members can connect with each other and build valuable relationships.",
+      p2: "The rhetora Community is a great place to network with other sales professionals. Our active slack channel is a hub for discussion and networking, where members can connect with each other and build valuable relationships.",
       image: image1,
     },
     {
       id: 2,
       title: "Learn from industry leaders",
       p1: "Collaborating with like-minded people is essential to the success of any career, let alone in sales. Our members work together and share ideas, we learn from each other, improve our skills, and achieve our goals more effectively.",
-      p2: "The Rhetora Community provides a platform for sales professionals to collaborate and share best practices. Our slack channel is where members bounce ideas off of one another and seek advice from experienced professionals.",
+      p2: "The rhetora Community provides a platform for sales professionals to collaborate and share best practices. Our slack channel is where members bounce ideas off of one another and seek advice from experienced professionals.",
       image: image2,
     },
     {
       id: 3,
       title: "A real sense of belonging",
-      p1: "Belonging is an important aspect of any professional environment. The Rhetora Community creates a sense of belonging for sales professionals by constantly encouraging genuine conversation, real life events and a chill environment. Our meme slack channel is the most active slack channel.",
+      p1: "Belonging is an important aspect of any professional environment. The rhetora Community creates a sense of belonging for sales professionals by constantly encouraging genuine conversation, real life events and a chill environment. Our meme slack channel is the most active slack channel.",
       image: image3,
     },
   ];
@@ -49,7 +49,7 @@ const Community = () => {
           <p className="w-full md:w-2/3 mt-6 text-lg">
             Are you tired of feeling alone in your sales job? Do you want to
             connect with like-minded professionals to bounce ideas off of and
-            improve your skills? If so, you're in the right place. Rhetora
+            improve your skills? If so, you're in the right place. rhetora
             Community is a vibrant and active Slack channel with hundreds of
             sales professionals from all industries and experience levels
           </p>
@@ -61,6 +61,7 @@ const Community = () => {
             src={require("../assets/community-main-mobile.svg").default}
             alt="community"
             className="mx-auto w-full md:w-full"
+            style={{ transform: 'translateY(-100px)' }}
           />
         </div>
         <div id="com" className="hidden md:block w-full">

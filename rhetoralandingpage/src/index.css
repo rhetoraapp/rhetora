@@ -225,6 +225,7 @@ a:hover {
 
 #com {
   transform: translateY(-150px);
+  z-index: 0;
 }
 #com2 {
   transform: translateY(-220px);

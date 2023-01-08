@@ -10,7 +10,7 @@ const navbar = () => {
             <img
               src={require("../assets/Logo-Regular.svg").default}
               className="mr-3 h-12 mb-0"
-              alt="Rhetora Logo"
+              alt="rhetora Logo"
             />
             <span className="hidden pt-2 md:block self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
               rhetora

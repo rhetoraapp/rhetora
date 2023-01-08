@@ -55,7 +55,7 @@ const HowItWorks = () => {
                             training their team.
                           </li>
                           <li>
-                            Rhetora is patient. Allow sales reps to practice
+                            rhetora is patient. Allow sales reps to practice
                             cold calling offline in a stress-free enviroment
                             proven to best method to introducing new scripts and
                             roles.
