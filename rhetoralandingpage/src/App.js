@@ -44,7 +44,6 @@ const App = () => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>rhetora</title>
-          <link rel="canonical" href="http://mysite.com/example" />
           <meta name="description" content="Cold calling practice" />
           <script
             type="text/javascript"
