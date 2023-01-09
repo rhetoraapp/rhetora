@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import Background from '../assets/Hero-background.svg';
 import ReactGA from "react-ga";
 import "../styles/contactUsForm.css";
+import TwentyNineteen from "../components/TwentyNineteen";
 
 const Contactus = () => {
   useEffect(() => {
@@ -14,9 +15,9 @@ const Contactus = () => {
       <div>
         <Navbar/>
         <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
-          <div className='d-flex justify-content-center'>
-          <div id="arrowLine"></div>
-
+        <div className='d-flex p-5 mt-5 justify-content-end'>
+          <TwentyNineteen />
+              
           </div>
 
         </div>
