@@ -1,27 +1,28 @@
 import {React,useEffect} from "react";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Background from '../assets/Hero-lines.svg';
+import Background from '../assets/Hero-background.svg';
 import ReactGA from "react-ga";
-// import Hero from '../components/Hero/Hero';
-// import group48 from '../components/Hero/group48.png';
-import Banner from "../components/Hero/BackgroundImg";
-const Ourstory = () => {
+import "../styles/contactUsForm.css";
 
+const Contactus = () => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
   },[]);
-
+  
     return (
       <div>
         <Navbar/>
-          <Banner />
+        <div style={{height: "100vh", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
+          <div className='d-flex justify-content-center'>
+          <div id="arrowLine"></div>
+
+          </div>
+
+        </div>
         <Footer/>
-        
-        
-        
       </div>
     );
   };
-  
-  export default Ourstory;
+   
+  export default Contactus;
