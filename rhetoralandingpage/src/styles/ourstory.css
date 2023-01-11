@@ -1,29 +1,50 @@
-#TwntyNntnStory {
-    width: 90vh;
+#lucaLine {
     position: absolute;
-    right: 0;
-    top: 25vh;
-    background: #FFFFFF;
-
+    width: 933px;
+    height: 86px;
+    left: 579px;
+    top: 265px;
 }
 
-.year {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 16px;
+#mazeLine {
+    position: absolute;
+    width: 933.01px;
+    height: 86px;
+    left: 579px;
+    top: 610px;
+}
+
+#heading1 {
+    position: absolute;
+    left: 69.71%;
+    right: 26.06%;
+    top: 385px;
+    /* bottom: 59.1%; */
 
     font-family: 'Anek Latin';
     font-style: normal;
-    font-size: 18px;
-    line-height: 26px;
-    /* or 142% */
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 16px;
+    /* or 50% */
 
-    text-align: center;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.00380952px;
+
+    /* orange */
 
     color: #050038;
 }
 
-.yearDescription {
+#description1 {
+
+    position: absolute;
+    height: 110px;
+    left: 54.96%;
+    right: 11.24%;
+    top: 426px;
+
     font-family: 'Anek Latin';
     font-style: normal;
     font-weight: 600;
@@ -36,137 +57,59 @@
     color: #050038;
 }
 
-#name {
-    font-family: 'Anek Latin';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 16px;
-    color: #939393;
+#topline {
+    position: absolute;
+    width: 767px;
+    height: 128px;
+    left: -11px;
+    top: 834px;
 }
 
-.coFounderMatch {
-    margin-left: 40vh;
-    background: #050038;
-    box-shadow: 0px 2.75211px 2.75211px rgba(0, 0, 0, 0.25);
-    border-radius: 17.2007px;
-    padding: 4vh;
-    width: fit-content;
-    height: 16vh;
-}
+/* #frame34{
+  position: absolute;
+width: 56.31px;
+height: 56.31px;
+left: 728px;
+top: 726px;
+} */
 
 #vector145 {
+    box-sizing: border-box;
+
     position: absolute;
-    left: 746px;
+    width: 1166px;
+    height: 0px;
+    left: 166.5px;
+    top: 1550px;
+
+    /* timeline stroke */
+
+    border: 2px dashed #9CAFC6;
+    transform: rotate(-90deg);
+    border-radius: 5px;
 }
 
-#topRect {
-    position: relative;
-    width: 333.01px;
-    height: 224.99px;
-    left: 310.96px;
-    top: 67.67px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 2.75211px 2.75211px rgba(0, 0, 0, 0.25);
-    border-radius: 17.2007px;
-}
-
-/* #v1 {
+#v1 {
+    position: absolute;
     width: 394.93px;
     height: 278.65px;
-    background-color: #462424;
-
-} */
-
-/* #v1icon2 {
-    position: absolute;
-    left: 12.5%;
-    right: 12.5%;
-    top: 13.54%;
-    bottom: 13.54%;
-
-    border: 1.03204px solid #FFFFFF;
-} */
-
-#percRectangle {
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -100px;
-    left: 100px;
-    width: 147.93px;
-    height: 147.93px;
-    background: #050038;
-    box-shadow: 0px 2.75211px 2.75211px rgba(0, 0, 0, 0.25);
-    border-radius: 17.2007px;
+    left: 280px;
+    top: 950px;
 }
 
-#matchRectangle {
-    position: absolute;
-    width: 394.93px;
-    height: 79.81px;
-    top: 100px;
-    left: -32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #F8F8F8;
-    box-shadow: 0px 2.75211px 2.75211px rgba(0, 0, 0, 0.25);
-    border-radius: 13.7606px;
-}
-
-#pic{
-    position: static;
-width: 59.17px;
-height: 59.17px;
-/* 
-background: url(); */
-border-radius: 29.5852px;
-}
-
-#barone{
-    margin: 1vh;
-    width: 216.73px;
-    height: 10.32px;
-    
-    background: #E7E6E6;
-    border-radius: 13.7606px;
-}
-
-#bartwo{
-    margin: auto;
-width: 186.46px;
-height: 10.32px;
-
-background: #E7E6E6;
-border-radius: 13.7606px;
-}
-
-#bottomLine{
+#bottomline {
     position: absolute;
     width: 767px;
     height: 125px;
-    left: -9px;
-    top: 1431px;
+    left: -11px;
+    top: 1331px;
 }
 
-#Twenty22 {
-    display: flex;
-    justify-content: center;
-    width: 455px;
-    height: 166.63px;
-    position: relative;
-    left: 180px;
-    top: 600px;
-}
-
-#year22 {
+#heading3 {
     position: absolute;
-    left: 40.79%;
-    top: -100.12%;
+    left: 25.79%;
+    right: 69.84%;
+    top: 1612px;
     bottom: 68.23%;
 
     font-family: 'Anek Latin';
@@ -183,88 +126,47 @@ border-radius: 13.7606px;
     /* orange */
 
     color: #050038;
-
 }
 
-#yearTwenty21 {
-    position: absolute;
-    left: 66.07%;
-    right: 23.02%;
-    top: -800px;
-    bottom: 98.14%;
-
-    font-family: 'Anek Latin';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 16px;
-    /* or 50% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.00380952px;
-
-    /* orange */
-    color: #050038;
-}
-
-
-
-#rightSec{
-    position: relative;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#yearTwenty21Desc {
+#description3 {
     position: absolute;
     height: 110px;
-    left: 60.56%;
-    right: 12.3%;
-    top: -300.07px;
-    bottom: 80%;
-    margin-top: -30px;
+    left: 12.96%;
+    right: 56.94%;
+    top: 1668.63px;
+
     font-family: 'Anek Latin';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 30px;
-    /* or 167% */
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.00380952px;
+    line-height: 26px;
+    /* or 142% */
+
+    text-align: center;
 
     color: #050038;
 }
 
-#rectangle21 {
-    position: relative;
-    width: 374.11px;
-    height: 253px;
-    left: 370.83px;
-    top: 70px;
-    background: #FFFFFF;
-    box-shadow: 0px 3.31803px 3.31803px rgba(0, 0, 0, 0.25);
-    border-radius: 20.7377px;
+#text3 {
+    position: absolute;
+    width: 486px;
+    height: 167.07px;
+    left: 840px;
+    top: 985px;
 }
 
-#v4{
+#v4 {
     position: absolute;
     width: 527.57px;
     height: 253px;
+    left: 861px;
+    top: 1594px;
 }
 
-#pic1{
+#textRight {
     position: absolute;
-width: 71.34px;
-height: 71.34px;
-left: 874.27px;
-top: 628.84px;
-/* 
-background: url(IMG_4767.jpg); */
-border-radius: 35.6689px;
+    width: 511px;
+    height: 160.63px;
+    left: 861px;
+    top: 2053px;
 }
-
-
