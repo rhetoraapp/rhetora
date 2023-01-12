@@ -237,7 +237,7 @@ top: 726px;
     position: absolute;
     width: 1108px;
     height: 330px;
-    left: 140px;
+    left: 202px;
     top: 2500px;
     display: flex;
     justify-content: center;
@@ -298,29 +298,29 @@ top: 726px;
     border-radius: 15px;
 }
 
-#rect60 button{
+#rect60 button {
     box-sizing: border-box;
 
-position: absolute;
-height: 48px;
-left: 42.33%;
-right: 42.42%;
-top: 249px;
+    position: absolute;
+    height: 48px;
+    left: 42.33%;
+    right: 42.42%;
+    top: 249px;
 
-font-family: 'Anek Latin';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 18px;
-text-align: center;
-letter-spacing: -0.13px;
-text-transform: uppercase;
+    font-family: 'Anek Latin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.13px;
+    text-transform: uppercase;
 
-color: #050038;
+    color: #050038;
 
-border: 1px solid rgba(255, 255, 255, 0.5);
-border-radius: 100px;
-background: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+    background: #FFFFFF;
 }
 
 #frame18 {
@@ -328,7 +328,7 @@ background: #FFFFFF;
     width: 255px;
     height: 255px;
     left: 917px;
-    top: 2500px;
+    top: -155px;
 }
 
 #frame19 {
@@ -339,3 +339,7 @@ background: #FFFFFF;
     top: 2500px;
 }
 
+#orstryftr{
+    position: absolute;
+    top: 2000px;
+}

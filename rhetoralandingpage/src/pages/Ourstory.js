@@ -1,5 +1,6 @@
 import { React } from "react";
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import Background from "../assets/Hero.png";
 import "../styles/ourstory.css";
 
@@ -17,6 +18,8 @@ import Text1 from '../components/ourstory/Text1';
 import Text2 from "../components/ourstory/Text2";
 import Text3 from '../components/ourstory/Text3';
 import Text4 from "../components/ourstory/Text4";
+
+import Form from '../components/ourstory/Form';
 
 const Ourstory = () => {
   return (
@@ -52,16 +55,7 @@ const Ourstory = () => {
 
         <Frame18 id="frame18" />
 
-        <form id="rect60" action="#">
-          <label id="label">Get in Touch With Us</label>
-          <input id="input1" type="text" name="name" value="name" />
-          <input id="input2" type="email" name="email" value="test@test.com" />
-          <div>
-            <textarea />
-          </div>
-          <button type="">Submit</button>
-        </form>
-
+        <Form />
 
 
 
@@ -78,6 +72,8 @@ const Ourstory = () => {
 
 
       </div>
+      
+      <Footer/>
     </div>
   );
 };
