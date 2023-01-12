@@ -2,15 +2,22 @@ import { React } from "react";
 import Navbar from '../components/navbar';
 import Background from "../assets/Hero.png";
 import "../styles/ourstory.css";
+
 import LukaLine from "../components/ourstory/lukaLine";
 import MazeLine from "../components/ourstory/mazeLine";
 import TopLine from "../components/ourstory/Topline";
 import Vector145 from "../components/ourstory/Vector145";
 import V1 from "../components/ourstory/V1";
 import BottomLine from "../components/ourstory/BottomLine";
-import Text3 from "../components/ourstory/Text3";
 import V4 from "../components/ourstory/V4";
-import Text2021 from "../components/ourstory/Text2021";
+import Frame19 from "../components/ourstory/Frame19";
+import Frame18 from "../components/ourstory/Frame18";
+
+import Text1 from '../components/ourstory/Text1';
+import Text2 from "../components/ourstory/Text2";
+import Text3 from '../components/ourstory/Text3';
+import Text4 from "../components/ourstory/Text4";
+
 const Ourstory = () => {
   return (
     <div>
@@ -25,15 +32,7 @@ const Ourstory = () => {
         }}
       >
         <LukaLine id="lucaLine" />
-        <div>
-          <div id="heading1">2019</div>
-          <div id="description1">
-            Luka and Mazen have been business partners for many years, having
-            met in high school and bonded over our shared mentality and
-            entrepreneurial spirit. We have always been driven to find ways to
-            improve upon existing ideas and create new solutions to problems.
-          </div>
-        </div>
+        <Text1 />
         <MazeLine id="mazeLine" />
 
         <TopLine id="topline" />
@@ -41,22 +40,39 @@ const Ourstory = () => {
         <V1 id="v1" />
         <BottomLine id="bottomline" />
 
-        <div>
-          <div id="heading3">2023</div>
-          <div id="description3">
-            During the growth of our e-commerce business and working in sales,
-            we experienced the challenges of cold calling and decided to create
-            Rhetora, an AI-powered platform that helps salespeople improve their
-            cold calling skills and increase their chances of success in a
-            stress-free environment.
-          </div>
-        </div>
+        <Text2 />
 
-        <Text3 id="text3" />
+        <Text3 />
 
         <V4 id="v4" />
 
-        <Text2021 id="textRight" />
+        <Text4 id="text" />
+
+        <Frame19 id="frame19" />
+
+        <Frame18 id="frame18" />
+
+        <form id="rect60">
+          <label id="label">Get in Touch With Us</label>
+          <input type="text" name="tst" value="tst" />
+          <input type="text" name="tst" value="oio" />
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
   );
