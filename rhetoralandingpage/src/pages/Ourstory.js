@@ -22,8 +22,9 @@ import Form from '../components/ourstory/Form';
 
 const Ourstory = () => {
   return (
-    <div className="content-center" >
+    <div className="" >
       <Navbar />
+
       <div
         style={{
           position: "relative",
