@@ -81,16 +81,12 @@ top: 726px;
 #vector145 {
     box-sizing: border-box;
 
-    position: absolute;
     width: 1166px;
-    height: 0px;
     left: 162.5px;
-    top: 1550px;
+    top: 961px;
 
     /* timeline stroke */
 
-    border: 2px dashed #9CAFC6;
-    transform: rotate(-90deg);
     border-radius: 5px;
 }
 

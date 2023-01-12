@@ -11,6 +11,7 @@ import Vector145 from "../components/ourstory/Vector145";
 import V1 from "../components/ourstory/V1";
 import BottomLine from "../components/ourstory/BottomLine";
 import V4 from "../components/ourstory/V4";
+import TelescopeIcon from '../components/ourstory/TelescopeIcon';
 
 import Text1 from '../components/ourstory/Text1';
 import Text2 from "../components/ourstory/Text2";
@@ -37,7 +38,7 @@ const Ourstory = () => {
         <MazeLine id="mazeLine" className="bg-white" />
 
         <TopLine id="topline" />
-        <Vector145 id="vector145" />
+        <Vector145 className="absolute" id="vector145" />
         <V1 id="v1" />
         <BottomLine id="bottomline" />
 
