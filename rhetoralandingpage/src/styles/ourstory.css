@@ -231,64 +231,111 @@ top: 726px;
     color: #050038;
 }
 
-#frame18{
-    position: absolute;
-width: 255px;
-height: 255px;
-left: 917px;
-top: -155px;
-}
 
-#frame19{
-    position: absolute;
-width: 255px;
-height: 255px;
-left: -53px;
-top: -115px;
-}
 
-#rect60{
+#rect60 {
     position: absolute;
     width: 1108px;
     height: 330px;
-    left: 202px;
+    left: 140px;
     top: 2500px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: #050038;
-    border-radius: 10px;  
+    border-radius: 10px;
 }
 
-#rect60 input {
+#rect60 #input2 {
     position: absolute;
-    width: 200px;
-    left: 1.32%;
-    right: 1.55%;
-    top: 102px;
+    height: 58px;
+    left: 49.91%;
+    right: 26.71%;
+    top: 96px;
 
+    border-radius: 50px;
+}
+
+#rect60 #input1 {
+
+    position: absolute;
+    height: 58px;
+    left: 26.44%;
+    right: 50.18%;
+    top: 96px;
+
+    border-radius: 50px;
+}
+
+#rect60 #label {
+    position: absolute;
     height: 45px;
+    top: 41px;
+
+    font-family: 'Anek Latin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#rect60 textarea {
+
+    position: absolute;
+    height: 62px;
+    left: 26.36%;
+    right: 26.60%;
+    top: 172px;
 
     background: #FFFFFF;
     border-radius: 15px;
 }
 
-#rect60 label{
-    position: absolute;
-height: 45px;
-left: 17.42%;
-right: 17.42%;
-top: 41px;
+#rect60 button{
+    box-sizing: border-box;
+
+position: absolute;
+height: 48px;
+left: 42.33%;
+right: 42.42%;
+top: 249px;
 
 font-family: 'Anek Latin';
 font-style: normal;
 font-weight: 700;
-font-size: 32px;
-line-height: 48px;
-/* or 150% */
-
-display: flex;
-align-items: center;
+font-size: 16px;
+line-height: 18px;
 text-align: center;
+letter-spacing: -0.13px;
+text-transform: uppercase;
 
-color: #FFFFFF;
+color: #050038;
+
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 100px;
+background: #FFFFFF;
 }
+
+#frame18 {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    left: 917px;
+    top: 2500px;
+}
+
+#frame19 {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    left: 300px;
+    top: 2500px;
+}
+
