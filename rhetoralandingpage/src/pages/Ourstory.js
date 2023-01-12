@@ -11,8 +11,6 @@ import Vector145 from "../components/ourstory/Vector145";
 import V1 from "../components/ourstory/V1";
 import BottomLine from "../components/ourstory/BottomLine";
 import V4 from "../components/ourstory/V4";
-import Frame19 from "../components/ourstory/Frame19";
-import Frame18 from "../components/ourstory/Frame18";
 
 import Text1 from '../components/ourstory/Text1';
 import Text2 from "../components/ourstory/Text2";
@@ -23,7 +21,7 @@ import Form from '../components/ourstory/Form';
 
 const Ourstory = () => {
   return (
-    <div>
+    <div className="content-center" >
       <Navbar />
       <div
         style={{
@@ -34,9 +32,9 @@ const Ourstory = () => {
           background: `url(${Background})`,
         }}
       >
-        <LukaLine id="lucaLine" />
-        <Text1 />
-        <MazeLine id="mazeLine" />
+        <LukaLine id="lucaLine" className="bg-white" />
+        <Text1 className="bg-white" />
+        <MazeLine id="mazeLine" className="bg-white" />
 
         <TopLine id="topline" />
         <Vector145 id="vector145" />
@@ -51,24 +49,8 @@ const Ourstory = () => {
 
         <Text4 id="text" />
 
-        <Frame19 id="frame19" />
-
-        <Frame18 id="frame18" />
 
         <Form />
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       </div>
