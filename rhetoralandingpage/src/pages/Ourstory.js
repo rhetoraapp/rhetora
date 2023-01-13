@@ -38,7 +38,7 @@ const Ourstory = () => {
 	}, []);
 
 	const { width } = useViewport();
-	const breakpoint = 768;
+	const breakpoint = 450;
 
 	return (
 		<div>
@@ -81,7 +81,7 @@ const Ourstory = () => {
 				</div>
 			</div>
 			<div
-				className={`pt-[120px] !bg-no-repeat !bg-contain md:!bg-cover !bg-center mr-10 md:mr-0`}
+				className={` !bg-no-repeat md:!bg-contain md:!bg-center`}
 				style={width > breakpoint ? style.timeLineBG : style.mobileTimeLineBG}
 			>
 				<div className="md:w-1/2 md:ml-auto md:text-center md:pt-10">
