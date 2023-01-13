@@ -1,0 +1,53 @@
+.ourstory-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourstory-form .input-container{
+  width: 100%;
+  display: flex;
+}
+.ourstory-form .input-container > input{
+  width: 50%;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.ourstory-form .input-container > input:nth-child(1){
+  margin-right: 10px;
+}
+.ourstory-form #ourstory-msg{
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.ourstory-form button{
+  padding: 10px 30px;
+  width: 140px;
+  text-align: center;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  background-color: #fff;
+  font-weight: 600;
+}
+/* for sm */
+@media only screen and (max-width: 600px) {
+  .ourstory-form .input-container{
+    flex-direction: column;
+  }
+  .ourstory-form .input-container > input{
+    width: 100%;
+  }
+  .ourstory-form .input-container > input:nth-child(1){
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
