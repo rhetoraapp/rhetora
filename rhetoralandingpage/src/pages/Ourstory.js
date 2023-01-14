@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { React } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import OurStoryFormContainer from '../components/OurstoryFormContainer';
@@ -7,39 +7,13 @@ import LukaLine from '../assets/luka-line.svg';
 import LukaLineMobile from '../assets/luka-line-mobile.svg';
 import MazenLineMobile from '../assets/mazen-line-mobile.svg';
 import MazenLine from '../assets/mazen-line.svg';
-import TimeLineBG from '../assets/timeline-section.svg';
 import MobileTimeLineBG from '../assets/mobile-timeline.svg';
-import ReactGA from 'react-ga';
 
-const style = {
-	timeLineBG: {
-		background: `url(${TimeLineBG})`,
-	},
-	mobileTimeLineBG: {
-		background: `url(${MobileTimeLineBG})`,
-	},
-};
-
-const useViewport = () => {
-	const [width, setWidth] = useState(window.innerWidth);
-
-	useEffect(() => {
-		const handleWindowResize = () => setWidth(window.innerWidth);
-		window.addEventListener('resize', handleWindowResize);
-		return () => window.removeEventListener('resize', handleWindowResize);
-	}, []);
-
-	return { width };
-};
+import TimeLineLeftBG from '../assets/timeline-left-bg.svg';
+import TimeLineRightBG from '../assets/timeline-right-bg.svg';
+import '../styles/Ourstory.css';
 
 const Ourstory = () => {
-	useEffect(() => {
-		ReactGA.pageview(window.location.pathname);
-	}, []);
-
-	const { width } = useViewport();
-	const breakpoint = 450;
-
 	return (
 		<div>
 			<Navbar />
@@ -80,23 +54,11 @@ const Ourstory = () => {
 					</div>
 				</div>
 			</div>
-			<div
-				className={` !bg-no-repeat md:!bg-contain md:!bg-center`}
-				style={width > breakpoint ? style.timeLineBG : style.mobileTimeLineBG}
-			>
-				<div className="md:w-1/2 md:ml-auto md:text-center md:pt-10">
-					<div className="md:w-[60%] md:mx-auto ml-10 mr-20 pt-20">
-						<p className="font-semibold">2020 & 2021</p>
-						<p className="mt-[16px] text-base">
-							Luka and I started our journey as e-commerce partners, building
-							and growing our online business. This allowed us to gain valuable
-							experience and insights into the world of entrepreneurship and
-							e-commerce.
-						</p>
-					</div>
-				</div>
-				<div className="md:w-1/2 text-center md:px-[20px] md:pt-10 mt-60">
-					<div className="md:w-[60%] md:mx-auto ml-10 mr-20 pt-20">
+
+			<div className="md:flex mt-[40px] hidden">
+				<div className="w-1/2 relative">
+					<img src={TimeLineLeftBG} alt="" srcset="" />
+					<div className="md:w-3/5 md:ml-auto md:text-center absolute xl:top-[50%] md:top-[40%] left-[20%]">
 						<p className="font-semibold">2022</p>
 						<p className="mt-[16px] text-base">
 							During the growth of our e-commerce business and working in sales,
@@ -107,8 +69,21 @@ const Ourstory = () => {
 						</p>
 					</div>
 				</div>
-				<div className="md:w-1/2 md:ml-auto text-center md:px-[20px] md:pt-60 md:pb-[200px] pb-20">
-					<div className="md:w-[60%] md:mx-auto ml-10 mr-20 pt-20">
+				<div className="w-1/2 relative md:mt-[60px]">
+					<div className="md:w-3/5 md:ml-auto md:text-center mx-auto">
+						<p className="font-semibold">2020 & 2021</p>
+						<p className="mt-[16px] text-base">
+							Luka and I started our journey as e-commerce partners, building
+							and growing our online business. This allowed us to gain valuable
+							experience and insights into the world of entrepreneurship and
+							e-commerce.
+						</p>
+					</div>
+					<div className="flex w-full justify-end md:mt-[-100px]">
+						<img src={TimeLineRightBG} alt="" srcset="" />
+					</div>
+
+					<div className="md:w-3/5 md:ml-auto md:text-center mx-auto mt-[100px]">
 						<p className="font-semibold">2023</p>
 						<p className="mt-[16px] text-base">
 							Rhetora is revolutionizing the sales industry by helping
@@ -121,7 +96,40 @@ const Ourstory = () => {
 				</div>
 			</div>
 
-			<div className="relative">
+			<div className="md:hidden pr-[20px] mt-[40px] block w-full relative">
+				<img className="w-full" src={MobileTimeLineBG} alt="" srcset="" />
+				<div className="absolute top-[10%] ml-[60px] w-3/5 timeline-2021">
+					<p className="font-semibold">2020 & 2021</p>
+					<p className="mt-[16px] text-base">
+						Luka and I started our journey as e-commerce partners, building and
+						growing our online business. This allowed us to gain valuable
+						experience and insights into the world of entrepreneurship and
+						e-commerce.
+					</p>
+				</div>
+				<div className="absolute top-[60%] w-3/5 ml-[60px] timeline-2022">
+					<p className="font-semibold">2022</p>
+					<p className="mt-[16px] text-base">
+						During the growth of our e-commerce business and working in sales,
+						we experienced the challenges of cold calling and decided to create
+						Rhetora, an AI-powered platform that helps salespeople improve their
+						cold calling skills and increase their chances of success in a
+						stress-free environment.
+					</p>
+				</div>
+				<div className="absolute top-[90%] w-3/5 ml-[60px] mb-[40px] timeline-2023">
+					<p className="font-semibold">2023</p>
+					<p className="mt-[16px] text-base">
+						Rhetora is revolutionizing the sales industry by helping salespeople
+						master cold calling using AI. With Rhetora, salespeople can improve
+						their skills and increase their chances of success. Rhetora empowers
+						salespeople to turn cold calling into a powerful tool for building
+						relationships and closing deals.
+					</p>
+				</div>
+			</div>
+
+			<div className="relative mt-[200px] md:mt-[600px]">
 				<OurStoryFormContainer id="com2" title="Get in Touch With Us" />
 				<Footer />
 			</div>

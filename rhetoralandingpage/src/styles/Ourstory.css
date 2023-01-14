@@ -1,0 +1,14 @@
+@media only screen and (max-width: 400px) {
+  .timeline-2021{
+    top: 6%!important;
+    margin-left: 40px;
+  }
+  .timeline-2022{
+    top: 50%!important;
+    margin-left: 40px;
+  }
+  .timeline-2023{
+    margin-left: 40px;
+    top: 80%!important;
+  }
+}
