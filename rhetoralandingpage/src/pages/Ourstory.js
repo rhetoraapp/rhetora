@@ -22,6 +22,8 @@ const Ourstory = () => {
 					className="md:w-2/5 bg-contain bg-no-repeat hidden md:block"
 					style={{
 						backgroundImage: `url(${InfoBG})`,
+						backgroundSize: 'cover',
+						backgroundRepeat: 'no-repeat',
 					}}
 				></div>
 				<div className="md:w-3/5">
@@ -79,7 +81,7 @@ const Ourstory = () => {
 							e-commerce.
 						</p>
 					</div>
-					<div className="flex w-full justify-end md:mt-[-100px]">
+					<div className="flex w-full justify-end md:mt-[-100px] timeline-right">
 						<img src={TimeLineRightBG} alt="" srcset="" />
 					</div>
 
@@ -129,7 +131,7 @@ const Ourstory = () => {
 				</div>
 			</div>
 
-			<div className="relative mt-[200px] md:mt-[600px]">
+			<div className="relative mt-[200px] md:mt-[-100px] footer-container">
 				<OurStoryFormContainer id="com2" title="Get in Touch With Us" />
 				<Footer />
 			</div>
