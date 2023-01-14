@@ -1,67 +1,140 @@
-import {React,useEffect} from "react";
+import { React } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Background from '../assets/Hero-lines.svg';
-import ReactGA from "react-ga";
+import OurStoryFormContainer from '../components/OurstoryFormContainer';
+import InfoBG from '../assets/ourstory-info-bg.svg';
+import LukaLine from '../assets/luka-line.svg';
+import LukaLineMobile from '../assets/luka-line-mobile.svg';
+import MazenLineMobile from '../assets/mazen-line-mobile.svg';
+import MazenLine from '../assets/mazen-line.svg';
+import MobileTimeLineBG from '../assets/mobile-timeline.svg';
+
+import TimeLineLeftBG from '../assets/timeline-left-bg.svg';
+import TimeLineRightBG from '../assets/timeline-right-bg.svg';
+import '../styles/Ourstory.css';
 
 const Ourstory = () => {
+	return (
+		<div>
+			<Navbar />
+			<div className="flex mt-[40px]">
+				<div
+					className="md:w-2/5 bg-contain bg-no-repeat hidden md:block"
+					style={{
+						backgroundImage: `url(${InfoBG})`,
+					}}
+				></div>
+				<div className="md:w-3/5">
+					<div>
+						<img className="hidden md:block" src={LukaLine} alt="" srcset="" />
+						<img
+							className="block md:hidden w-full h-[100px] mb-[20px]"
+							src={LukaLineMobile}
+							alt=""
+							srcset=""
+						/>
+					</div>
+					<div className="mt-[40px] px-10 md:w-1/2 mx-auto text-center">
+						<p className="font-semibold">2019</p>
+						<p className="mt-[18px] text-base">
+							Luka and Mazen have been business partners for many years, having
+							met in high school and bonded over our shared mentality and
+							entrepreneurial spirit. We have always been driven to find ways to
+							improve upon existing ideas and create new solutions to problems.
+						</p>
+					</div>
+					<div className="mt-[40px]">
+						<img className="hidden md:block" src={MazenLine} alt="" srcset="" />
+						<img
+							className="block md:hidden w-full h-[100px] mb-[20px]"
+							src={MazenLineMobile}
+							alt=""
+							srcset=""
+						/>
+					</div>
+				</div>
+			</div>
 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  },[]);
+			<div className="md:flex mt-[40px] hidden">
+				<div className="w-1/2 relative">
+					<img src={TimeLineLeftBG} alt="" srcset="" />
+					<div className="md:w-3/5 md:ml-auto md:text-center absolute xl:top-[50%] md:top-[40%] left-[20%]">
+						<p className="font-semibold">2022</p>
+						<p className="mt-[16px] text-base">
+							During the growth of our e-commerce business and working in sales,
+							we experienced the challenges of cold calling and decided to
+							create Rhetora, an AI-powered platform that helps salespeople
+							improve their cold calling skills and increase their chances of
+							success in a stress-free environment.
+						</p>
+					</div>
+				</div>
+				<div className="w-1/2 relative md:mt-[60px]">
+					<div className="md:w-3/5 md:ml-auto md:text-center mx-auto">
+						<p className="font-semibold">2020 & 2021</p>
+						<p className="mt-[16px] text-base">
+							Luka and I started our journey as e-commerce partners, building
+							and growing our online business. This allowed us to gain valuable
+							experience and insights into the world of entrepreneurship and
+							e-commerce.
+						</p>
+					</div>
+					<div className="flex w-full justify-end md:mt-[-100px]">
+						<img src={TimeLineRightBG} alt="" srcset="" />
+					</div>
 
-    return (
-      <div>
-        <Navbar/>
-        <div style={{height: "500px", backgroundImage: `url(${Background})`,  backgroundSize: "cover"}}>
-          <div className='container hero'>
-            <div className='spacer' style={{height:140}}></div>
-          <h1 style={{color:'white'}}>The Story of rhetora</h1>
-          <p style={{color:'white'}}>How Dumb & Dumber Met and Launched rhetora</p>
-          <button id='herobtn'><a href="/contactus" id='herobtn'>Speak With Us</a></button>
-          </div>
-        </div>
-        <div>
-          <div className='d-flex flex-lg-row flex-column'>
-          <div className='os-w col-lg-6 col-md-12 flex-column d-flex justify-content-center'>
-            <h2 className='os-h2'>1.We met in Highschool</h2>
-            <p className='os-p'>We met in Highschool in Dubai, we had similar philosophies of changing the corporate culture in the Middle East.</p>
-          </div>
-          <div className='os-b col-lg-6 col-md-12 d-flex justify-content-center'>
-          <img className="img-fluid mt-5 os-img" src={require('../assets/v1.svg').default} />
-          </div>
-          </div>
-          <div className='d-flex flex-lg-row flex-column'>
-          <div className='os-w col-lg-6 col-md-12 flex-column d-flex justify-content-center'>
-            <h2 className='os-h2'>2. We started being E-commerce business partners</h2>
-            <p className='os-p'>Once we became successful individual ecommerce builders, we decided to partner up to run a partnership ecommerce store.</p>
-          </div>
-          <div className='os-b col-lg-6 col-md-12 d-flex justify-content-center'>
-          <img className="img-fluid mt-5 os-img-250" src={require('../assets/v2.svg').default} />
-          </div>
-          </div>
-          <div className='d-flex flex-lg-row flex-column'>
-          <div className='os-w col-lg-6 col-md-12 flex-column d-flex justify-content-center'>
-            <h2 className='os-h2'>3. We realized a common pain with cold calling</h2>
-            <p className='os-p'>We figured out there is a gap in the market when it comes to cold calling tools.</p>
-          </div>
-          <div className='os-b col-lg-6 col-md-12 d-flex justify-content-center'>
-          <img className="img-fluid mt-5 os-img" src={require('../assets/v3.svg').default} />
-          </div>
-          </div>
-          <div className='d-flex flex-lg-row flex-column'>
-          <div className='os-w col-lg-6 col-md-12 flex-column d-flex justify-content-center'>
-            <h2 className='os-h2'>4. We quit our jobs to build rhetora 7/7 24/24</h2>
-            <p className='os-p'>Currently living the dream, building our first rhetora prototype & fundraising.</p>
-          </div>
-          <div className='os-b col-lg-6 col-md-12 d-flex justify-content-center'>
-          <img className="img-fluid mt-5 os-img-250" src={require('../assets/v4.svg').default} />
-          </div>
-          </div>
-        </div>
-        <Footer/>
-      </div>
-    );
-  };
-  
-  export default Ourstory;
+					<div className="md:w-3/5 md:ml-auto md:text-center mx-auto mt-[100px]">
+						<p className="font-semibold">2023</p>
+						<p className="mt-[16px] text-base">
+							Rhetora is revolutionizing the sales industry by helping
+							salespeople master cold calling using AI. With Rhetora,
+							salespeople can improve their skills and increase their chances of
+							success. Rhetora empowers salespeople to turn cold calling into a
+							powerful tool for building relationships and closing deals.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="md:hidden pr-[20px] mt-[40px] block w-full relative">
+				<img className="w-full" src={MobileTimeLineBG} alt="" srcset="" />
+				<div className="absolute top-[10%] ml-[60px] w-3/5 timeline-2021">
+					<p className="font-semibold">2020 & 2021</p>
+					<p className="mt-[16px] text-base">
+						Luka and I started our journey as e-commerce partners, building and
+						growing our online business. This allowed us to gain valuable
+						experience and insights into the world of entrepreneurship and
+						e-commerce.
+					</p>
+				</div>
+				<div className="absolute top-[60%] w-3/5 ml-[60px] timeline-2022">
+					<p className="font-semibold">2022</p>
+					<p className="mt-[16px] text-base">
+						During the growth of our e-commerce business and working in sales,
+						we experienced the challenges of cold calling and decided to create
+						Rhetora, an AI-powered platform that helps salespeople improve their
+						cold calling skills and increase their chances of success in a
+						stress-free environment.
+					</p>
+				</div>
+				<div className="absolute top-[90%] w-3/5 ml-[60px] mb-[40px] timeline-2023">
+					<p className="font-semibold">2023</p>
+					<p className="mt-[16px] text-base">
+						Rhetora is revolutionizing the sales industry by helping salespeople
+						master cold calling using AI. With Rhetora, salespeople can improve
+						their skills and increase their chances of success. Rhetora empowers
+						salespeople to turn cold calling into a powerful tool for building
+						relationships and closing deals.
+					</p>
+				</div>
+			</div>
+
+			<div className="relative mt-[200px] md:mt-[600px]">
+				<OurStoryFormContainer id="com2" title="Get in Touch With Us" />
+				<Footer />
+			</div>
+		</div>
+	);
+};
+
+export default Ourstory;
