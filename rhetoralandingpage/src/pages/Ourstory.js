@@ -63,7 +63,7 @@ const Ourstory = () => {
 					<div className="md:w-3/5 md:ml-auto md:text-center absolute xl:top-[50%] md:top-[40%] left-[20%]">
 						<p className="font-semibold">2022</p>
 						<p className="mt-[16px] text-base">
-							During the growth of our e-commerce business and working in sales,
+							During the growth of our e-commerce businesses and working in sales,
 							we experienced the challenges of cold calling and decided to
 							create Rhetora, an AI-powered platform that helps salespeople
 							improve their cold calling skills and increase their chances of
@@ -75,8 +75,8 @@ const Ourstory = () => {
 					<div className="md:w-3/5 md:ml-auto md:text-center mx-auto">
 						<p className="font-semibold">2020 & 2021</p>
 						<p className="mt-[16px] text-base">
-							Luka and I started our journey as e-commerce partners, building
-							and growing our online business. This allowed us to gain valuable
+							We started our journey as e-commerce partners, building
+							and growing online businesses through shopify and digital ads. This allowed us to gain valuable
 							experience and insights into the world of entrepreneurship and
 							e-commerce.
 						</p>
@@ -103,16 +103,16 @@ const Ourstory = () => {
 				<div className="absolute top-[10%] ml-[60px] w-3/5 timeline-2021">
 					<p className="font-semibold">2020 & 2021</p>
 					<p className="mt-[16px] text-base">
-						Luka and I started our journey as e-commerce partners, building and
-						growing our online business. This allowed us to gain valuable
-						experience and insights into the world of entrepreneurship and
-						e-commerce.
+							We started our journey as e-commerce partners, building
+							and growing online businesses through shopify and digital ads. This allowed us to gain valuable
+							experience and insights into the world of entrepreneurship and
+							e-commerce.
 					</p>
 				</div>
 				<div className="absolute top-[60%] w-3/5 ml-[60px] timeline-2022">
 					<p className="font-semibold">2022</p>
 					<p className="mt-[16px] text-base">
-						During the growth of our e-commerce business and working in sales,
+						During the growth of our e-commerce businesses and working in sales,
 						we experienced the challenges of cold calling and decided to create
 						Rhetora, an AI-powered platform that helps salespeople improve their
 						cold calling skills and increase their chances of success in a
