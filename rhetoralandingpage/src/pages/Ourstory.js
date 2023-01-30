@@ -12,8 +12,14 @@ import MobileTimeLineBG from '../assets/mobile-timeline.svg';
 import TimeLineLeftBG from '../assets/timeline-left-bg.svg';
 import TimeLineRightBG from '../assets/timeline-right-bg.svg';
 import '../styles/Ourstory.css';
+import ReactGA from "react-ga";
 
 const Ourstory = () => {
+
+	useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  },[]);
+
 	return (
 		<div>
 			<Navbar />
