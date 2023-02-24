@@ -16,10 +16,6 @@ import ReactGA from "react-ga";
 
 const Ourstory = () => {
 
-	useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  },[]);
-
 	return (
 		<div>
 			<Navbar />
@@ -109,10 +105,10 @@ const Ourstory = () => {
 				<div className="absolute top-[10%] ml-[60px] w-3/5 timeline-2021">
 					<p className="font-semibold">2020 & 2021</p>
 					<p className="mt-[16px] text-base">
-							We started our journey as e-commerce partners, building
-							and growing online businesses through shopify and digital ads. This allowed us to gain valuable
-							experience and insights into the world of entrepreneurship and
-							e-commerce.
+						We started our journey as e-commerce partners, building
+						and growing online businesses through shopify and digital ads. This allowed us to gain valuable
+						experience and insights into the world of entrepreneurship and
+						e-commerce.
 					</p>
 				</div>
 				<div className="absolute top-[60%] w-3/5 ml-[60px] timeline-2022">
