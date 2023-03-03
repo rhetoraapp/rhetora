@@ -6,6 +6,18 @@ import HubspotForm from "react-hubspot-form";
 import ReactGA from "react-ga";
 import "../styles/joinWaitListForm.css";
 
+const Card = ({ children }) => {
+  return (
+    <div className="my-2 flex flex-col rounded-[10px] bg-white p-3 text-left text-sm shadow">
+      <div className="mt-1.5 flex w-full flex-row justify-between">
+        <div className="rounded-xl bg-lightgreen px-2.5 pt-1 text-xs">User Response</div>
+        <img src={require("../assets/profile-icon.svg").default} />
+      </div>
+      <div className="mt-3">{children}</div>
+    </div>
+  );
+};
+
 const Join = () => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -40,7 +52,7 @@ const Join = () => {
             <div className="flex h-[55vh] flex-col md:mt-4">
               <div className="flex flex-1 basis-3/4 flex-col md:flex-row ">
                 <div className="my-1.5 basis-1/4 rounded-[17px] bg-graylight p-3 text-center md:mr-3">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col py-3 px-1.5">
                     <div
                       className="tc text-5xl"
                       style={{
@@ -50,6 +62,27 @@ const Join = () => {
                       }}
                     >
                       Script Builder
+                    </div>
+
+                    <div className="my-2 flex flex-col rounded-[10px] bg-white p-3 text-left text-sm shadow">
+                      <div className="flex h-6 w-full flex-row justify-between">
+                        <span className="h-6 rounded-lg bg-lightgreen px-3 pt-1.5 text-xs">User Response</span>
+                        <img className="mb-0" src={require("../assets/profile-icon.svg").default} />
+                      </div>
+                      <div className="mt-2 font-medium">
+                        I’m calling to see if we can find some time to chat on Thursday. <br />
+                        <br /> We help sales leaders ramp their reps quicker using an AI mock cold calling solution.
+                      </div>
+                    </div>
+
+                    <img className="mb-0 -mt-1.5 h-8" src={require("../assets/connector.svg").default} />
+
+                    <div className="my-2 flex flex-col rounded-[10px] bg-lightgreen p-3 text-left text-sm shadow">
+                      <div className="flex h-6 w-full flex-row justify-between">
+                        <span className="h-6 rounded-lg bg-darkgreen px-3 pt-1.5 text-xs text-lightgreen">Meeting Set</span>
+                        <img className="mb-0 h-5" src={require("../assets/checkmark.svg").default} />
+                      </div>
+                      <div className="mt-2 font-medium">Meeting set with prospect!</div>
                     </div>
                   </div>
                 </div>

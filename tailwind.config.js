@@ -22,6 +22,8 @@ module.exports = {
 				subheading: '#454545',
 				gray: '#7C828D',
 				graylight: '#F2F2F2',
+				lightgreen: '#C2E7CF',
+				darkgreen: '#1D482C',
 			},
 		},
 	},
