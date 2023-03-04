@@ -24,6 +24,7 @@ module.exports = {
 				graylight: '#F2F2F2',
 				lightgreen: '#C2E7CF',
 				darkgreen: '#1D482C',
+				cream: "#FFE1C4"
 			},
 		},
 	},
