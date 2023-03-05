@@ -172,7 +172,7 @@ const Join = () => {
 
                 {/* Column 3*/}
                 <div className="order-3 flex basis-1/4 flex-col rounded-[17px] text-center">
-                  <Fade  duration={1000} delay={isMobile ? 0 : second * 6}>
+                  <Fade  duration={1000} delay={isMobile ? 0 : second * 3}>
                     <div className="my-1.5 flex w-full flex-1 flex-col rounded-[17px] bg-graylight p-3 text-center">
                       <img className="my-auto mb-4 px-4 pt-3" src={require("../assets/companies.svg").default} />
                       <Heading
@@ -209,7 +209,7 @@ const Join = () => {
                     </div>
                   </div>
                 </Fade>
-                <Fade  duration={1000} delay={isMobile ? 0 : second * 3}>
+                <Fade  duration={1000} delay={isMobile ? 0 : second * 6}>
                   <div className="my-1.5 flex flex-1 flex-col rounded-[17px] bg-graylight p-3 text-center md:mr-3">
                     <div className="my-3 flex flex-row justify-between">
                       <div className="mx-2 -mt-3 h-6 w-max rounded-lg bg-lightgreen px-3 pt-1 text-sm font-medium text-green-800 shadow-md">
