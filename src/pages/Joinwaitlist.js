@@ -5,6 +5,7 @@ import Background from "../assets/Hero-background.svg";
 import HubspotForm from "react-hubspot-form";
 import ReactGA from "react-ga";
 import { Fade } from "react-reveal";
+import { WaitlistModal } from "../components/WaitlistModal";
 import "../styles/joinWaitListForm.css";
 
 const Heading = ({ children, className, background }) => {
@@ -30,7 +31,19 @@ const Join = () => {
 
   const [email, setEmail] = useState("");
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [modalOpen, setModalOpen] = useState(false);
 
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    openModal();
+  };
   useEffect(() => {
     function handleResize() {
       setViewportWidth(window.innerWidth);
@@ -48,9 +61,10 @@ const Join = () => {
   return (
     <div>
       <Navbar />
+    
       <div style={{ height: "100vh", backgroundImage: `url(${Background})`, backgroundSize: "cover" }}>
         <div className="justify-content-center mx-auto max-w-[90vw] lg:max-w-[1024px] xl:max-w-[1200px]">
-         
+        <WaitlistModal isOpen={modalOpen} closeModal={closeModal} />
           <div className=" d-flex flex-column mt-5 justify-center">
             <Heading
               className="text-3xl md:mt-5 md:text-5xl"
@@ -153,12 +167,14 @@ const Join = () => {
                         Limited Seats
                       </span>
                       <div className="mx-auto mt-4 mb-1.5 flex h-11 w-full max-w-lg justify-between rounded-full border bg-white p-2.5 shadow">
+                        <form onSubmit={handleSubmit}>
                         <input
                           className="ml-3.5 h-full w-full flex-1 bg-transparent  pt-1 outline-none"
                           placeholder="Email Address"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                         />
+                        </form>
                         <div className="mr-1.5 mt-0.5 flex text-slate-400">
                           press enter{" "}
                           <span>
