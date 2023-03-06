@@ -16,7 +16,7 @@ module.exports = {
 				...colors,
 				main: '#050038',
 				minor: '#FF9933',
-				minorlight: '#FFA74F',
+				minorlight: '#FFE9D3',
 				light: '#B9BEC7',
 				bglight: '#F9F9F9',
 				subheading: '#454545',
