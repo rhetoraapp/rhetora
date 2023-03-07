@@ -1,25 +1,44 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useEffect, useRef } from "react";
+import { EMAIL_REGEX } from "../utils/contants";
+import { InviteFriendRequest } from "../api";
+import { Loading } from "./Loading";
 
-const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-
-export const WaitlistModal = ({ isOpen, closeModal, email }) => {
+export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
+  const { points: currentPoints, position, email } = waitlistData;
   const [emails, setEmails] = useState([]);
 
   const [input, setInput] = useState("");
-  const [waitlistCount, setWaitlistCount] = useState(100);
-  const [points, setPoints] = useState(100);
+  const [points, setPoints] = useState(currentPoints);
+  const [loading, setLoading] = useState(false);
 
   const inputDivRef = useRef(null);
 
-  const addEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (input) {
-      setEmails([...emails, input]);
-    }
-    setInput("");
+    if (!emails.length && !input) return alert("Please enter an email address");
 
-    inputDivRef.current.scrollleft += 200;
+    let invitee_list;
+    if (!emails.length) {
+      // in the event that the user only entered one email, check if it is valid
+      if (!input.match(EMAIL_REGEX)) return alert("Please enter a valid email address");
+      invitee_list = [input];
+    } else {
+      invitee_list = emails;
+    }
+
+    setLoading(true);
+    const data = await InviteFriendRequest(invitee_list, email);
+    if (data.success) {
+      closeModal();
+      setEmails([]);
+      setInput("");
+      alert("Invitation sent successfully!");
+    }
+    if (data.error) {
+      alert("An error occurred. Please try again later.");
+    }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -28,8 +47,7 @@ export const WaitlistModal = ({ isOpen, closeModal, email }) => {
   }, [emails]);
 
   useEffect(() => {
-    // if input is valid email and there is a space at the end of the input, add email.
-    // regex to check if input is valid email
+    // adds email to the list if the user enters a valid email and presses space
     if (input.endsWith(" ") && input.trim().match(EMAIL_REGEX)) {
       setEmails([...emails, input.trim()]);
       setInput("");
@@ -50,9 +68,11 @@ export const WaitlistModal = ({ isOpen, closeModal, email }) => {
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black bg-opacity-25" />
+           
           </Transition.Child>
-
+          <Loading loading={loading} />
           <div className="fixed inset-0 overflow-y-auto">
+            
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -63,7 +83,7 @@ export const WaitlistModal = ({ isOpen, closeModal, email }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="h-[800px] w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-14 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="h-[800px] w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-14 text-left align-middle shadow-xl transition-all ">
                   <Dialog.Title as="h3" className="text-center text-4xl font-bold leading-6">
                     Thank You!
                   </Dialog.Title>
@@ -71,7 +91,7 @@ export const WaitlistModal = ({ isOpen, closeModal, email }) => {
                     <p className="text-center text-lg">
                       You are number{" "}
                       <span className="inline-block  h-6 rounded-full bg-minor px-2.5">
-                        <p className="my-auto py-1.5 text-base leading-[18px] text-white">{waitlistCount}</p>
+                        <p className="my-auto py-1.5 text-base leading-[18px] text-white">{position}</p>
                       </span>{" "}
                       on the list. Invite friends to jump the queue and earn rewards. Earn 100 points for every friend that signs up.
                     </p>
@@ -89,7 +109,7 @@ export const WaitlistModal = ({ isOpen, closeModal, email }) => {
                         </div>
                       ))}
 
-                      <form onSubmit={addEmail} className="h-full w-full">
+                      <form onSubmit={handleSubmit} className="h-full w-full">
                         <input
                           className="h-full w-full min-w-max flex-1 border-none bg-transparent px-2 pt-1 leading-3 outline-none"
                           value={input}
@@ -98,7 +118,7 @@ export const WaitlistModal = ({ isOpen, closeModal, email }) => {
                         />
                       </form>
                     </div>
-                    <button className="my-auto h-7 rounded bg-minor px-3 py-1 text-base text-white" onClick={addEmail}>
+                    <button className="my-auto h-7 rounded bg-minor px-3 py-1 text-base text-white" onClick={handleSubmit}>
                       Invite
                     </button>
                   </div>

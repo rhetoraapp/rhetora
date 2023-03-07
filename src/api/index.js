@@ -13,10 +13,10 @@ const PostAccessRequest = async ({ name, companyName, email }) => {
 };
 
 // InviteFriend
-const InviteFriendRequest = async ({ email }) => {
-  const response = await axiosInstance.post("/invite", {
-    email,
-    invitedBy: localStorage.getItem("successfullAccess"),
+const InviteFriendRequest = async (invitee_list, host_email) => {
+  const response = await axiosInstance.post("/waitlist/invite", {
+    invitee_list,
+    host_email,
   });
   const { data } = response;
   return data;
