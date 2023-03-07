@@ -31,4 +31,10 @@ const JoinWaitlistRequest = async (email) => {
   return data;
 };
 
-export { PostAccessRequest, InviteFriendRequest, JoinWaitlistRequest };
+// redeem Invitation
+const RedeemInvitationRequest = async (inviteCode) => {
+  const { data } = await axiosInstance.post( `/waitlist/redeem/${inviteCode}`)
+  return data;
+};
+
+export { PostAccessRequest, InviteFriendRequest, JoinWaitlistRequest, RedeemInvitationRequest };
