@@ -2,7 +2,7 @@ import axios from "axios";
 // configuration
 const isProduction = process.env.NODE_ENV === "production";
 
-const baseURL = isProduction ? "http://backend.rhetora.app/api/" : "http://localhost:8080/";
+const baseURL = isProduction ? "https://rhetora-backend-production-d331.up.railway.app/" : "http://localhost:8080/";
 
 // ----------------------------------------------------------------------
 
