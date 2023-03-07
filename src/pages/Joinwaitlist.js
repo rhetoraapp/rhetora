@@ -84,13 +84,13 @@ const Join = () => {
   const second = 1000;
   return (
     <>
-      <div>
+      <div className="h-max">
         <Navbar />
 
         <div style={{ height: "100vh", backgroundImage: `url(${Background})`, backgroundSize: "cover" }}>
           <div className="justify-content-center mx-auto max-w-[90vw] lg:max-w-[1024px] xl:max-w-[1200px]">
             <WaitlistModal isOpen={modalOpen} closeModal={closeModal} waitlistData={waitlistData} />
-            <div className=" d-flex flex-column mt-5 justify-center">
+            <div className=" d-flex flex-column mt-5 pb-4 justify-center">
               <Heading
                 className="text-3xl md:mt-5 md:text-5xl"
                 background="radial-gradient(50.31% 50.31% at 51.49% 49.69%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(87.84deg, #FFBE0B 14.27%, #FF9933 26.9%, rgba(255, 153, 51, 0.85) 37.9%, rgba(255, 0, 110, 0.77) 49.83%, rgba(131, 56, 236, 0.799403) 59.71%, #8338EC 69.42%, #3A86FF 85.23%)"
@@ -200,10 +200,10 @@ const Join = () => {
                               onChange={(e) => setEmail(e.target.value)}
                             />
                           </form>
-                          <div className="mr-1.5 mt-0.5 flex text-slate-400">
-                            press enter{" "}
+                          <div className="-ml-4 mt-1.5 text-xs md:ml-0 md:mt-0.5 md:text-base flex text-slate-400">
+                            press enter {" "}
                             <span>
-                              <img src={require("../assets/enter-arrow.svg").default} />
+                              <img className="-mt-0.5 md:mt-0" src={require("../assets/enter-arrow.svg").default} />
                             </span>
                           </div>
                         </div>
@@ -287,11 +287,13 @@ const Join = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        <div className="hidden md:block">
+          <Footer />
+        </div>
       </div>
 
       {/* Loading Screen */}
-      <Loading loading={loading}/>
+      <Loading loading={loading} />
     </>
   );
 };
