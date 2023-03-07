@@ -56,7 +56,7 @@ const Join = () => {
 
     setLoading(true);
     const data = await JoinWaitlistRequest(email);
-    if (data.success) {
+    if (data.success === true) {
       setWaitlistData(data);
       openModal();
       setEmail("");
@@ -108,8 +108,8 @@ const Join = () => {
                       <div className="flex flex-col py-4 px-1.5">
                         <Heading
                           className="text-5xl"
-                          background="linear-gradient(101.53deg, #FFBE0B 10.97%, #FF9933 33.08%, rgba(255, 153, 51, 0.85) 40.29%, rgba(255, 0, 110, 0.77) 49.79%, rgba(131, 56, 236, 0.799403) 58.63%, #8338EC 75.6%, #3A86FF 96%)"
-                        >
+                          background="linear-gradient(101.53deg, #FFCC5A 10.97%, #FFC85E 33.08%, #FFC561 40.29%, #FFC165 49.79%, #FFBE69 58.63%, #FFBA6D 75.6%, #FFB771 96%)"
+                          >
                           Script Builder
                         </Heading>
 
@@ -164,7 +164,7 @@ const Join = () => {
 
                           <Heading
                             className="mt-3 text-3xl"
-                            background="linear-gradient(101.53deg, #FFBE0B 10.97%, #FF9933 33.08%, rgba(255, 153, 51, 0.85) 40.29%, rgba(255, 0, 110, 0.77) 49.79%, rgba(131, 56, 236, 0.799403) 58.63%, #8338EC 75.6%, #3A86FF 96%)"
+                            background="linear-gradient(101.53deg, #FDA975 10.97%, #FC977C 33.08%, #FB7D88 40.29%, #FB6493 49.79%, #EB67A8 58.63%, #C973CF 75.6%, #B479E8 96%)"
                           >
                             Live Call Navigation
                           </Heading>
@@ -177,7 +177,7 @@ const Join = () => {
                       <div className="order-1 my-1.5  flex flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
                         <Heading
                           className="mt-10 w-full text-3xl md:text-5xl"
-                          background="linear-gradient(101.53deg, #FFBE0B 10.97%, #FF9933 33.08%, rgba(255, 153, 51, 0.85) 40.29%, rgba(255, 0, 110, 0.77) 49.79%, rgba(131, 56, 236, 0.799403) 58.63%, #8338EC 75.6%, #3A86FF 96%)"
+                          background="linear-gradient(101.53deg, #FFB96E  10.97%, #FDB771 33.08%, #FB9E82 40.29%, #FB689E 49.79%, #BB7BDF 58.63%, #8338EC 75.6%, #B078EC 96%)"
                         >
                           Join The Movement <br />
                           <span className="text-4xl md:text-6xl">Enter Your Email</span>
@@ -218,8 +218,7 @@ const Join = () => {
                         <img className="my-auto mb-4 px-4 pt-3" src={require("../assets/companies.svg").default} />
                         <Heading
                           className="my-auto w-full text-3xl xl:text-4xl"
-                          background="linear-gradient(101.53deg, #FFBE0B 10.97%, #FF9933 33.08%, rgba(255, 153, 51, 0.85) 40.29%, rgba(255, 0, 110, 0.77) 49.79%, rgba(131, 56, 236, 0.799403) 58.63%, #8338EC 75.6%, #3A86FF 96%)"
-                        >
+                          background="linear-gradient(93.79deg, #A974F1 18.63%, #75A9FF 89.95%)">       
                           <span className="text-4xl xl:text-5xl">AUTO-PILOT</span>
                           <br />
                           Sales Assistant
@@ -241,7 +240,7 @@ const Join = () => {
                     <div className="my-1.5 flex flex-1 flex-col rounded-[17px] bg-graylight p-3 text-center md:mr-3">
                       <Heading
                         className="mt-auto pb-2 text-5xl"
-                        background="linear-gradient(101.53deg, #FFBE0B 10.97%, #FF9933 33.08%, rgba(255, 153, 51, 0.85) 40.29%, rgba(255, 0, 110, 0.77) 49.79%, rgba(131, 56, 236, 0.799403) 58.63%, #8338EC 75.6%, #3A86FF 96%)"
+                        background="linear-gradient(101.53deg, #FFCC5A 10.97%, #FFC85E 33.08%, #FFC561 40.29%, #FFC165 49.79%, #FFBE69 58.63%, #FFBA6D 75.6%, #FFB771 96%)"
                       >
                         Rebuttal Suggestions
                       </Heading>
@@ -260,7 +259,7 @@ const Join = () => {
                       </div>
                       <Heading
                         className="my-auto text-5xl"
-                        background="linear-gradient(101.53deg, #FFBE0B 10.97%, #FF9933 33.08%, rgba(255, 153, 51, 0.85) 40.29%, rgba(255, 0, 110, 0.77) 49.79%, rgba(131, 56, 236, 0.799403) 58.63%, #8338EC 75.6%, #3A86FF 96%)"
+                        background="linear-gradient(101.53deg, #FB7189 10.97%, #EB68A3 33.08%, #EB68A3 40.29%, #DA6EB7 49.79%, #C177D7 58.63%, #B57AE5 75.6%, #B57AE9 96%)"
                       >
                         Speech <br /> Analytics
                       </Heading>
@@ -276,7 +275,7 @@ const Join = () => {
                   </Fade>
                   <Fade duration={1000} delay={isMobile ? 0 : second}>
                     <div className="my-1.5 flex flex-1 rounded-[17px] bg-graylight p-3 text-center">
-                      <Heading className="my-auto w-full  text-4xl" background="linear-gradient(93.79deg, #FF9933 18.63%, #FD71AF 89.95%)">
+                      <Heading className="my-auto w-full  text-4xl" background="linear-gradient(93.79deg, #A974F1 18.63%, #75A9FF 89.95%)">
                         <span className="text-6xl">UNLIMITED</span> <br />
                         Mock Cold Calls
                       </Heading>
