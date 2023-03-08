@@ -90,7 +90,7 @@ const Join = () => {
 
   const EnterEmailDiv = () => {
     return (
-      <div className="order-1 my-1.5  flex flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
+      <div className="order-1 my-1.5 h-full flex flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
         <Heading
           className="mt-10 w-full text-3xl md:text-5xl"
           background="linear-gradient(101.53deg, #FFB96E  10.97%, #FDB771 33.08%, #FB9E82 40.29%, #FB689E 49.79%, #BB7BDF 58.63%, #8338EC 75.6%, #B078EC 96%)"
@@ -222,9 +222,12 @@ const Join = () => {
                     </div>
 
                     {/* Main Section */}
-                    <Fade className="order-1" duration={1000} delay={isMobile ? 0 : second * 9}>
+                    <div className="order=1 md:order-2">
+                    <Fade duration={1000} delay={isMobile ? 0 : second * 9}>
                       <EnterEmailDiv />
                     </Fade>
+                    </div>
+        
                   </div>
 
                   {/* Column 3*/}
