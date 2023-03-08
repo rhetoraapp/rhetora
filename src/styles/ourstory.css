@@ -1,0 +1,39 @@
+@media only screen and (max-width: 400px) {
+	.timeline-2021 {
+		top: 6% !important;
+		margin-left: 40px;
+	}
+	.timeline-2022 {
+		top: 50% !important;
+		margin-left: 40px;
+	}
+	.timeline-2023 {
+		margin-left: 40px;
+		top: 80% !important;
+	}
+}
+@media only screen and (max-width: 1400px) {
+	.footer-container {
+		margin-top: 300px;
+	}
+}
+@media only screen and (max-width: 1280px) {
+	.footer-container {
+		margin-top: 350px;
+	}
+}
+@media only screen and (max-width: 1240px) {
+	.footer-container {
+		margin-top: 400px;
+	}
+}
+@media only screen and (max-width: 1240px) and (min-width: 1020px) {
+	.footer-container {
+		margin-top: 500px;
+	}
+}
+@media only screen and (max-width: 1340px) and (min-width: 768px) {
+	.timeline-right {
+		padding-left: 40px;
+	}
+}
