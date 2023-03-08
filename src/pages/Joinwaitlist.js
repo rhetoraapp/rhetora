@@ -45,6 +45,11 @@ const Join = () => {
     setModalOpen(false);
   };
 
+  function getRandomArbitrary(min, max) {
+    return Math.ceil(Math.random() * (max - min) + min);
+  }
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -57,6 +62,7 @@ const Join = () => {
     setLoading(true);
     const data = await JoinWaitlistRequest(email);
     if (data.success === true) {
+      data.position = getRandomArbitrary(1000, 2000)
       setWaitlistData(data);
       openModal();
       setEmail("");
@@ -109,7 +115,7 @@ const Join = () => {
                         <Heading
                           className="text-5xl"
                           background="linear-gradient(101.53deg, #FFCC5A 10.97%, #FFC85E 33.08%, #FFC561 40.29%, #FFC165 49.79%, #FFBE69 58.63%, #FFBA6D 75.6%, #FFB771 96%)"
-                          >
+                        >
                           Script Builder
                         </Heading>
 
@@ -218,7 +224,7 @@ const Join = () => {
                         <img className="my-auto mb-4 px-4 pt-3" src={require("../assets/companies.svg").default} />
                         <Heading
                           className="my-auto w-full text-3xl xl:text-4xl"
-                          background="linear-gradient(93.79deg, #A974F1 18.63%, #75A9FF 89.95%)">       
+                          background="linear-gradient(93.79deg, #A974F1 18.63%, #75A9FF 89.95%)">
                           <span className="text-4xl xl:text-5xl">AUTO-PILOT</span>
                           <br />
                           Sales Assistant

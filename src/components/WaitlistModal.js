@@ -68,11 +68,11 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black bg-opacity-25" />
-           
+
           </Transition.Child>
           <Loading loading={loading} />
           <div className="fixed inset-0 overflow-y-auto">
-            
+
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -188,9 +188,8 @@ const ProgressBar = ({ points }) => {
   const renderCompletedDot = (dot) => (
     <li
       key={dot}
-      className={` flex w-full items-center justify-end rounded-full before:my-auto before:inline-block before:h-3 before:w-full   before:bg-minor before:content-[''] ${
-        dot === 1 && "before:rounded-l-full"
-      }`}
+      className={` flex w-full items-center justify-end rounded-full before:my-auto before:inline-block before:h-3 before:w-full   before:bg-minor before:content-[''] ${dot === 1 && "before:rounded-l-full"
+        }`}
     >
       <img src={require("../assets/checkmark-orange.svg").default} className={`h-[22px] ${dot === 1 ? "-mr-2" : "-mr-2"}`} />
     </li>
