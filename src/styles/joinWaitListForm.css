@@ -65,6 +65,23 @@ input[value="Get Early Access"] {
   border-radius: 0.5rem;
 }
 
+.invite-waitlist-input-div {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.invite-waitlist-input-div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add a small margin to the right of the parent div to indicate that there's more content */
+.invite-waitlist-input-div::after {
+  content: '';
+  display: block;
+  width: 20px;
+}
+
 /* media queries */
 @media (min-width: 778px) {
   #hsForm_5d003db2-c7e7-4230-b51f-cf526b584d4b {

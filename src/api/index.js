@@ -1,9 +1,9 @@
 // utils
-import axios from "../utils/axios";
+import axiosInstance from "../utils/axios";
 
 // PostAccessRequest
 const PostAccessRequest = async ({ name, companyName, email }) => {
-  const response = await axios.post("/early-access", {
+  const response = await axiosInstance.post("/early-access", {
     name,
     companyName,
     email,
@@ -13,13 +13,28 @@ const PostAccessRequest = async ({ name, companyName, email }) => {
 };
 
 // InviteFriend
-const InviteFriendRequest = async ({ email }) => {
-  const response = await axios.post("/invite", {
-    email,
-    invitedBy: localStorage.getItem("successfullAccess"),
+const InviteFriendRequest = async (invitee_list, host_email) => {
+  const response = await axiosInstance.post("/waitlist/invite", {
+    invitee_list,
+    host_email,
   });
   const { data } = response;
   return data;
 };
 
-export { PostAccessRequest, InviteFriendRequest };
+// join waitlist
+const JoinWaitlistRequest = async (email) => {
+  const { data } = await axiosInstance.post("/waitlist/join", {
+    email: email,
+  });
+
+  return data;
+};
+
+// redeem Invitation
+const RedeemInvitationRequest = async (inviteCode) => {
+  const { data } = await axiosInstance.post( `/waitlist/redeem/${inviteCode}`)
+  return data;
+};
+
+export { PostAccessRequest, InviteFriendRequest, JoinWaitlistRequest, RedeemInvitationRequest };
