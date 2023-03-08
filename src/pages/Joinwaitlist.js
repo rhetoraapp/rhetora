@@ -222,7 +222,7 @@ const Join = () => {
                     </div>
 
                     {/* Main Section */}
-                    <Fade duration={1000} delay={isMobile ? 0 : second * 9}>
+                    <Fade className="order-1" duration={1000} delay={isMobile ? 0 : second * 9}>
                       <EnterEmailDiv />
                     </Fade>
                   </div>
