@@ -17,6 +17,12 @@ const InviteFriend = () => {
       .required("The Email address field is required."),
   });
 
+  // Generate random number for queue
+  function generateRandom(min, max, step) {
+    const randomNum = min + Math.random() * (max - min);
+    return Math.round(randomNum / step) * step;
+  }
+
   // formik
   const formik = useFormik({
     initialValues: {
@@ -32,9 +38,11 @@ const InviteFriend = () => {
         });
         console.log(result);
         if (result && result.status === "200") {
+
           setErrors({
             success: result.message || "Successfully Requested!",
-            queueNumber: result.payload.queueNumber,
+            // queueNumber: result.payload.queueNumber,
+            queueNumber: generateRandom(1000, 2000, 15),
           });
         } else {
           console.log("error", result);
