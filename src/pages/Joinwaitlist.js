@@ -73,6 +73,7 @@ const Join = () => {
 
     if (data.error) {
       alert("Something went wrong. Please try again later.");
+      setOpenWaitlistDetailsModal(false);
     }
     setLoading(false);
   };
@@ -91,45 +92,6 @@ const Join = () => {
 
   const isMobile = viewportWidth < 768;
   const second = 1000;
-
-  const EnterEmailDiv = () => {
-    return (
-      <div className="order-1 my-1.5 flex h-full flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
-        <Heading
-          className="mt-10 w-full text-3xl md:text-5xl"
-          background="linear-gradient(101.53deg, #FFB96E  10.97%, #FDB771 33.08%, #FB9E82 40.29%, #FB689E 49.79%, #BB7BDF 58.63%, #8338EC 75.6%, #B078EC 96%)"
-        >
-          Join The Movement <br />
-          <span className="text-4xl md:text-6xl">Enter Your Email</span>
-        </Heading>
-        <span
-          style={{
-            background:
-              "linear-gradient(98.89deg, #FFBE0B -486.28%, #FF9933 -365.64%, rgba(255, 153, 51, 0.85) 10.08%, rgba(255, 0, 110, 0.77) 51.33%, rgba(131, 56, 236, 0.799403) 91.34%, #8338EC 406.77%, #3A86FF 693.75%)",
-          }}
-          className="mx-auto h-6  scale-90 rounded-lg bg-lightgreen px-3 pt-1.5 text-xs text-white shadow md:scale-100"
-        >
-          Limited Seats
-        </span>
-        <div className="md: mx-auto mt-3 mb-1.5 flex h-11 w-full max-w-lg scale-95 rounded-full border  bg-white p-2.5 shadow md:mt-4 md:scale-100">
-          <form className="flex-1" onSubmit={onEnterEmail}>
-            <input
-              className="ml-3.5 h-full w-full bg-transparent  pt-1 outline-none"
-              placeholder="Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </form>
-          <div className="ml-auto mt-1.5 flex text-xs text-slate-400 md:ml-0 md:mt-0.5 md:text-base">
-            press enter{" "}
-            <span>
-              <img className="-mt-0.5 md:mt-0" src={require("../assets/enter-arrow.svg").default} />
-            </span>
-          </div>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <>
