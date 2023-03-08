@@ -91,7 +91,7 @@ export const WaitlistDetailsModal = ({ isOpen, closeModal, submit }) => {
                       </div>
                     </form>
                     <div className="w-full pt-4">
-                    <button onClick={handleSubmit} className="my-auto mt-8  flex h-8 rounded bg-minor px-4 py-1 text-lg text-white ml-1/2 mx-auto justify-center self-center">
+                    <button onClick={handleSubmit} className="my-auto mt-8 shadow-md  flex h-8 rounded bg-minor px-4 py-1 text-lg text-white ml-1/2 mx-auto justify-center self-center">
                       Go to rewards!
                     </button>
                     </div>
