@@ -65,7 +65,7 @@ const Join = () => {
     setLoading(true);
     const data = await JoinWaitlistRequest(email, firstName, lastName, company);
     if (data.success === true) {
-      data.position = getRandomArbitrary(1000, 2000);
+      // data.position = getRandomArbitrary(1000, 2000);
       setWaitlistData(data);
       openModal();
       setEmail("");
