@@ -5,6 +5,7 @@ import Background from "../assets/Hero-background.svg";
 import ReactGA from "react-ga";
 import { Fade } from "react-reveal";
 import { WaitlistModal } from "../components/WaitlistModal";
+import { WaitlistDetailsModal } from "../components/WaitlistDetailsModal";
 import "../styles/joinWaitListForm.css";
 import { JoinWaitlistRequest } from "../api";
 import { EMAIL_REGEX } from "../utils/contants";
@@ -36,7 +37,7 @@ const Join = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [waitlistData, setWaitlistData] = useState({});
-
+  const [openWaitlistDetailsModal, setOpenWaitlistDetailsModal] = useState(false);
   const openModal = () => {
     setModalOpen(true);
   };
@@ -49,7 +50,7 @@ const Join = () => {
     return Math.ceil(Math.random() * (max - min) + min);
   }
 
-  const handleSubmit = async (e) => {
+  const onEnterEmail = async (e) => {
     e.preventDefault();
 
     // validate email
@@ -57,9 +58,12 @@ const Join = () => {
       alert("Please enter a valid email address");
       return;
     }
+    setOpenWaitlistDetailsModal(true);
+  };
 
+  const joinWaitlist = async ({ firstName, lastName, company }) => {
     setLoading(true);
-    const data = await JoinWaitlistRequest(email);
+    const data = await JoinWaitlistRequest(email, firstName, lastName, company);
     if (data.success === true) {
       data.position = getRandomArbitrary(1000, 2000);
       setWaitlistData(data);
@@ -90,7 +94,7 @@ const Join = () => {
 
   const EnterEmailDiv = () => {
     return (
-      <div className="order-1 my-1.5 h-full flex flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
+      <div className="order-1 my-1.5 flex h-full flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
         <Heading
           className="mt-10 w-full text-3xl md:text-5xl"
           background="linear-gradient(101.53deg, #FFB96E  10.97%, #FDB771 33.08%, #FB9E82 40.29%, #FB689E 49.79%, #BB7BDF 58.63%, #8338EC 75.6%, #B078EC 96%)"
@@ -108,7 +112,7 @@ const Join = () => {
           Limited Seats
         </span>
         <div className="md: mx-auto mt-3 mb-1.5 flex h-11 w-full max-w-lg scale-95 rounded-full border  bg-white p-2.5 shadow md:mt-4 md:scale-100">
-          <form className="flex-1" onSubmit={handleSubmit}>
+          <form className="flex-1" onSubmit={onEnterEmail}>
             <input
               className="ml-3.5 h-full w-full bg-transparent  pt-1 outline-none"
               placeholder="Email Address"
@@ -135,6 +139,7 @@ const Join = () => {
         <div>
           <div className="justify-content-center mx-auto max-w-[90vw] lg:max-w-[1024px] xl:max-w-[1200px]">
             <WaitlistModal isOpen={modalOpen} closeModal={closeModal} waitlistData={waitlistData} />
+            <WaitlistDetailsModal isOpen={openWaitlistDetailsModal} closeModal={() => setOpenWaitlistDetailsModal(false)} submit={joinWaitlist} />
             <div className="d-flex flex-column mt-5 transform justify-center pb-4 md:mt-2 md:scale-90 ">
               <Heading
                 className="text-3xl md:text-5xl"
@@ -185,14 +190,14 @@ const Join = () => {
                   {/* Column 2 large, Column 1 Mobile */}
                   <div className="order-1 flex basis-1/2 flex-col md:!order-2">
                     <div className="order-2 flex basis-1/3 flex-col rounded-[17px] text-center md:order-1 md:mr-3 md:flex-row">
-                      <div className="my-1.5 order-2 md:order-1 basis-1/3 ">
+                      <div className="order-2 my-1.5 basis-1/3 md:order-1 ">
                         <Fade duration={1000} delay={isMobile ? 0 : second * 8}>
                           <div className=" h-full w-full rounded-[17px] bg-graylight md:mr-3 "></div>
                         </Fade>
                       </div>
-                      <div className="order-1 md:order-2 basis-3/4 md:mr-3 my-1.5  ">
+                      <div className="order-1 my-1.5 basis-3/4 md:order-2 md:mr-3  ">
                         <Fade duration={1000} delay={isMobile ? 0 : second * 5}>
-                          <div className="rounded-[17px] h-full  bg-graylight p-3">
+                          <div className="h-full rounded-[17px]  bg-graylight p-3">
                             <div className="flex flex-col rounded-[10px] bg-white px-3 py-2.5 text-left text-sm shadow">
                               <div className="flex h-6 w-full flex-row justify-between">
                                 <span className="h-6 rounded-lg bg-lightgreen px-3 pt-1.5 text-xs">User Response</span>
@@ -222,12 +227,43 @@ const Join = () => {
                     </div>
 
                     {/* Main Section */}
-                    <div className="order=1 md:order-2">
+
                     <Fade duration={1000} delay={isMobile ? 0 : second * 9}>
-                      <EnterEmailDiv />
+                      <div className="order-1 my-1.5 flex h-full flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3">
+                        <Heading
+                          className="mt-10 w-full text-3xl md:text-5xl"
+                          background="linear-gradient(101.53deg, #FFB96E  10.97%, #FDB771 33.08%, #FB9E82 40.29%, #FB689E 49.79%, #BB7BDF 58.63%, #8338EC 75.6%, #B078EC 96%)"
+                        >
+                          Join The Movement <br />
+                          <span className="text-4xl md:text-6xl">Enter Your Email</span>
+                        </Heading>
+                        <span
+                          style={{
+                            background:
+                              "linear-gradient(98.89deg, #FFBE0B -486.28%, #FF9933 -365.64%, rgba(255, 153, 51, 0.85) 10.08%, rgba(255, 0, 110, 0.77) 51.33%, rgba(131, 56, 236, 0.799403) 91.34%, #8338EC 406.77%, #3A86FF 693.75%)",
+                          }}
+                          className="mx-auto h-6  scale-90 rounded-lg bg-lightgreen px-3 pt-1.5 text-xs text-white shadow md:scale-100"
+                        >
+                          Limited Seats
+                        </span>
+                        <div className="md: mx-auto mt-3 mb-1.5 flex h-11 w-full max-w-lg scale-95 rounded-full border  bg-white p-2.5 shadow md:mt-4 md:scale-100">
+                          <form className="flex-1" onSubmit={onEnterEmail}>
+                            <input
+                              className="ml-3.5 h-full w-full bg-transparent  pt-1 outline-none"
+                              placeholder="Email Address"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                            />
+                          </form>
+                          <div className="ml-auto mt-1.5 flex text-xs text-slate-400 md:ml-0 md:mt-0.5 md:text-base">
+                            press enter{" "}
+                            <span>
+                              <img className="-mt-0.5 md:mt-0" src={require("../assets/enter-arrow.svg").default} />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </Fade>
-                    </div>
-        
                   </div>
 
                   {/* Column 3*/}
@@ -244,8 +280,8 @@ const Join = () => {
                     </Fade>
                     <Fade duration={1000} delay={isMobile ? 0 : second * 7}>
                       <div className="my-1.5 flex basis-1/4 flex-row">
-                        <div className="flex min-h-[150px] flex-1 rounded-[17px] bg-graylight p-3 text-center mr-1 md:mr-3 md:min-h-max"></div>
-                        <div className="flex min-h-[150px] flex-1 rounded-[17px] bg-graylight p-3 text-center ml-1 md:ml-0 md:min-h-max"></div>
+                        <div className="mr-1 flex min-h-[150px] flex-1 rounded-[17px] bg-graylight p-3 text-center md:mr-3 md:min-h-max"></div>
+                        <div className="ml-1 flex min-h-[150px] flex-1 rounded-[17px] bg-graylight p-3 text-center md:ml-0 md:min-h-max"></div>
                       </div>
                     </Fade>
                   </div>
@@ -298,7 +334,42 @@ const Join = () => {
                       </Heading>
                     </div>
                   </Fade>
-                  <Fade className="hidden">{isMobile ? <EnterEmailDiv /> : <></>}</Fade>
+                  <Fade duration={1000} delay={isMobile ? 0 : second * 9}>
+                    <div className="order-1 my-1.5 flex h-full flex-1 flex-col rounded-[17px] bg-graylight p-3 md:!order-2 md:mr-3 md:hidden">
+                      <Heading
+                        className="mt-10 w-full text-3xl md:text-5xl"
+                        background="linear-gradient(101.53deg, #FFB96E  10.97%, #FDB771 33.08%, #FB9E82 40.29%, #FB689E 49.79%, #BB7BDF 58.63%, #8338EC 75.6%, #B078EC 96%)"
+                      >
+                        Join The Movement <br />
+                        <span className="text-4xl md:text-6xl">Enter Your Email</span>
+                      </Heading>
+                      <span
+                        style={{
+                          background:
+                            "linear-gradient(98.89deg, #FFBE0B -486.28%, #FF9933 -365.64%, rgba(255, 153, 51, 0.85) 10.08%, rgba(255, 0, 110, 0.77) 51.33%, rgba(131, 56, 236, 0.799403) 91.34%, #8338EC 406.77%, #3A86FF 693.75%)",
+                        }}
+                        className="mx-auto h-6  scale-90 rounded-lg bg-lightgreen px-3 pt-1.5 text-xs text-white shadow md:scale-100"
+                      >
+                        Limited Seats
+                      </span>
+                      <div className="md: mx-auto mt-3 mb-1.5 flex h-11 w-full max-w-lg scale-95 rounded-full border  bg-white p-2.5 shadow md:mt-4 md:scale-100">
+                        <form className="flex-1" onSubmit={onEnterEmail}>
+                          <input
+                            className="ml-3.5 h-full w-full bg-transparent  pt-1 outline-none"
+                            placeholder="Email Address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                          />
+                        </form>
+                        <div className="ml-auto mt-1.5 flex text-xs text-slate-400 md:ml-0 md:mt-0.5 md:text-base">
+                          press enter{" "}
+                          <span>
+                            <img className="-mt-0.5 md:mt-0" src={require("../assets/enter-arrow.svg").default} />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Fade>
                 </div>
               </div>
             </div>
