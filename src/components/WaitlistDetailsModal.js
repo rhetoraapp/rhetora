@@ -46,7 +46,6 @@ export const WaitlistDetailsModal = ({ isOpen, closeModal, submit }) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="h-[470px] justify-center  w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-14 text-left align-middle shadow-xl transition-all ">
-                  <img className="-mt-[180px] relative z-30 h-[300px] mx-auto bg-white" src={require("../assets/fireball.svg").default}/>
                   <Dialog.Title as="h3" className="text-center text-4xl font-bold leading-6">
                     Almost There!
                   </Dialog.Title>
