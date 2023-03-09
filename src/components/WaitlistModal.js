@@ -14,11 +14,11 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({
     type: "",
-    message: ""
+    message: "",
   });
 
   const inputDivRef = useRef(null);
-  const closeToast = () => setToast({ type: "success", message: "" });
+  const closeToast = () => setToast({ type: "", message: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,18 +36,18 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
     setLoading(true);
     const data = await InviteFriendRequest(invitee_list, email);
     if (data.success) {
-      closeModal();
-      setEmails([]);
-      setInput("");
       setToast({
         type: "success",
-        message: "Invites sent successfully"
+        message: "Invites sent successfully",
       });
+      closeModal();
+      setEmails([]);
+      setInput("")
     }
     if (data.error) {
-     setToast({
+      setToast({
         type: "error",
-        message: data.error
+        message: "Oops! An error occured. Please try again",
       });
     }
     setLoading(false);
@@ -55,7 +55,7 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
 
   useEffect(() => {
     // add 100 points for every email. max 1000 points
-    setPoints(Math.min((emails.length * 100) + currentPoints, 1000));
+    setPoints(Math.min(emails.length * 100 + currentPoints, 1000));
   }, [currentPoints, emails]);
 
   useEffect(() => {
@@ -68,8 +68,8 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
 
   return (
     <>
-       <Toast type={toast.type} text={toast.message} close={closeToast} /> 
-     
+      <Toast type={toast.type} text={toast.message} close={closeToast} />
+
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -82,11 +82,9 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black bg-opacity-25" />
-
           </Transition.Child>
           <Loading loading={loading} />
           <div className="fixed inset-0 overflow-y-auto">
-
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -202,8 +200,9 @@ const ProgressBar = ({ points }) => {
   const renderCompletedDot = (dot) => (
     <li
       key={dot}
-      className={` flex w-full items-center justify-end rounded-full before:my-auto before:inline-block before:h-3 before:w-full   before:bg-minor before:content-[''] ${dot === 1 && "before:rounded-l-full"
-        }`}
+      className={` flex w-full items-center justify-end rounded-full before:my-auto before:inline-block before:h-3 before:w-full   before:bg-minor before:content-[''] ${
+        dot === 1 && "before:rounded-l-full"
+      }`}
     >
       <img src={require("../assets/checkmark-orange.svg").default} className={`h-[22px] ${dot === 1 ? "-mr-2" : "-mr-2"}`} />
     </li>
