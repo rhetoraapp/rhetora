@@ -43,7 +43,8 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
 
   useEffect(() => {
     // add 100 points for every email. max 1000 points
-    setPoints(Math.min((emails.length + 1) * 100, 1000));
+    if (!emails.length) return setPoints(currentPoints);
+    setPoints(Math.min((emails.length) * 100, 1000) + currentPoints);
   }, [emails]);
 
   useEffect(() => {
