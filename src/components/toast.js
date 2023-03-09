@@ -16,7 +16,7 @@ export const Toast = ({ type, text, close }) => {
       <div
         id="toast-success"
         className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${
-          type !== "success" ? "opacity-100" : "opacity-0"
+          type === "success" ? "opacity-100" : "opacity-0"
         }`}
         role="alert"
       >
