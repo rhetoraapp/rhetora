@@ -3,6 +3,7 @@ import { Fragment, useState, useEffect, useRef } from "react";
 import { EMAIL_REGEX } from "../utils/contants";
 import { InviteFriendRequest } from "../api";
 import { Loading } from "./Loading";
+import { Toast } from "./toast";
 
 export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
   const { points: currentPoints, position, email } = waitlistData;
@@ -11,8 +12,13 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
   const [input, setInput] = useState("");
   const [points, setPoints] = useState(currentPoints);
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState({
+    type: "",
+    message: ""
+  });
 
   const inputDivRef = useRef(null);
+  const closeToast = () => setToast({ type: "success", message: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,19 +39,24 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
       closeModal();
       setEmails([]);
       setInput("");
-      alert("Invitation sent successfully!");
+      setToast({
+        type: "success",
+        message: "Invites sent successfully"
+      });
     }
     if (data.error) {
-      alert("An error occurred. Please try again later.");
+     setToast({
+        type: "error",
+        message: data.error
+      });
     }
     setLoading(false);
   };
 
   useEffect(() => {
     // add 100 points for every email. max 1000 points
-    if (!emails.length) return setPoints(currentPoints);
-    setPoints(Math.min((emails.length) * 100, 1000) + currentPoints);
-  }, [emails]);
+    setPoints(Math.min((emails.length * 100) + currentPoints, 1000));
+  }, [currentPoints, emails]);
 
   useEffect(() => {
     // adds email to the list if the user enters a valid email and presses space
@@ -57,6 +68,8 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
 
   return (
     <>
+       <Toast type={toast.type} text={toast.message} close={closeToast} /> 
+     
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child

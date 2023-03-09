@@ -38,6 +38,7 @@ const Join = () => {
   const [loading, setLoading] = useState(false);
   const [waitlistData, setWaitlistData] = useState({});
   const [openWaitlistDetailsModal, setOpenWaitlistDetailsModal] = useState(false);
+
   const openModal = () => {
     setModalOpen(true);
   };
@@ -61,13 +62,14 @@ const Join = () => {
     setOpenWaitlistDetailsModal(true);
   };
 
-  const joinWaitlist = async ({ firstName, lastName, company }) => {
+  const joinWaitlist = async (firstName, lastName, company) => {
     setLoading(true);
     const data = await JoinWaitlistRequest(email, firstName, lastName, company);
     if (data.success === true) {
       // data.position = getRandomArbitrary(1000, 2000);
       setWaitlistData(data);
       openModal();
+      setOpenWaitlistDetailsModal(false);
       setEmail("");
     }
 
