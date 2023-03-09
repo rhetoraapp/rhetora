@@ -11,7 +11,7 @@ import MobileTimeLineBG from '../assets/mobile-timeline.svg';
 
 import TimeLineLeftBG from '../assets/timeline-left-bg.svg';
 import TimeLineRightBG from '../assets/timeline-right-bg.svg';
-import '../styles/Ourstory.css';
+import '../styles/ourstory.css';
 import ReactGA from "react-ga";
 
 const Ourstory = () => {
