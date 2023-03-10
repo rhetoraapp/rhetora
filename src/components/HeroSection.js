@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/EarlyAccessForm.css";
-import HeroSectionForm from "./forms/HeroSectionForm";
+import WaitlistForm from "./forms/WaitlistForm";
 
 const HeroSection = () => {
+  
   return (
     <div>
       <div className="container max-w-5xl pt-24 md:pt-16 pb-16 mx-auto flex flex-col sm:flex md:flex-row items-center justify-between gap-8 w-100">
@@ -16,7 +17,7 @@ const HeroSection = () => {
             using the first AI cold calling coach for unlimited mock calls. Ramp
             sales reps in days, instead of weeks without burning your lead list.
           </p>
-          <HeroSectionForm />
+          <WaitlistForm color="bg-minor"/>  
         </div>
         <div className="w-full md:w-3/6 lg:pb-32">
           <img
