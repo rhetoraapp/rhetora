@@ -23,9 +23,12 @@ const InviteFriendRequest = async (invitee_list, host_email) => {
 };
 
 // join waitlist
-const JoinWaitlistRequest = async (email) => {
+const JoinWaitlistRequest = async (email, firstName, lastName, company) => {
   const { data } = await axiosInstance.post("/waitlist/join", {
-    email: email,
+    email,
+    firstName,
+    lastName,
+    company
   });
 
   return data;

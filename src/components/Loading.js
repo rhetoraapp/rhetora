@@ -3,7 +3,7 @@ import React from "react";
 export const Loading = ({ loading }) => {
   return loading ? (
     <>
-    <div className="fixed inset-0 bg-black bg-opacity-25 z-20" />
+    <div className="fixed inset-0 bg-black bg-opacity-25 z-30" />
     <div role="status" class="fixed top-2/4 left-1/2 z-30 -translate-x-1/2 -translate-y-1/2 !opacity-100">
       <svg
         aria-hidden="true"
