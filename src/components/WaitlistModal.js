@@ -68,7 +68,8 @@ export const WaitlistModal = ({ isOpen, closeModal, waitlistData }) => {
 
   return (
     <>
-      <Toast type={toast.type} text={toast.message} close={closeToast} />
+      {toast.type != "" ? <Toast type={toast.type} text={toast.message} close={closeToast} /> : null}
+
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -200,9 +201,8 @@ const ProgressBar = ({ points }) => {
   const renderCompletedDot = (dot) => (
     <li
       key={dot}
-      className={` flex w-full items-center justify-end rounded-full before:my-auto before:inline-block before:h-3 before:w-full   before:bg-minor before:content-[''] ${
-        dot === 1 && "before:rounded-l-full"
-      }`}
+      className={` flex w-full items-center justify-end rounded-full before:my-auto before:inline-block before:h-3 before:w-full   before:bg-minor before:content-[''] ${dot === 1 && "before:rounded-l-full"
+        }`}
     >
       <img src={require("../assets/checkmark-orange.svg").default} className={`h-[22px] ${dot === 1 ? "-mr-2" : "-mr-2"}`} />
     </li>

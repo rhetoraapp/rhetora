@@ -15,9 +15,8 @@ export const Toast = ({ type, text, close }) => {
       {/* Success */}
       <div
         id="toast-success"
-        className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${
-          type === "success" ? "opacity-100" : "opacity-0"
-        }`}
+        className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${type === "success" ? "opacity-100" : "opacity-0"
+          }`}
         role="alert"
       >
         <div className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-500 dark:bg-green-800 dark:text-green-200">
@@ -52,9 +51,8 @@ export const Toast = ({ type, text, close }) => {
       {/* Error */}
       <div
         id="toast-danger"
-        className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${
-          type === "error" ? "opacity-100" : "opacity-0"
-        }`}
+        className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${type === "error" ? "opacity-100" : "opacity-0"
+          }`}
         role="alert"
       >
         <div className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200">
@@ -89,9 +87,8 @@ export const Toast = ({ type, text, close }) => {
       {/* Warning */}
       <div
         id="toast-warning"
-        className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${
-          type === "warning" ? "opacity-100" : "opacity-0"
-        }`}
+        className={`text-gray-500 divide-gray-200 space-x text-gray-500 absolute top-5 right-5 mb-4 flex w-full max-w-xs transform items-center space-x-4 divide-x rounded-lg  bg-white p-4 shadow transition duration-500 ease-in-out ${type === "warning" ? "opacity-100" : "opacity-0"
+          }`}
         role="alert"
       >
         <div className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-orange-100 text-orange-500 dark:bg-orange-700 dark:text-orange-200">

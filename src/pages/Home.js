@@ -10,8 +10,8 @@ const Home = () => {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
-  },[]);
-  
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -20,6 +20,7 @@ const Home = () => {
       <HowItWorks />
       <FooterSubscriber title="If you made it this far, we must be striking a chord." />
       <Footer />
+
     </div>
   );
 };
