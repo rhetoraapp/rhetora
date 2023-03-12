@@ -104,7 +104,7 @@ const Join = () => {
           <div className="justify-content-center mx-auto max-w-[90vw] lg:max-w-[1024px] xl:max-w-[1200px]">
             <WaitlistModal isOpen={modalOpen} closeModal={closeModal} waitlistData={waitlistData} />
             <WaitlistDetailsModal isOpen={openWaitlistDetailsModal} closeModal={() => setOpenWaitlistDetailsModal(false)} submit={joinWaitlist} />
-            <div className="d-flex flex-column mt-5 transform justify-center pb-4 md:mt-2 md:scale-90 ">
+            <div className="d-flex flex-column transform justify-center pb-4 md:mt-2 md:scale-90 ">
               <Heading
                 className="text-3xl md:text-5xl"
                 background="radial-gradient(50.31% 50.31% at 51.49% 49.69%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(87.84deg, #FFBE0B 14.27%, #FF9933 26.9%, rgba(255, 153, 51, 0.85) 37.9%, rgba(255, 0, 110, 0.77) 49.83%, rgba(131, 56, 236, 0.799403) 59.71%, #8338EC 69.42%, #3A86FF 85.23%)"
@@ -334,6 +334,7 @@ const Join = () => {
                       </div>
                     </div>
                   </Fade>
+
                 </div>
               </div>
             </div>
