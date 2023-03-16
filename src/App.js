@@ -11,6 +11,7 @@ import Community from "./pages/Community.js";
 import Invited from "./pages/Invited";
 import JoinWaitlist from "./pages/Joinwaitlist";
 import RedeemInvite from "./pages/RedeemInvite";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 import ReactGA from "react-ga";
 
@@ -72,6 +73,7 @@ const App = () => {
           <Route path="/our-story" element={<Ourstory />}></Route>
           <Route path="/contact-us" element={<Contactus />}></Route>
           <Route path="/community" element={<Community />}></Route>
+          <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/invited-c03skupo" element={<Invited />}></Route>
           <Route path="/join-waitlist" element={<JoinWaitlist />}></Route>
           <Route path="/redeem/:id" element={<RedeemInvite />}></Route>
