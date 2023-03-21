@@ -1,0 +1,49 @@
+.flexbox {
+    display:flex;
+}
+
+.float-left{
+    padding-left:8vw;
+    padding-right: 7vw;
+}
+
+.input-field{
+    border:none;
+    font-size:1.1rem;
+    width:50%;
+    outline: none
+}
+
+.video-js{
+    width: 300px;
+    height: auto;
+    aspect-ratio: 16/9;
+    
+}
+
+@media screen and (max-width: 880px) {
+    .flexbox {
+        display:block;
+    }
+
+    .float-right{
+        padding-left:8vw;
+        padding-top: 20px;
+    }
+
+    .float-left{
+        padding-left:8vw;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+    .flexbox {
+        display:block;
+    }
+
+    .float-right{
+        padding-left:5vw;
+    }
+
+}

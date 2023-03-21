@@ -1,0 +1,20 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff99338c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+border-radius: 2rem;
+    background-color: #ff9933;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
