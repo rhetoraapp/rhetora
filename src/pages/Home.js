@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import FooterSubscriber from "../components/FooterSubscriber";
 import ReactGA from "react-ga";
+import { PopupButton } from "react-calendly";
 
 const Home = () => {
 
