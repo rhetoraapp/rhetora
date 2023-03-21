@@ -3,6 +3,7 @@ import HowItWorksMobile from "./HowItWorksMobile";
 import bannerReqAccess from "../assets/banner-req-access-2.svg";
 import { Tabs } from "flowbite-react";
 import "../styles/tabStyles.css";
+import { PopupButton } from "react-calendly";
 
 const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -261,14 +262,25 @@ const HowItWorks = () => {
             <p className="text-2xl text-white font-anek">
               Ready to explode your response rates?
             </p>
-            <a href="/join-waitlist">
+            <PopupButton
+              url="https://calendly.com/lukarhetora/15-minute-call"
+              /*
+              * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+              * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+              */
+              rootElement={document.getElementById("root")}
+              text="Book a Demo"
+              className="text-orange bg-white align-middle hover:bg-minor focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-lg px-3 lg:px-5 pb-2 lg:py-2 mr-2 focus:outline-none  "
+              style={{ paddingTop: "3px"}}
+            />
+            {/* <a href="/join-waitlist">
             <button
               type="button"
               style={{ paddingTop: "13px" }}
               className="pb-2.5 px-5 mr-2 text-sm font-bold text-main focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-minor focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
               Request Access
-            </button></a>
+            </button></a> */}
           </div>
         </div>
       </div>

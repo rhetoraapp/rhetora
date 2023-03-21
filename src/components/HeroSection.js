@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="font-inter w-full text-start md:w-3/6">
           <h2 className="text-4xl lg:text-5xl font-bold text-main">
             Eliminate Cold Calling <br />
-            Anxiety
+            Anxiety<span class="align-middle text-center ml-2 inline-flex items-center px-4 py-1 rounded-full text-lg font-medium bg-orange-100 text-orange-800">Available Now</span>
           </h2>
           <p className="text-start font-normal text-lg text-subtext mt-3">
             Empower your salesforce with the confidence, knowledge, and skills

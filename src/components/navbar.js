@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { PopupButton } from "react-calendly";
 
 const navbar = () => {
   return (
@@ -13,17 +14,28 @@ const navbar = () => {
               alt="rhetora Logo"
             />
             <span className="hidden pt-2 md:block self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
-              rhetora
+              rhetora.ai
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
-            <Link
-              to="/join-waitlist"
-              className="text-white bg-main hover:bg-minor focus:ring-4 focus:ring-primary-300 font-bold rounded-lg text-lg px-3 lg:px-5 pb-2 lg:py-2 mr-2 focus:outline-none "
-              style={{ paddingTop: "13px" }}
+          <PopupButton
+              url="https://calendly.com/lukarhetora/15-minute-call"
+              /*
+              * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+              * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+              */
+              rootElement={document.getElementById("root")}
+              text="Book a Demo"
+              className="text-white bg-main align-middle hover:bg-minor focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-lg px-3 lg:px-5 pb-2 lg:py-2 mr-2 focus:outline-none  "
+              style={{ paddingTop: "13px"}}
+            />
+            {/* <Link
+              to="/join-waitlist" */}
+              {/* className="text-white bg-main hover:bg-minor focus:ring-4 focus:ring-primary-300 font-bold rounded-lg text-lg px-3 lg:px-5 pb-2 lg:py-2 mr-2 focus:outline-none "
+              style={{ paddingTop: "13px", fontWeight:500 }}
             >
-              Join Waitlist
-            </Link>
+              Book a Demo */}
+            {/* </Link> */}
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -88,6 +100,9 @@ const navbar = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                 <a href="https://www.app.rhetora.ai" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-main-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
+               </li>
             </ul>
           </div>
         </div>
